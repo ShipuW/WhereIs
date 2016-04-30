@@ -33,6 +33,14 @@
 		840FD4841CD51E0200C50D3E /* FxJsonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD47E1CD51E0200C50D3E /* FxJsonUtility.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		840FD4851CD51E0200C50D3E /* FxJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD4801CD51E0200C50D3E /* FxJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		840FD4871CD52FE600C50D3E /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 840FD4861CD52FE600C50D3E /* Podfile */; };
+		840FD4891CD53C8700C50D3E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FD4881CD53C8700C50D3E /* CoreLocation.framework */; };
+		840FD48B1CD53CE000C50D3E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FD48A1CD53CE000C50D3E /* CoreMotion.framework */; };
+		840FD48F1CD54B6A00C50D3E /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD48E1CD54B6A00C50D3E /* Global.m */; };
+		840FD4921CD54C1D00C50D3E /* GetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD4911CD54C1D00C50D3E /* GetImage.m */; };
+		840FD4951CD54E8E00C50D3E /* BaseNavPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD4941CD54E8E00C50D3E /* BaseNavPage.m */; };
+		840FD4981CD54EA700C50D3E /* HomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD4971CD54EA700C50D3E /* HomePage.m */; };
+		840FD49A1CD54F0B00C50D3E /* HomePage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840FD4991CD54F0B00C50D3E /* HomePage.xib */; };
+		840FD4A01CD5558100C50D3E /* CameraBackgroundWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD49F1CD5558100C50D3E /* CameraBackgroundWidget.m */; };
 		8E95EBA82687DB39F7247AD4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6D84F3F22F594C95B8D5EA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +117,20 @@
 		840FD47F1CD51E0200C50D3E /* FxJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FxJsonWriter.h; sourceTree = "<group>"; };
 		840FD4801CD51E0200C50D3E /* FxJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FxJsonWriter.m; sourceTree = "<group>"; };
 		840FD4861CD52FE600C50D3E /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		840FD4881CD53C8700C50D3E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		840FD48A1CD53CE000C50D3E /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		840FD48C1CD549FC00C50D3E /* URLDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLDefine.h; sourceTree = "<group>"; };
+		840FD48D1CD54B6A00C50D3E /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		840FD48E1CD54B6A00C50D3E /* Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Global.m; sourceTree = "<group>"; };
+		840FD4901CD54C1D00C50D3E /* GetImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetImage.h; sourceTree = "<group>"; };
+		840FD4911CD54C1D00C50D3E /* GetImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetImage.m; sourceTree = "<group>"; };
+		840FD4931CD54E8E00C50D3E /* BaseNavPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavPage.h; sourceTree = "<group>"; };
+		840FD4941CD54E8E00C50D3E /* BaseNavPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavPage.m; sourceTree = "<group>"; };
+		840FD4961CD54EA700C50D3E /* HomePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePage.h; sourceTree = "<group>"; };
+		840FD4971CD54EA700C50D3E /* HomePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePage.m; sourceTree = "<group>"; };
+		840FD4991CD54F0B00C50D3E /* HomePage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePage.xib; sourceTree = "<group>"; };
+		840FD49E1CD5558100C50D3E /* CameraBackgroundWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraBackgroundWidget.h; sourceTree = "<group>"; };
+		840FD49F1CD5558100C50D3E /* CameraBackgroundWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraBackgroundWidget.m; sourceTree = "<group>"; };
 		8B6D84F3F22F594C95B8D5EA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E30D0D3415ECE08848254D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +140,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840FD48B1CD53CE000C50D3E /* CoreMotion.framework in Frameworks */,
+				840FD4891CD53C8700C50D3E /* CoreLocation.framework in Frameworks */,
 				8E95EBA82687DB39F7247AD4 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +245,8 @@
 		840FD4391CD5145A00C50D3E /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				840FD48D1CD54B6A00C50D3E /* Global.h */,
+				840FD48E1CD54B6A00C50D3E /* Global.m */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -251,6 +277,8 @@
 			children = (
 				840FD4591CD51C1200C50D3E /* BaseOperation.h */,
 				840FD45A1CD51C1200C50D3E /* BaseOperation.m */,
+				840FD4901CD54C1D00C50D3E /* GetImage.h */,
+				840FD4911CD54C1D00C50D3E /* GetImage.m */,
 			);
 			path = Operation;
 			sourceTree = "<group>";
@@ -288,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				840FD44C1CD519D300C50D3E /* Defines.h */,
+				840FD48C1CD549FC00C50D3E /* URLDefine.h */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -316,6 +345,10 @@
 				840FD4511CD51BB200C50D3E /* BasePage.m */,
 				840FD45C1CD51C8E00C50D3E /* AdvertPage.h */,
 				840FD45D1CD51C8E00C50D3E /* AdvertPage.m */,
+				840FD4931CD54E8E00C50D3E /* BaseNavPage.h */,
+				840FD4941CD54E8E00C50D3E /* BaseNavPage.m */,
+				840FD4961CD54EA700C50D3E /* HomePage.h */,
+				840FD4971CD54EA700C50D3E /* HomePage.m */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -325,6 +358,8 @@
 			children = (
 				840FD4531CD51BC800C50D3E /* BaseWidget.h */,
 				840FD4541CD51BC800C50D3E /* BaseWidget.m */,
+				840FD49E1CD5558100C50D3E /* CameraBackgroundWidget.h */,
+				840FD49F1CD5558100C50D3E /* CameraBackgroundWidget.m */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -342,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				840FD45F1CD51CB100C50D3E /* AdvertPage.xib */,
+				840FD4991CD54F0B00C50D3E /* HomePage.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -381,6 +417,8 @@
 		93D9149F3F8CF1000A108C09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				840FD48A1CD53CE000C50D3E /* CoreMotion.framework */,
+				840FD4881CD53C8700C50D3E /* CoreLocation.framework */,
 				8B6D84F3F22F594C95B8D5EA /* libPods.a */,
 			);
 			name = Frameworks;
@@ -495,6 +533,7 @@
 				840FD4111CD4FEE700C50D3E /* Assets.xcassets in Resources */,
 				840FD4871CD52FE600C50D3E /* Podfile in Resources */,
 				840FD4601CD51CB100C50D3E /* AdvertPage.xib in Resources */,
+				840FD49A1CD54F0B00C50D3E /* HomePage.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,9 +606,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840FD48F1CD54B6A00C50D3E /* Global.m in Sources */,
 				840FD4711CD51DBB00C50D3E /* FxAppSetting.m in Sources */,
 				840FD4721CD51DBB00C50D3E /* FxButtonHelper.m in Sources */,
 				840FD4701CD51DBB00C50D3E /* FxActivityIndicator.m in Sources */,
+				840FD4A01CD5558100C50D3E /* CameraBackgroundWidget.m in Sources */,
 				840FD4581CD51BE400C50D3E /* BaseCell.m in Sources */,
 				840FD44B1CD518BD00C50D3E /* BaseInfo.m in Sources */,
 				840FD4731CD51DBB00C50D3E /* FxDate.m in Sources */,
@@ -579,6 +620,7 @@
 				840FD4821CD51E0200C50D3E /* FxJsonBase.m in Sources */,
 				840FD4811CD51E0200C50D3E /* FxJSON.m in Sources */,
 				840FD4521CD51BB200C50D3E /* BasePage.m in Sources */,
+				840FD4951CD54E8E00C50D3E /* BaseNavPage.m in Sources */,
 				840FD45E1CD51C8E00C50D3E /* AdvertPage.m in Sources */,
 				840FD4091CD4FEE700C50D3E /* AppDelegate.m in Sources */,
 				840FD4831CD51E0200C50D3E /* FxJsonParser.m in Sources */,
@@ -587,7 +629,9 @@
 				840FD4551CD51BC800C50D3E /* BaseWidget.m in Sources */,
 				840FD4061CD4FEE700C50D3E /* main.m in Sources */,
 				840FD46F1CD51DBB00C50D3E /* FxActivity.m in Sources */,
+				840FD4981CD54EA700C50D3E /* HomePage.m in Sources */,
 				840FD4751CD51DBB00C50D3E /* FxString.m in Sources */,
+				840FD4921CD54C1D00C50D3E /* GetImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

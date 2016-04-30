@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AdvertPage.h"
+#import "HomePage.h"
 
 
 
@@ -20,11 +21,20 @@
 }
 
 
+- (void)showHomePage
+{
+    HomePage *page = [[HomePage alloc] init];
+    
+    self.window.rootViewController = page;//navController;
+    
+    [self.window makeKeyAndVisible];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-
-    
-    [AdvertPage showAdvertPage];
+#pragma mark - remember change
+    [self showHomePage];
+    //[AdvertPage showAdvertPage];
 
     return YES;
 }

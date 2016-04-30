@@ -7,7 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseOperation.h"
+#import "FxActivity.h"
 
-@interface BaseController : UIViewController
+@interface BaseController : UIViewController<BaseOperationDelegate>{
+    BaseOperation       *_operation;
+    FxActivity          *_activity;
+}
+
+- (void)showIndicator:(NSString *)tipMessage
+             autoHide:(BOOL)hide
+           afterDelay:(BOOL)delay;
+- (void)hideIndicator;
+
+- (void)setNavigationTitleImage:(NSString *)imageName;
+- (void)setNavigationLeft:(NSString *)imageName sel:(SEL)sel;
+- (void)setNavigationRight:(NSString *)imageName;
+- (void)setStatusBarStyle:(UIStatusBarStyle)style;
+- (IBAction)doBack:(id)sender;
 
 @end

@@ -8,9 +8,13 @@
 
 #import "BasePage.h"
 
-@interface AdvertPage : BasePage{
-    IBOutlet UIImageView *_advertImage;
+@interface AdvertPage : BasePage<CLLocationManagerDelegate>{
+    IBOutlet UIImageView    *_advertImage;
+    CLLocationManager       *locationManager;
+    CMMotionManager         *motionManager;
+
 }
+
 
 + (BOOL)canShowAdvertPage;
 + (void)showAdvertPage;
