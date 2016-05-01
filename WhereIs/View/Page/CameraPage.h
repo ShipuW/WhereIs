@@ -9,7 +9,7 @@
 #import "BaseNavPage.h"
 #import "CameraBackgroundWidget.h"
 
-@interface HomePage : BaseNavPage{
+@interface CameraPage : BaseNavPage{
 
     IBOutlet UIView         *_cameraView;
     CameraBackgroundWidget  *_cameraWidget;

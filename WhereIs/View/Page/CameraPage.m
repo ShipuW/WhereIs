@@ -6,9 +6,9 @@
 //  Copyright © 2016年 ShipuW. All rights reserved.
 //
 
-#import "HomePage.h"
+#import "CameraPage.h"
 
-@implementation HomePage
+@implementation CameraPage
 
 
 - (void)viewDidLoad{

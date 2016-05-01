@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AdvertPage.h"
-#import "HomePage.h"
+#import "CameraPage.h"
 
 
 
@@ -23,7 +23,7 @@
 
 - (void)showHomePage
 {
-    HomePage *page = [[HomePage alloc] init];
+    CameraPage *page = [[CameraPage alloc] init];
     
     self.window.rootViewController = page;//navController;
     

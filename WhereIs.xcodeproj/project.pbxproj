@@ -38,8 +38,8 @@
 		840FD48F1CD54B6A00C50D3E /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD48E1CD54B6A00C50D3E /* Global.m */; };
 		840FD4921CD54C1D00C50D3E /* GetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD4911CD54C1D00C50D3E /* GetImage.m */; };
 		840FD4951CD54E8E00C50D3E /* BaseNavPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD4941CD54E8E00C50D3E /* BaseNavPage.m */; };
-		840FD4981CD54EA700C50D3E /* HomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD4971CD54EA700C50D3E /* HomePage.m */; };
-		840FD49A1CD54F0B00C50D3E /* HomePage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840FD4991CD54F0B00C50D3E /* HomePage.xib */; };
+		840FD4981CD54EA700C50D3E /* CameraPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD4971CD54EA700C50D3E /* CameraPage.m */; };
+		840FD49A1CD54F0B00C50D3E /* CameraPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840FD4991CD54F0B00C50D3E /* CameraPage.xib */; };
 		840FD4A01CD5558100C50D3E /* CameraBackgroundWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD49F1CD5558100C50D3E /* CameraBackgroundWidget.m */; };
 		8E95EBA82687DB39F7247AD4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6D84F3F22F594C95B8D5EA /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -126,9 +126,9 @@
 		840FD4911CD54C1D00C50D3E /* GetImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetImage.m; sourceTree = "<group>"; };
 		840FD4931CD54E8E00C50D3E /* BaseNavPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavPage.h; sourceTree = "<group>"; };
 		840FD4941CD54E8E00C50D3E /* BaseNavPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavPage.m; sourceTree = "<group>"; };
-		840FD4961CD54EA700C50D3E /* HomePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePage.h; sourceTree = "<group>"; };
-		840FD4971CD54EA700C50D3E /* HomePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePage.m; sourceTree = "<group>"; };
-		840FD4991CD54F0B00C50D3E /* HomePage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePage.xib; sourceTree = "<group>"; };
+		840FD4961CD54EA700C50D3E /* CameraPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraPage.h; sourceTree = "<group>"; };
+		840FD4971CD54EA700C50D3E /* CameraPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraPage.m; sourceTree = "<group>"; };
+		840FD4991CD54F0B00C50D3E /* CameraPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraPage.xib; sourceTree = "<group>"; };
 		840FD49E1CD5558100C50D3E /* CameraBackgroundWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraBackgroundWidget.h; sourceTree = "<group>"; };
 		840FD49F1CD5558100C50D3E /* CameraBackgroundWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraBackgroundWidget.m; sourceTree = "<group>"; };
 		8B6D84F3F22F594C95B8D5EA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -347,8 +347,8 @@
 				840FD45D1CD51C8E00C50D3E /* AdvertPage.m */,
 				840FD4931CD54E8E00C50D3E /* BaseNavPage.h */,
 				840FD4941CD54E8E00C50D3E /* BaseNavPage.m */,
-				840FD4961CD54EA700C50D3E /* HomePage.h */,
-				840FD4971CD54EA700C50D3E /* HomePage.m */,
+				840FD4961CD54EA700C50D3E /* CameraPage.h */,
+				840FD4971CD54EA700C50D3E /* CameraPage.m */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -377,7 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				840FD45F1CD51CB100C50D3E /* AdvertPage.xib */,
-				840FD4991CD54F0B00C50D3E /* HomePage.xib */,
+				840FD4991CD54F0B00C50D3E /* CameraPage.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -533,7 +533,7 @@
 				840FD4111CD4FEE700C50D3E /* Assets.xcassets in Resources */,
 				840FD4871CD52FE600C50D3E /* Podfile in Resources */,
 				840FD4601CD51CB100C50D3E /* AdvertPage.xib in Resources */,
-				840FD49A1CD54F0B00C50D3E /* HomePage.xib in Resources */,
+				840FD49A1CD54F0B00C50D3E /* CameraPage.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,7 +629,7 @@
 				840FD4551CD51BC800C50D3E /* BaseWidget.m in Sources */,
 				840FD4061CD4FEE700C50D3E /* main.m in Sources */,
 				840FD46F1CD51DBB00C50D3E /* FxActivity.m in Sources */,
-				840FD4981CD54EA700C50D3E /* HomePage.m in Sources */,
+				840FD4981CD54EA700C50D3E /* CameraPage.m in Sources */,
 				840FD4751CD51DBB00C50D3E /* FxString.m in Sources */,
 				840FD4921CD54C1D00C50D3E /* GetImage.m in Sources */,
 			);
