@@ -10,4 +10,13 @@
 
 @implementation BaseCell
 
+- (void)initCell
+{
+}
+
+- (void)setCellData:(AMapPOI *)info
+{
+    _titleLabel.text = info.name;
+}
+
 @end

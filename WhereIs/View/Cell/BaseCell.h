@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BaseCell : UITableViewCell
+@interface BaseCell : UITableViewCell {
+    IBOutlet UILabel        *_titleLabel;
+}
+
+//@property(nonatomic, strong) BaseInfo   *cellInfo;
+
+- (void)initCell;
+- (void)setCellData:(AMapPOI *)info;
+
 
 @end

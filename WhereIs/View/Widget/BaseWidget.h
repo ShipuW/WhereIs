@@ -10,5 +10,6 @@
 
 @interface BaseWidget : BaseController
 
+@property(strong, nonatomic) NSArray    *listData;
 
 @end

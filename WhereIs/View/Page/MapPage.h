@@ -8,10 +8,16 @@
 
 #import "BaseNavPage.h"
 #import "MapWidget.h"
+#import "PositionTableWidget.h"
 
 @interface MapPage : BaseNavPage{
-    IBOutlet UIView     *_mapView;
-    MapWidget  *_mapWidget;
+    IBOutlet UIView         *_mapView;
+    MapWidget               *_mapWidget;
+    
+    IBOutlet UIButton       *_searchButton;
+    
+    PositionTableWidget     *_positionTableWidget;
+    IBOutlet UIView         *_positionTableView;
 }
 
 @end

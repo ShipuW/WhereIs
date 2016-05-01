@@ -8,15 +8,15 @@
 
 #import "BaseWidget.h"
 
-@interface MapWidget : BaseWidget<MAMapViewDelegate,AMapSearchDelegate>{
+@interface MapWidget : BaseWidget<MAMapViewDelegate>{
     MAMapView       *_mapView;
-    AMapSearchAPI   *_search;
-    CLLocation      *_currentLocation;
-    IBOutlet UIButton *_searchButton;
+    NSMutableArray  *_annotations;
+    
 }
 
 @property (nonatomic) MAMapLanguage             language;
 @property (nonatomic) CLLocationCoordinate2D    centerCoordinate;
 @property (nonatomic) CGFloat                   zoomLevel;
+@property (nonatomic) CLLocation                *currentLocation;
 
 @end

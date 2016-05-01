@@ -10,10 +10,12 @@
 #import "BaseOperation.h"
 #import "FxActivity.h"
 
-@interface BaseController : UIViewController<BaseOperationDelegate>{
+@interface BaseController : UIViewController<BaseOperationDelegate,AMapSearchDelegate>{
     BaseOperation       *_operation;
     FxActivity          *_activity;
+    AMapSearchAPI       *_search;
 }
+
 
 - (void)showIndicator:(NSString *)tipMessage
              autoHide:(BOOL)hide

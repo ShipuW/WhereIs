@@ -40,16 +40,7 @@
 }
 
 
-- (void)opFail:(NSString *)errorMessage
-{
-    BASE_ERROR_FUN(errorMessage);
-    [self showIndicator:errorMessage autoHide:YES afterDelay:YES];
-}
 
-- (void)opSuccess:(id)data
-{
-    [self hideIndicator];
-}
 
 - (void)setNavigationTitleImage:(NSString *)imageName
 {
@@ -154,6 +145,23 @@
 {
     [_activity hide:YES];
 }
+#pragma mark - BaseOperationDelegate
 
+- (void)opFail:(NSString *)errorMessage
+{
+    BASE_ERROR_FUN(errorMessage);
+    [self showIndicator:errorMessage autoHide:YES afterDelay:YES];
+}
+
+- (void)opSuccess:(id)data
+{
+    [self hideIndicator];
+}
+
+#pragma mark - AMapSearchDelegate
+
+- (void)AMapSearchRequest:(id)request didFailWithError:(NSError *)error{
+    NSLog(@"request:%@,error:%@",request,error);
+}
 
 @end

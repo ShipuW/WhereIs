@@ -52,6 +52,11 @@
 		84E44B4C1CD678EF00BC6DE4 /* path@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E44B471CD678EF00BC6DE4 /* path@2x.png */; };
 		84E44B4D1CD678EF00BC6DE4 /* restaurant.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E44B481CD678EF00BC6DE4 /* restaurant.png */; };
 		84E44B4E1CD678EF00BC6DE4 /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E44B491CD678EF00BC6DE4 /* search@2x.png */; };
+		84E44B511CD6844D00BC6DE4 /* TableWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E44B501CD6844D00BC6DE4 /* TableWidget.m */; };
+		84E44B541CD6850400BC6DE4 /* PositionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E44B531CD6850400BC6DE4 /* PositionCell.m */; };
+		84E44B571CD6853400BC6DE4 /* PositionTableWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E44B561CD6853400BC6DE4 /* PositionTableWidget.m */; };
+		84E44B591CD6867A00BC6DE4 /* PositionTableWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E44B581CD6867A00BC6DE4 /* PositionTableWidget.xib */; };
+		84E44B5B1CD6869100BC6DE4 /* PositionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E44B5A1CD6869100BC6DE4 /* PositionCell.xib */; };
 		8E95EBA82687DB39F7247AD4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6D84F3F22F594C95B8D5EA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -157,6 +162,14 @@
 		84E44B471CD678EF00BC6DE4 /* path@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "path@2x.png"; sourceTree = "<group>"; };
 		84E44B481CD678EF00BC6DE4 /* restaurant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restaurant.png; sourceTree = "<group>"; };
 		84E44B491CD678EF00BC6DE4 /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
+		84E44B4F1CD6844D00BC6DE4 /* TableWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableWidget.h; sourceTree = "<group>"; };
+		84E44B501CD6844D00BC6DE4 /* TableWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableWidget.m; sourceTree = "<group>"; };
+		84E44B521CD6850400BC6DE4 /* PositionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionCell.h; sourceTree = "<group>"; };
+		84E44B531CD6850400BC6DE4 /* PositionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionCell.m; sourceTree = "<group>"; };
+		84E44B551CD6853400BC6DE4 /* PositionTableWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionTableWidget.h; sourceTree = "<group>"; };
+		84E44B561CD6853400BC6DE4 /* PositionTableWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionTableWidget.m; sourceTree = "<group>"; };
+		84E44B581CD6867A00BC6DE4 /* PositionTableWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PositionTableWidget.xib; sourceTree = "<group>"; };
+		84E44B5A1CD6869100BC6DE4 /* PositionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PositionCell.xib; sourceTree = "<group>"; };
 		8B6D84F3F22F594C95B8D5EA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E30D0D3415ECE08848254D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -394,6 +407,10 @@
 				84E44B3B1CD658A200BC6DE4 /* SearchWidget.m */,
 				84E44B3D1CD65DE300BC6DE4 /* WeatherWidget.h */,
 				84E44B3E1CD65DE300BC6DE4 /* WeatherWidget.m */,
+				84E44B4F1CD6844D00BC6DE4 /* TableWidget.h */,
+				84E44B501CD6844D00BC6DE4 /* TableWidget.m */,
+				84E44B551CD6853400BC6DE4 /* PositionTableWidget.h */,
+				84E44B561CD6853400BC6DE4 /* PositionTableWidget.m */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -403,6 +420,8 @@
 			children = (
 				840FD4561CD51BE400C50D3E /* BaseCell.h */,
 				840FD4571CD51BE400C50D3E /* BaseCell.m */,
+				84E44B521CD6850400BC6DE4 /* PositionCell.h */,
+				84E44B531CD6850400BC6DE4 /* PositionCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -414,6 +433,8 @@
 				840FD4991CD54F0B00C50D3E /* CameraPage.xib */,
 				84E44B401CD6623700BC6DE4 /* MapPage.xib */,
 				84E44B421CD676B900BC6DE4 /* MapWidget.xib */,
+				84E44B581CD6867A00BC6DE4 /* PositionTableWidget.xib */,
+				84E44B5A1CD6869100BC6DE4 /* PositionCell.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -581,6 +602,7 @@
 			files = (
 				84E44B4D1CD678EF00BC6DE4 /* restaurant.png in Resources */,
 				84E44B4E1CD678EF00BC6DE4 /* search@2x.png in Resources */,
+				84E44B5B1CD6869100BC6DE4 /* PositionCell.xib in Resources */,
 				84E44B431CD676B900BC6DE4 /* MapWidget.xib in Resources */,
 				84E44B4B1CD678EF00BC6DE4 /* location_yes@2x.png in Resources */,
 				840FD4111CD4FEE700C50D3E /* Assets.xcassets in Resources */,
@@ -588,6 +610,7 @@
 				840FD4871CD52FE600C50D3E /* Podfile in Resources */,
 				840FD4601CD51CB100C50D3E /* AdvertPage.xib in Resources */,
 				84E44B4A1CD678EF00BC6DE4 /* location_no@2x.png in Resources */,
+				84E44B591CD6867A00BC6DE4 /* PositionTableWidget.xib in Resources */,
 				840FD49A1CD54F0B00C50D3E /* CameraPage.xib in Resources */,
 				84E44B4C1CD678EF00BC6DE4 /* path@2x.png in Resources */,
 			);
@@ -664,11 +687,13 @@
 			files = (
 				840FD48F1CD54B6A00C50D3E /* Global.m in Sources */,
 				840FD4711CD51DBB00C50D3E /* FxAppSetting.m in Sources */,
+				84E44B511CD6844D00BC6DE4 /* TableWidget.m in Sources */,
 				840FD4721CD51DBB00C50D3E /* FxButtonHelper.m in Sources */,
 				840FD4701CD51DBB00C50D3E /* FxActivityIndicator.m in Sources */,
 				84E44B3F1CD65DE300BC6DE4 /* WeatherWidget.m in Sources */,
 				840FD4A01CD5558100C50D3E /* CameraBackgroundWidget.m in Sources */,
 				840FD4581CD51BE400C50D3E /* BaseCell.m in Sources */,
+				84E44B571CD6853400BC6DE4 /* PositionTableWidget.m in Sources */,
 				840FD44B1CD518BD00C50D3E /* BaseInfo.m in Sources */,
 				840FD4731CD51DBB00C50D3E /* FxDate.m in Sources */,
 				840FD44F1CD51B9900C50D3E /* BaseController.m in Sources */,
@@ -681,6 +706,7 @@
 				84E44B3C1CD658A200BC6DE4 /* SearchWidget.m in Sources */,
 				840FD4951CD54E8E00C50D3E /* BaseNavPage.m in Sources */,
 				840FD45E1CD51C8E00C50D3E /* AdvertPage.m in Sources */,
+				84E44B541CD6850400BC6DE4 /* PositionCell.m in Sources */,
 				84E44B361CD614ED00BC6DE4 /* MapPage.m in Sources */,
 				840FD4091CD4FEE700C50D3E /* AppDelegate.m in Sources */,
 				840FD4831CD51E0200C50D3E /* FxJsonParser.m in Sources */,

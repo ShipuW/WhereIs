@@ -26,6 +26,7 @@
     [super viewDidLoad];
     [self initMapView];
     [self initSearch];
+    [self initAttributes];
 
 }
 
@@ -50,6 +51,11 @@
 - (void)initSearch{
     _search = [[AMapSearchAPI alloc] init];
     _search.delegate = self;
+}
+
+- (void)initAttributes{
+    _annotations = [NSMutableArray array];
+    self.listData = nil;
 }
 
 - (void)reGeoAction{//逆地理编码搜索请求
@@ -98,6 +104,7 @@ updatingLocation:(BOOL)updatingLocation
     if ([view.annotation isKindOfClass:[MAUserLocation class]]){
         [self reGeoAction];
     }
+    
 }
 
 @end
