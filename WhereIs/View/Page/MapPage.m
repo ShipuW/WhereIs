@@ -26,6 +26,7 @@
     _mapWidget = [[MapWidget alloc] init];
     //_mapWidget.language = MAMapLanguageEn;;
     //_mapWidget.zoomLevel = 11.0;
+
     
     _mapWidget.view.frame = _mapView.bounds;//赋值要放在这句之前
     [_mapView addSubview:_mapWidget.view];
@@ -36,6 +37,7 @@
 - (void)addPositionTableViewWithArray:(NSArray *)array{
     [_positionTableView setHidden:NO];
     _positionTableWidget = [[PositionTableWidget alloc] init];
+    _positionTableWidget.delegate = self;
     
     _positionTableWidget.listData = array;
     _positionTableWidget.view.frame = _positionTableView.bounds;//赋值要放在这句之前
@@ -56,13 +58,15 @@
 }
 
 - (IBAction)searchAction:(id)sender{
+    [_mapWidget clearAllAnnotations];
+    
     if (_mapWidget.currentLocation == nil || _search == nil){
         NSLog(@"search failed");
         return;
     }
     
     AMapPOIAroundSearchRequest *request = [[AMapPOIAroundSearchRequest alloc] init];
-    request.location = [AMapGeoPoint locationWithLatitude:29.530974 longitude:106.604850];
+    request.location = [AMapGeoPoint locationWithLatitude:_mapWidget.currentLocation.coordinate.latitude longitude:_mapWidget.currentLocation.coordinate.longitude];
     request.keywords = @"重庆";
     request.types = @"餐饮服务|生活服务";
     request.sortrule = 0;
@@ -73,7 +77,7 @@
 //    _positionTableWidget.view.frame = CGRectMake(_positionTableView.frame.origin.x, _positionTableView.frame.origin.y, _positionTableView.frame.size.width, _positionTableView.frame.size.width * 0.5);
 }
 
-#pragma mark - AMapSearchDelegate
+#pragma mark - AMapSearchDelegate,PositionTableDelegate
 
 
 - (void)onPOISearchDone:(AMapPOISearchBaseRequest *)request response:(AMapPOISearchResponse *)response
@@ -96,6 +100,11 @@
     [self addPositionTableViewWithArray:response.pois];
     
 }
+
+- (void)didSelect:(MAPointAnnotation *)annotation{
+    [_mapWidget addPoiAnnotation:annotation];
+}
+
 
 @end
 

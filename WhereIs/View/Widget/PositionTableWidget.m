@@ -57,7 +57,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    PositionCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    //PositionCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    AMapPOI *poi = self.listData[indexPath.row];
+
+    MAPointAnnotation *poiAnnotation = [[MAPointAnnotation alloc] init];
+    poiAnnotation.coordinate = CLLocationCoordinate2DMake(poi.location.latitude, poi.location.longitude);
+    poiAnnotation.title = poi.name;
+    poiAnnotation.subtitle = poi.address;
+//    NSLog(@"%f|%f|%@|%@",poi.location.latitude,poi.location.longitude,poi.name,poi.address);
+//    NSLog(@"%f|%f|%@|%@",poiAnnotation.coordinate.latitude,poiAnnotation.coordinate.longitude,poiAnnotation.title,poiAnnotation.subtitle);
+    
+    [self.delegate didSelect:poiAnnotation];
 }
 
 

@@ -10,7 +10,7 @@
 #import "MapWidget.h"
 #import "PositionTableWidget.h"
 
-@interface MapPage : BaseNavPage{
+@interface MapPage : BaseNavPage <PositionTableDelegate> {
     IBOutlet UIView         *_mapView;
     MapWidget               *_mapWidget;
     

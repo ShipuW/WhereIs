@@ -66,7 +66,28 @@
     }
 }
 
+- (MAPointAnnotation*)containAnnotation:(MAPointAnnotation *)annotation in:(NSMutableArray<MAPointAnnotation*>*)annotations{
+    for (MAPointAnnotation *ann in annotations){
+        if( (ann.title == annotation.title)&&(ann.subtitle == annotation.subtitle) ){
+            return ann;
+        }
+    }
+    return nil;
+}
 
+- (void)addPoiAnnotation:(MAPointAnnotation *)annotation{
+    [self removePoiAnnotation:[self containAnnotation:annotation in:_annotations]];
+    [_annotations addObject:annotation];
+    [_mapView addAnnotation:annotation];
+}
+- (void)removePoiAnnotation:(MAPointAnnotation *)annotation{
+    [_annotations removeObject:annotation];
+    [_mapView removeAnnotation:annotation];
+}
+- (void)clearAllAnnotations{
+    [_mapView removeAnnotations:_annotations];
+    [_annotations removeAllObjects];
+}
 
 #pragma mark - MAMapViewDelegate,AMapSearchDelegate
 
@@ -94,7 +115,7 @@ updatingLocation:(BOOL)updatingLocation
     if(updatingLocation)
     {
         //取出当前位置的坐标
-        NSLog(@"latitude : %f,longitude: %f",userLocation.coordinate.latitude,userLocation.coordinate.longitude);
+        //NSLog(@"latitude : %f,longitude: %f",userLocation.coordinate.latitude,userLocation.coordinate.longitude);
         _currentLocation = [userLocation.location copy];
     }
 }
@@ -107,4 +128,21 @@ updatingLocation:(BOOL)updatingLocation
     
 }
 
+- (MAAnnotationView*)mapView:(MAMapView *)mapView viewForAnnotation:(id <MAAnnotation>)annotation{
+    if ([annotation isKindOfClass:[MAPointAnnotation class]]){
+        static NSString *reuseIndetifier = @"annotationReuseIndetifier";
+        MAPinAnnotationView *annotationView = (MAPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:reuseIndetifier];
+        if (annotationView == nil)
+        {
+            annotationView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:reuseIndetifier];
+        }
+        
+        annotationView.canShowCallout = YES;
+        annotationView.animatesDrop = YES;
+        
+        return annotationView;
+    }
+    
+    return nil;
+}
 @end

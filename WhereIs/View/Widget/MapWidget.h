@@ -19,4 +19,7 @@
 @property (nonatomic) CGFloat                   zoomLevel;
 @property (nonatomic) CLLocation                *currentLocation;
 
+- (void)addPoiAnnotation:(MAPointAnnotation *)annotation;
+- (void)removePoiAnnotation:(MAPointAnnotation *)annotation;
+- (void)clearAllAnnotations;
 @end

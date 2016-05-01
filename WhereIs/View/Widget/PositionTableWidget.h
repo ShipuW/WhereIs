@@ -8,11 +8,19 @@
 
 #import "TableWidget.h"
 #import "PositionCell.h"
-
+@protocol PositionTableDelegate;
 @interface PositionTableWidget : TableWidget {
     BOOL        _hasNextPage;
     NSInteger   _pageIndex;
 }
 - (void)updateUI;
+
+@property(nonatomic, assign) id<PositionTableDelegate> delegate;
+
+@end
+
+@protocol PositionTableDelegate <NSObject>
+
+- (void)didSelect:(MAPointAnnotation *)annotation;
 
 @end
