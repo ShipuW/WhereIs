@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "AdvertPage.h"
 #import "CameraPage.h"
+#import "MapPage.h"
 
 
 
@@ -23,8 +24,8 @@
 
 - (void)showHomePage
 {
-    CameraPage *page = [[CameraPage alloc] init];
-    
+    //CameraPage *page = [[CameraPage alloc] init];
+    MapPage *page = [[MapPage alloc] init];
     self.window.rootViewController = page;//navController;
     
     [self.window makeKeyAndVisible];
@@ -35,7 +36,8 @@
 #pragma mark - remember change
     [self showHomePage];
     //[AdvertPage showAdvertPage];
-
+    [MAMapServices sharedServices].apiKey = AmapKey;
+    [AMapSearchServices sharedServices].apiKey = AmapKey;
     return YES;
 }
 

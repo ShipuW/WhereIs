@@ -106,6 +106,9 @@ selector:_selector name:_name object:nil];
 // 消息通知Key
 #define NofifyNewsIcon      @"NewsIcon"
 
+// 高德地图
+#define AmapKey             @"b239d3ba7c47329f0c7ec9d07ef08c85"
+
 // 微信
 #define WXAppID             @"wxb5713bb26f06f413"
 
