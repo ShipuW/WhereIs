@@ -13,7 +13,7 @@
     BOOL        _hasNextPage;
     NSInteger   _pageIndex;
 }
-- (void)updateUI;
+
 
 @property(nonatomic, assign) id<PositionTableDelegate> delegate;
 

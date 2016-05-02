@@ -136,3 +136,13 @@ selector:_selector name:_name object:nil];
 #define LoginCheckTip       @"用户名或密码不能为空"
 #define LoginTitle          @"登录"
 #define WeatherSuffix       @"市市辖区"
+
+// 自定义弹出框信息
+#define kArrorHeight        10
+#define kPortraitMargin     5
+#define kPortraitWidth      50
+#define kPortraitHeight     50
+#define kTitleWidth         120
+#define kTitleHeight        20
+#define kCalloutWidth       200.0
+#define kCalloutHeight      70.0

@@ -131,18 +131,42 @@ updatingLocation:(BOOL)updatingLocation
 - (MAAnnotationView*)mapView:(MAMapView *)mapView viewForAnnotation:(id <MAAnnotation>)annotation{
     if ([annotation isKindOfClass:[MAPointAnnotation class]]){
         static NSString *reuseIndetifier = @"annotationReuseIndetifier";
-        MAPinAnnotationView *annotationView = (MAPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:reuseIndetifier];
+        CustomAnnotationWidget *annotationView = (CustomAnnotationWidget *)[mapView dequeueReusableAnnotationViewWithIdentifier:reuseIndetifier];
+        
+        //annotationView.delegate = self;
         if (annotationView == nil)
         {
-            annotationView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:reuseIndetifier];
+            annotationView = [[CustomAnnotationWidget alloc] initWithAnnotation:annotation reuseIdentifier:reuseIndetifier];
         }
         
-        annotationView.canShowCallout = YES;
-        annotationView.animatesDrop = YES;
+        //annotationView.ownerMapWidget = self;
+        annotationView.ownerMapPage   = _ownerPage;//传输页面指针
+        
+        
+        annotationView.canShowCallout = NO;
+        //annotationView.animatesDrop = YES;
+        
+        
+        annotationView.image = [UIImage imageNamed:@"pin.png"];
+        
+        // 设置为NO，用以调用自定义的calloutView
+        annotationView.canShowCallout = NO;
+        
+        // 设置中心点偏移，使得标注底部中间点成为经纬度对应点
+        annotationView.centerOffset = CGPointMake(0, -18);
         
         return annotationView;
     }
     
     return nil;
 }
+
+
+#pragma mark - CalloutDelegate
+
+//- (void)beginNavigation:(MAPointAnnotation *)annotation{
+//    NSLog(@"%@",annotation.title);
+//    //[self.delegate beginNavigation2MapPage:annotation];
+//}
+
 @end

@@ -57,6 +57,10 @@
 		84E44B571CD6853400BC6DE4 /* PositionTableWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E44B561CD6853400BC6DE4 /* PositionTableWidget.m */; };
 		84E44B591CD6867A00BC6DE4 /* PositionTableWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E44B581CD6867A00BC6DE4 /* PositionTableWidget.xib */; };
 		84E44B5B1CD6869100BC6DE4 /* PositionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E44B5A1CD6869100BC6DE4 /* PositionCell.xib */; };
+		84E44B5E1CD6BE6400BC6DE4 /* CalloutWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E44B5D1CD6BE6400BC6DE4 /* CalloutWidget.m */; };
+		84E44B611CD6C26900BC6DE4 /* CustomAnnotationWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E44B601CD6C26900BC6DE4 /* CustomAnnotationWidget.m */; };
+		84E44B631CD6C97600BC6DE4 /* pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E44B621CD6C97600BC6DE4 /* pin@2x.png */; };
+		84E44B651CD6CA3100BC6DE4 /* beginnav@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E44B641CD6CA3100BC6DE4 /* beginnav@2x.png */; };
 		8E95EBA82687DB39F7247AD4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6D84F3F22F594C95B8D5EA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -170,6 +174,12 @@
 		84E44B561CD6853400BC6DE4 /* PositionTableWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionTableWidget.m; sourceTree = "<group>"; };
 		84E44B581CD6867A00BC6DE4 /* PositionTableWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PositionTableWidget.xib; sourceTree = "<group>"; };
 		84E44B5A1CD6869100BC6DE4 /* PositionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PositionCell.xib; sourceTree = "<group>"; };
+		84E44B5C1CD6BE6400BC6DE4 /* CalloutWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalloutWidget.h; sourceTree = "<group>"; };
+		84E44B5D1CD6BE6400BC6DE4 /* CalloutWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalloutWidget.m; sourceTree = "<group>"; };
+		84E44B5F1CD6C26900BC6DE4 /* CustomAnnotationWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotationWidget.h; sourceTree = "<group>"; };
+		84E44B601CD6C26900BC6DE4 /* CustomAnnotationWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationWidget.m; sourceTree = "<group>"; };
+		84E44B621CD6C97600BC6DE4 /* pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin@2x.png"; sourceTree = "<group>"; };
+		84E44B641CD6CA3100BC6DE4 /* beginnav@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beginnav@2x.png"; sourceTree = "<group>"; };
 		8B6D84F3F22F594C95B8D5EA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E30D0D3415ECE08848254D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -411,6 +421,10 @@
 				84E44B501CD6844D00BC6DE4 /* TableWidget.m */,
 				84E44B551CD6853400BC6DE4 /* PositionTableWidget.h */,
 				84E44B561CD6853400BC6DE4 /* PositionTableWidget.m */,
+				84E44B5C1CD6BE6400BC6DE4 /* CalloutWidget.h */,
+				84E44B5D1CD6BE6400BC6DE4 /* CalloutWidget.m */,
+				84E44B5F1CD6C26900BC6DE4 /* CustomAnnotationWidget.h */,
+				84E44B601CD6C26900BC6DE4 /* CustomAnnotationWidget.m */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -475,6 +489,8 @@
 		84E44B441CD6789300BC6DE4 /* map */ = {
 			isa = PBXGroup;
 			children = (
+				84E44B641CD6CA3100BC6DE4 /* beginnav@2x.png */,
+				84E44B621CD6C97600BC6DE4 /* pin@2x.png */,
 				84E44B451CD678EF00BC6DE4 /* location_no@2x.png */,
 				84E44B461CD678EF00BC6DE4 /* location_yes@2x.png */,
 				84E44B471CD678EF00BC6DE4 /* path@2x.png */,
@@ -600,12 +616,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E44B631CD6C97600BC6DE4 /* pin@2x.png in Resources */,
 				84E44B4D1CD678EF00BC6DE4 /* restaurant.png in Resources */,
 				84E44B4E1CD678EF00BC6DE4 /* search@2x.png in Resources */,
 				84E44B5B1CD6869100BC6DE4 /* PositionCell.xib in Resources */,
 				84E44B431CD676B900BC6DE4 /* MapWidget.xib in Resources */,
 				84E44B4B1CD678EF00BC6DE4 /* location_yes@2x.png in Resources */,
 				840FD4111CD4FEE700C50D3E /* Assets.xcassets in Resources */,
+				84E44B651CD6CA3100BC6DE4 /* beginnav@2x.png in Resources */,
 				84E44B411CD6623700BC6DE4 /* MapPage.xib in Resources */,
 				840FD4871CD52FE600C50D3E /* Podfile in Resources */,
 				840FD4601CD51CB100C50D3E /* AdvertPage.xib in Resources */,
@@ -689,6 +707,7 @@
 				840FD4711CD51DBB00C50D3E /* FxAppSetting.m in Sources */,
 				84E44B511CD6844D00BC6DE4 /* TableWidget.m in Sources */,
 				840FD4721CD51DBB00C50D3E /* FxButtonHelper.m in Sources */,
+				84E44B5E1CD6BE6400BC6DE4 /* CalloutWidget.m in Sources */,
 				840FD4701CD51DBB00C50D3E /* FxActivityIndicator.m in Sources */,
 				84E44B3F1CD65DE300BC6DE4 /* WeatherWidget.m in Sources */,
 				840FD4A01CD5558100C50D3E /* CameraBackgroundWidget.m in Sources */,
@@ -716,6 +735,7 @@
 				840FD4061CD4FEE700C50D3E /* main.m in Sources */,
 				840FD46F1CD51DBB00C50D3E /* FxActivity.m in Sources */,
 				840FD4981CD54EA700C50D3E /* CameraPage.m in Sources */,
+				84E44B611CD6C26900BC6DE4 /* CustomAnnotationWidget.m in Sources */,
 				840FD4751CD51DBB00C50D3E /* FxString.m in Sources */,
 				840FD4921CD54C1D00C50D3E /* GetImage.m in Sources */,
 			);

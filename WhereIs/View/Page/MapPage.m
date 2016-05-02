@@ -26,6 +26,7 @@
     _mapWidget = [[MapWidget alloc] init];
     //_mapWidget.language = MAMapLanguageEn;;
     //_mapWidget.zoomLevel = 11.0;
+    _mapWidget.ownerPage = self;
 
     
     _mapWidget.view.frame = _mapView.bounds;//赋值要放在这句之前
@@ -77,7 +78,7 @@
 //    _positionTableWidget.view.frame = CGRectMake(_positionTableView.frame.origin.x, _positionTableView.frame.origin.y, _positionTableView.frame.size.width, _positionTableView.frame.size.width * 0.5);
 }
 
-#pragma mark - AMapSearchDelegate,PositionTableDelegate
+#pragma mark - AMapSearchDelegate,PositionTableDelegate,MapWidgetDelegate,CalloutDelegate
 
 
 - (void)onPOISearchDone:(AMapPOISearchBaseRequest *)request response:(AMapPOISearchResponse *)response
@@ -105,6 +106,9 @@
     [_mapWidget addPoiAnnotation:annotation];
 }
 
+- (void)beginNavigation:(MAPointAnnotation *)annotation{
+    NSLog(@"%@",annotation.title);
+}
 
 @end
 
