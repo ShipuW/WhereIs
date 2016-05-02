@@ -8,6 +8,7 @@
 
 #import "MapPage.h"
 #import "CameraPage.h"
+#import "SearchPage.h"
 
 @implementation MapPage
 
@@ -16,6 +17,17 @@
     [self addMapView];
     [self initSearch];
     [self initControls];
+    [self initAttributes];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+
+    [super viewWillAppear:animated];
+    if ([_searchKeyword isEqualToString:@""]){
+    }else{
+        [self beginSearch];
+    }
+            
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,7 +38,7 @@
     
     _mapWidget = [[MapWidget alloc] init];
     //_mapWidget.language = MAMapLanguageEn;;
-    //_mapWidget.zoomLevel = 11.0;
+    _mapWidget.zoomLevel = 15.0;
     _mapWidget.ownerPage = self;
 
     
@@ -60,7 +72,21 @@
     self.title = @"在哪";
 }
 
+- (void)initAttributes{
+    _searchKeyword = @"";
+}
+
 - (IBAction)searchAction:(id)sender{
+    SearchPage *page = [[SearchPage alloc] init];
+    
+    page.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:page animated:YES];
+    
+    [_mapWidget clearAllAnnotations];
+
+}
+
+- (void)beginSearch{
     [_mapWidget clearAllAnnotations];
     
     if (_mapWidget.currentLocation == nil || _search == nil){
@@ -70,14 +96,13 @@
     
     AMapPOIAroundSearchRequest *request = [[AMapPOIAroundSearchRequest alloc] init];
     request.location = [AMapGeoPoint locationWithLatitude:_mapWidget.currentLocation.coordinate.latitude longitude:_mapWidget.currentLocation.coordinate.longitude];
-    request.keywords = @"重庆";
+    request.keywords = _searchKeyword;
     request.types = @"餐饮服务|生活服务";
     request.sortrule = 0;
     request.requireExtension = YES;
     
     //发起周边搜索
     [_search AMapPOIAroundSearch: request];
-//    _positionTableWidget.view.frame = CGRectMake(_positionTableView.frame.origin.x, _positionTableView.frame.origin.y, _positionTableView.frame.size.width, _positionTableView.frame.size.width * 0.5);
 }
 
 #pragma mark - AMapSearchDelegate,PositionTableDelegate,MapWidgetDelegate,CalloutDelegate

@@ -41,6 +41,11 @@
 		840FD4981CD54EA700C50D3E /* CameraPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD4971CD54EA700C50D3E /* CameraPage.m */; };
 		840FD49A1CD54F0B00C50D3E /* CameraPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840FD4991CD54F0B00C50D3E /* CameraPage.xib */; };
 		840FD4A01CD5558100C50D3E /* CameraBackgroundWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD49F1CD5558100C50D3E /* CameraBackgroundWidget.m */; };
+		84CEAF801CD7994E00175860 /* SearchPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CEAF7F1CD7994E00175860 /* SearchPage.m */; };
+		84CEAF831CD79A2000175860 /* SearchTableWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CEAF821CD79A2000175860 /* SearchTableWidget.m */; };
+		84CEAF851CD79A3500175860 /* SearchPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CEAF841CD79A3500175860 /* SearchPage.xib */; };
+		84CEAF871CD79A6300175860 /* SearchTableWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CEAF861CD79A6300175860 /* SearchTableWidget.xib */; };
+		84CEAF891CD79A7C00175860 /* SearchWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CEAF881CD79A7C00175860 /* SearchWidget.xib */; };
 		84E44B361CD614ED00BC6DE4 /* MapPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E44B351CD614ED00BC6DE4 /* MapPage.m */; };
 		84E44B391CD6587D00BC6DE4 /* MapWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E44B381CD6587D00BC6DE4 /* MapWidget.m */; };
 		84E44B3C1CD658A200BC6DE4 /* SearchWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E44B3B1CD658A200BC6DE4 /* SearchWidget.m */; };
@@ -161,6 +166,13 @@
 		840FD4991CD54F0B00C50D3E /* CameraPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraPage.xib; sourceTree = "<group>"; };
 		840FD49E1CD5558100C50D3E /* CameraBackgroundWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraBackgroundWidget.h; sourceTree = "<group>"; };
 		840FD49F1CD5558100C50D3E /* CameraBackgroundWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraBackgroundWidget.m; sourceTree = "<group>"; };
+		84CEAF7E1CD7994E00175860 /* SearchPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchPage.h; sourceTree = "<group>"; };
+		84CEAF7F1CD7994E00175860 /* SearchPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchPage.m; sourceTree = "<group>"; };
+		84CEAF811CD79A2000175860 /* SearchTableWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableWidget.h; sourceTree = "<group>"; };
+		84CEAF821CD79A2000175860 /* SearchTableWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableWidget.m; sourceTree = "<group>"; };
+		84CEAF841CD79A3500175860 /* SearchPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchPage.xib; sourceTree = "<group>"; };
+		84CEAF861CD79A6300175860 /* SearchTableWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableWidget.xib; sourceTree = "<group>"; };
+		84CEAF881CD79A7C00175860 /* SearchWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchWidget.xib; sourceTree = "<group>"; };
 		84E44B341CD614ED00BC6DE4 /* MapPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPage.h; sourceTree = "<group>"; };
 		84E44B351CD614ED00BC6DE4 /* MapPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPage.m; sourceTree = "<group>"; };
 		84E44B371CD6587D00BC6DE4 /* MapWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapWidget.h; sourceTree = "<group>"; };
@@ -420,6 +432,8 @@
 				840FD4971CD54EA700C50D3E /* CameraPage.m */,
 				84E44B341CD614ED00BC6DE4 /* MapPage.h */,
 				84E44B351CD614ED00BC6DE4 /* MapPage.m */,
+				84CEAF7E1CD7994E00175860 /* SearchPage.h */,
+				84CEAF7F1CD7994E00175860 /* SearchPage.m */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -445,6 +459,8 @@
 				84E44B5D1CD6BE6400BC6DE4 /* CalloutWidget.m */,
 				84E44B5F1CD6C26900BC6DE4 /* CustomAnnotationWidget.h */,
 				84E44B601CD6C26900BC6DE4 /* CustomAnnotationWidget.m */,
+				84CEAF811CD79A2000175860 /* SearchTableWidget.h */,
+				84CEAF821CD79A2000175860 /* SearchTableWidget.m */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -469,6 +485,9 @@
 				84E44B421CD676B900BC6DE4 /* MapWidget.xib */,
 				84E44B581CD6867A00BC6DE4 /* PositionTableWidget.xib */,
 				84E44B5A1CD6869100BC6DE4 /* PositionCell.xib */,
+				84CEAF841CD79A3500175860 /* SearchPage.xib */,
+				84CEAF861CD79A6300175860 /* SearchTableWidget.xib */,
+				84CEAF881CD79A7C00175860 /* SearchWidget.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -656,6 +675,7 @@
 			files = (
 				84E44B781CD6FFEF00BC6DE4 /* NavigationBar64@2x.png in Resources */,
 				84E44B791CD6FFEF00BC6DE4 /* NavigationBell@2x.png in Resources */,
+				84CEAF871CD79A6300175860 /* SearchTableWidget.xib in Resources */,
 				84E44B761CD6FFEF00BC6DE4 /* NavigationBackBlack@2x.png in Resources */,
 				84E44B631CD6C97600BC6DE4 /* pin@2x.png in Resources */,
 				84E44B4D1CD678EF00BC6DE4 /* restaurant.png in Resources */,
@@ -672,6 +692,8 @@
 				84E44B411CD6623700BC6DE4 /* MapPage.xib in Resources */,
 				84E44B771CD6FFEF00BC6DE4 /* NavigationBar44@2x.png in Resources */,
 				840FD4871CD52FE600C50D3E /* Podfile in Resources */,
+				84CEAF891CD79A7C00175860 /* SearchWidget.xib in Resources */,
+				84CEAF851CD79A3500175860 /* SearchPage.xib in Resources */,
 				840FD4601CD51CB100C50D3E /* AdvertPage.xib in Resources */,
 				84E44B751CD6FFEF00BC6DE4 /* NavigationBack@2x.png in Resources */,
 				84E44B7A1CD6FFEF00BC6DE4 /* NavigationSquare@2x.png in Resources */,
@@ -765,6 +787,7 @@
 				840FD4731CD51DBB00C50D3E /* FxDate.m in Sources */,
 				840FD44F1CD51B9900C50D3E /* BaseController.m in Sources */,
 				840FD45B1CD51C1200C50D3E /* BaseOperation.m in Sources */,
+				84CEAF801CD7994E00175860 /* SearchPage.m in Sources */,
 				840FD4851CD51E0200C50D3E /* FxJsonWriter.m in Sources */,
 				840FD4821CD51E0200C50D3E /* FxJsonBase.m in Sources */,
 				84E44B391CD6587D00BC6DE4 /* MapWidget.m in Sources */,
@@ -786,6 +809,7 @@
 				84E44B611CD6C26900BC6DE4 /* CustomAnnotationWidget.m in Sources */,
 				840FD4751CD51DBB00C50D3E /* FxString.m in Sources */,
 				840FD4921CD54C1D00C50D3E /* GetImage.m in Sources */,
+				84CEAF831CD79A2000175860 /* SearchTableWidget.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

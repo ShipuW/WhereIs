@@ -38,9 +38,12 @@
 - (void)initMapView{
     _mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds))];
     _mapView.delegate = self;
-    _mapView.language = _language;
-    _mapView.centerCoordinate = _centerCoordinate;
-    _mapView.zoomLevel = _zoomLevel;
+//    if (_language)
+        _mapView.language = _language;
+//    if (_centerCoordinate)
+        _mapView.centerCoordinate = _centerCoordinate;
+//    if (_zoomLevel)
+        _mapView.zoomLevel = _zoomLevel;
     _mapView.showsUserLocation = YES;
     [_mapView setUserTrackingMode:MAUserTrackingModeFollow animated:YES];
     [self.view addSubview:_mapView];

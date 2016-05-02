@@ -7,7 +7,20 @@
 //
 
 #import "BaseWidget.h"
+@protocol SearchWidgetDelegate;
+@interface SearchWidget : BaseWidget<UISearchBarDelegate>
 
-@interface SearchWidget : BaseWidget
+
+@property (nonatomic) NSString                      *keyword;
+@property (retain, nonatomic) IBOutlet UISearchBar  *searchBar;
+@property(nonatomic, assign) id<SearchWidgetDelegate> delegate;
+
+
+@end
+
+
+@protocol SearchWidgetDelegate <NSObject>
+
+- (void)searchString:(NSString *)keyword;
 
 @end

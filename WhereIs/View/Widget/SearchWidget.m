@@ -15,11 +15,41 @@
 @implementation SearchWidget
 
 - (void)viewDidLoad {
+    [self initAttributes];
     [super viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)initAttributes{
+    _keyword = @"";
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText;
+{
+    //_keyword = searchText;
+    if ([_keyword isEqualToString: @""])    [_searchBar setShowsCancelButton:NO animated:YES];
+    else    [_searchBar setShowsCancelButton:YES animated:YES];
+    
+}
+
+-(void) searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [_searchBar setShowsCancelButton:NO animated:YES];
+    //[self searchBar:_searchBar textDidChange:nil];
+    [_searchBar resignFirstResponder];
+    _keyword = searchBar.text;
+    [self.delegate searchString:_keyword];
+    
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *) searchBar
+{
+    [_searchBar setShowsCancelButton:NO animated:YES];
+    //[self searchBar:_searchBar textDidChange:nil];
+    [_searchBar resignFirstResponder];
 }
 
 

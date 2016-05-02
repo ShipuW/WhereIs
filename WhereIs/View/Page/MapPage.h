@@ -20,4 +20,6 @@
     IBOutlet UIView         *_positionTableView;
 }
 
+@property (nonatomic) NSString *searchKeyword;
+
 @end
