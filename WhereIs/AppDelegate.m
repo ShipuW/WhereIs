@@ -25,8 +25,9 @@
 - (void)showHomePage
 {
     //CameraPage *page = [[CameraPage alloc] init];
+    
     MapPage *page = [[MapPage alloc] init];
-
+    //MapWidget *page = [[MapWidget alloc] init];
     self.navController = [[UINavigationController alloc] init];
     [self.navController pushViewController:page animated:YES];
     self.window.rootViewController = self.navController;

@@ -59,6 +59,29 @@
 - (void)initAttributes{
     _annotations = [NSMutableArray array];
     self.listData = nil;
+    
+    _longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
+    _longPressGesture.delegate = self;
+    _longPressGesture.minimumPressDuration = 0.4;
+    [_mapView addGestureRecognizer:_longPressGesture];
+}
+
+- (void)handleLongPress:(UILongPressGestureRecognizer *)gesture{
+    if (gesture.state == UIGestureRecognizerStateBegan){
+        CLLocationCoordinate2D coordinate = [_mapView convertPoint:[gesture locationInView:_mapView] toCoordinateFromView:_mapView];
+        
+        if (_destinationPoint != nil){
+            [_mapView removeAnnotation:_destinationPoint];
+            _destinationPoint = nil;
+        }
+        
+        _destinationPoint = [[MAPointAnnotation alloc]init];
+        _destinationPoint.coordinate = coordinate;
+        _destinationPoint.title = @"地图选点";
+        
+        [_mapView addAnnotation:_destinationPoint];
+        
+    }
 }
 
 - (void)reGeoAction{//逆地理编码搜索请求
@@ -92,6 +115,20 @@
     [_annotations removeAllObjects];
 }
 
+- (void)setPathRequest{
+//    AMapNaviPoint *startPoint = [AMapNaviPoint locationWithLatitude:39.989614 longitude:116.481763];
+//    AMapNaviPoint *endPoints = [AMapNaviPoint locationWithLatitude:39.983456 longitude:116.315495];
+//    
+//    NSArray *startPoints = @[_startPoint];
+//    NSArray *endPoints   = @[_endPoint];
+//    
+//    //驾车路径规划（未设置途经点、导航策略为速度优先）
+//    [_naviManager calculateDriveRouteWithStartPoints:startPoints endPoints:endPoints wayPoints:nil drivingStrategy:0];
+//    
+//    //步行路径规划
+//    [self.naviManager calculateWalkRouteWithStartPoints:startPoints endPoints:endPoints];
+}
+
 #pragma mark - MAMapViewDelegate,AMapSearchDelegate
 
 - (void)AMapSearchRequest:(id)request didFailWithError:(NSError *)error{
@@ -108,6 +145,19 @@
     _mapView.userLocation.title = title;
     _mapView.userLocation.subtitle = response.regeocode.formattedAddress;
     
+}
+
+- (void)mapView:(MAMapView *)mapView didChangeUserTrackingMode:(MAUserTrackingMode)mode animated:(BOOL)animated
+{
+    // 修改定位按钮状态
+    if (mode == MAUserTrackingModeNone)
+    {
+        [_locationButton setImage:[UIImage imageNamed:@"location_no"] forState:UIControlStateNormal];
+    }
+    else
+    {
+        [_locationButton setImage:[UIImage imageNamed:@"location_yes"] forState:UIControlStateNormal];
+    }
 }
 
 
@@ -132,6 +182,22 @@ updatingLocation:(BOOL)updatingLocation
 }
 
 - (MAAnnotationView*)mapView:(MAMapView *)mapView viewForAnnotation:(id <MAAnnotation>)annotation{
+    if (annotation == _destinationPoint)
+    {
+        static NSString *reuseIndetifier = @"startAnnotationReuseIndetifier";
+        MAPinAnnotationView *annotationView = (MAPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:reuseIndetifier];
+        if (annotationView == nil)
+        {
+            annotationView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:reuseIndetifier];
+        }
+        
+        annotationView.canShowCallout = YES;
+        annotationView.animatesDrop = YES;
+        
+        return annotationView;
+    }
+    
+    
     if ([annotation isKindOfClass:[MAPointAnnotation class]]){
         static NSString *reuseIndetifier = @"annotationReuseIndetifier";
         CustomAnnotationWidget *annotationView = (CustomAnnotationWidget *)[mapView dequeueReusableAnnotationViewWithIdentifier:reuseIndetifier];

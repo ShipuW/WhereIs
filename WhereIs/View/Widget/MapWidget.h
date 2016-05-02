@@ -12,22 +12,29 @@
 
 //@protocol MapWidgetDelegate;
 
-@interface MapWidget : BaseWidget<MAMapViewDelegate>{
-    MAMapView       *_mapView;
-    NSMutableArray  *_annotations;
+@interface MapWidget : BaseWidget<MAMapViewDelegate,UIGestureRecognizerDelegate>{
+//    MAMapView                       *_mapView;
+    NSMutableArray                  *_annotations;
+    UILongPressGestureRecognizer    *_longPressGesture;
+    
     
 }
 
+
+@property (nonatomic) MAMapView                 *mapView;
 @property (nonatomic) MAMapLanguage             language;
 @property (nonatomic) CLLocationCoordinate2D    centerCoordinate;
 @property (nonatomic) CGFloat                   zoomLevel;
 @property (nonatomic) CLLocation                *currentLocation;
+@property (nonatomic) MAPointAnnotation         *destinationPoint;
 @property (nonatomic) MapPage                   *ownerPage;
+@property (nonatomic) UIButton                  *locationButton;
 //@property(nonatomic, assign) id<MapWidgetDelegate> delegate;
 
 - (void)addPoiAnnotation:(MAPointAnnotation *)annotation;
 - (void)removePoiAnnotation:(MAPointAnnotation *)annotation;
 - (void)clearAllAnnotations;
+- (void)setPathRequest;
 @end
 
 //@protocol MapWidgetDelegate <NSObject>

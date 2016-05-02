@@ -15,9 +15,13 @@
     MapWidget               *_mapWidget;
     
     IBOutlet UIButton       *_searchButton;
+    IBOutlet UIButton       *_pathButton;
+    IBOutlet UIButton       *_locationButton;
     
     PositionTableWidget     *_positionTableWidget;
     IBOutlet UIView         *_positionTableView;
+    
+
 }
 
 @property (nonatomic) NSString *searchKeyword;

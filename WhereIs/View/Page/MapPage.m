@@ -14,9 +14,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self initControls];
     [self addMapView];
     [self initSearch];
-    [self initControls];
+
     [self initAttributes];
 }
 
@@ -37,9 +38,10 @@
 - (void)addMapView{
     
     _mapWidget = [[MapWidget alloc] init];
-    //_mapWidget.language = MAMapLanguageEn;;
-    _mapWidget.zoomLevel = 15.0;
+    //_mapWidget.language = MAMapLanguageEn;
+    _mapWidget.zoomLevel = kDefaultLocationZoomLevel;
     _mapWidget.ownerPage = self;
+    _mapWidget.locationButton = _locationButton;
 
     
     _mapWidget.view.frame = _mapView.bounds;//赋值要放在这句之前
@@ -56,8 +58,6 @@
     _positionTableWidget.listData = array;
     _positionTableWidget.view.frame = _positionTableView.bounds;//赋值要放在这句之前
     [_positionTableView addSubview:_positionTableWidget.view];
-    //[_positionTableView sendSubviewToBack:_positionTableWidget.view];//加上widget后放到底部，使原本的subview显示出来
-    //[_positionTableWidget updateUI];
 }
 
 
@@ -66,6 +66,15 @@
     _search.delegate = self;
 }
 
+//- (void)initNaviManager
+//{
+//    if (_naviManager == nil)
+//    {
+//        _naviManager = [[AMapNaviManager alloc] init];
+//        [_naviManager setDelegate:self];
+//    }
+//}
+
 - (void)initControls{
     _searchButton.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin;
     [_positionTableView setHidden:YES];
@@ -73,6 +82,7 @@
 }
 
 - (void)initAttributes{
+    
     _searchKeyword = @"";
 }
 
@@ -83,6 +93,34 @@
     [self.navigationController pushViewController:page animated:YES];
     
     [_mapWidget clearAllAnnotations];
+
+}
+
+- (IBAction)locateAction:(id)sender{
+    if (_mapWidget.mapView.userTrackingMode != MAUserTrackingModeFollow)
+    {
+        _mapWidget.mapView.userTrackingMode = MAUserTrackingModeFollow;
+        [_mapWidget.mapView setZoomLevel:kDefaultLocationZoomLevel animated:YES];
+    }
+
+}
+
+- (IBAction)pathAction:(id)sender{
+    if (_mapWidget.destinationPoint == nil || _mapWidget.currentLocation == nil || _search == nil)
+    {
+        NSLog(@"path search failed");
+        return;
+    }
+    [_mapWidget setPathRequest];
+//    AMapNavigationSearchRequest *request = [[AMapNavigationSearchRequest alloc] init];
+//    
+//    // 设置为步行路径规划
+//    request.searchType = AMapSearchType_NaviWalking;
+//    
+//    request.origin = [AMapGeoPoint locationWithLatitude:_currentLocation.coordinate.latitude longitude:_currentLocation.coordinate.longitude];
+//    request.destination = [AMapGeoPoint locationWithLatitude:_destinationPoint.coordinate.latitude longitude:_destinationPoint.coordinate.longitude];
+//    
+//    [_search AMapNavigationSearch:request];
 
 }
 
@@ -106,6 +144,8 @@
 }
 
 #pragma mark - AMapSearchDelegate,PositionTableDelegate,MapWidgetDelegate,CalloutDelegate
+
+
 
 
 - (void)onPOISearchDone:(AMapPOISearchBaseRequest *)request response:(AMapPOISearchResponse *)response
