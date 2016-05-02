@@ -26,8 +26,10 @@
 {
     //CameraPage *page = [[CameraPage alloc] init];
     MapPage *page = [[MapPage alloc] init];
-    self.window.rootViewController = page;//navController;
-    
+
+    self.navController = [[UINavigationController alloc] init];
+    [self.navController pushViewController:page animated:YES];
+    self.window.rootViewController = self.navController;
     [self.window makeKeyAndVisible];
 }
 

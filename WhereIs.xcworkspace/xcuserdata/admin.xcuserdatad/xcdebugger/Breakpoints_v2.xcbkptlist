@@ -83,13 +83,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WhereIs/View/Page/MapPage.m"
-            timestampString = "483850755.686255"
+            filePath = "WhereIs/View/Page/CameraPage.m"
+            timestampString = "483851949.046617"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "-beginNavigation:"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "-setCameraBackground"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

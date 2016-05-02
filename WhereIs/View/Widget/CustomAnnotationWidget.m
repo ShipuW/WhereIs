@@ -7,7 +7,7 @@
 //
 
 #import "CustomAnnotationWidget.h"
-#import "MapWidget.h"
+
 @interface CustomAnnotationWidget ()
 
     @property (nonatomic, strong, readwrite) CalloutWidget *calloutWidget;

@@ -15,4 +15,6 @@
     CameraBackgroundWidget  *_cameraWidget;
 }
 
+@property(nonatomic) MAPointAnnotation      *targetAnnotation;
+
 @end

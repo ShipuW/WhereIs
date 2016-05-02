@@ -7,6 +7,7 @@
 //
 
 #import "MapPage.h"
+#import "CameraPage.h"
 
 @implementation MapPage
 
@@ -56,6 +57,7 @@
 - (void)initControls{
     _searchButton.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin;
     [_positionTableView setHidden:YES];
+    self.title = @"在哪";
 }
 
 - (IBAction)searchAction:(id)sender{
@@ -107,7 +109,12 @@
 }
 
 - (void)beginNavigation:(MAPointAnnotation *)annotation{
-    NSLog(@"%@",annotation.title);
+    //NSLog(@"%@",annotation.title);
+    CameraPage *page = [[CameraPage alloc] init];
+    
+    page.targetAnnotation = annotation;
+    page.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:page animated:YES];
 }
 
 @end

@@ -61,6 +61,16 @@
 		84E44B611CD6C26900BC6DE4 /* CustomAnnotationWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E44B601CD6C26900BC6DE4 /* CustomAnnotationWidget.m */; };
 		84E44B631CD6C97600BC6DE4 /* pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E44B621CD6C97600BC6DE4 /* pin@2x.png */; };
 		84E44B651CD6CA3100BC6DE4 /* beginnav@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E44B641CD6CA3100BC6DE4 /* beginnav@2x.png */; };
+		84E44B711CD6FFEF00BC6DE4 /* NavBarAlpha.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E44B671CD6FFEF00BC6DE4 /* NavBarAlpha.png */; };
+		84E44B721CD6FFEF00BC6DE4 /* NavBarIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E44B681CD6FFEF00BC6DE4 /* NavBarIcon@2x.png */; };
+		84E44B731CD6FFEF00BC6DE4 /* NavBarWhite44@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E44B691CD6FFEF00BC6DE4 /* NavBarWhite44@2x.png */; };
+		84E44B741CD6FFEF00BC6DE4 /* NavBarWhite64@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E44B6A1CD6FFEF00BC6DE4 /* NavBarWhite64@2x.png */; };
+		84E44B751CD6FFEF00BC6DE4 /* NavigationBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E44B6B1CD6FFEF00BC6DE4 /* NavigationBack@2x.png */; };
+		84E44B761CD6FFEF00BC6DE4 /* NavigationBackBlack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E44B6C1CD6FFEF00BC6DE4 /* NavigationBackBlack@2x.png */; };
+		84E44B771CD6FFEF00BC6DE4 /* NavigationBar44@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E44B6D1CD6FFEF00BC6DE4 /* NavigationBar44@2x.png */; };
+		84E44B781CD6FFEF00BC6DE4 /* NavigationBar64@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E44B6E1CD6FFEF00BC6DE4 /* NavigationBar64@2x.png */; };
+		84E44B791CD6FFEF00BC6DE4 /* NavigationBell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E44B6F1CD6FFEF00BC6DE4 /* NavigationBell@2x.png */; };
+		84E44B7A1CD6FFEF00BC6DE4 /* NavigationSquare@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E44B701CD6FFEF00BC6DE4 /* NavigationSquare@2x.png */; };
 		8E95EBA82687DB39F7247AD4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6D84F3F22F594C95B8D5EA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -180,6 +190,16 @@
 		84E44B601CD6C26900BC6DE4 /* CustomAnnotationWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationWidget.m; sourceTree = "<group>"; };
 		84E44B621CD6C97600BC6DE4 /* pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin@2x.png"; sourceTree = "<group>"; };
 		84E44B641CD6CA3100BC6DE4 /* beginnav@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beginnav@2x.png"; sourceTree = "<group>"; };
+		84E44B671CD6FFEF00BC6DE4 /* NavBarAlpha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavBarAlpha.png; sourceTree = "<group>"; };
+		84E44B681CD6FFEF00BC6DE4 /* NavBarIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavBarIcon@2x.png"; sourceTree = "<group>"; };
+		84E44B691CD6FFEF00BC6DE4 /* NavBarWhite44@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavBarWhite44@2x.png"; sourceTree = "<group>"; };
+		84E44B6A1CD6FFEF00BC6DE4 /* NavBarWhite64@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavBarWhite64@2x.png"; sourceTree = "<group>"; };
+		84E44B6B1CD6FFEF00BC6DE4 /* NavigationBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationBack@2x.png"; sourceTree = "<group>"; };
+		84E44B6C1CD6FFEF00BC6DE4 /* NavigationBackBlack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationBackBlack@2x.png"; sourceTree = "<group>"; };
+		84E44B6D1CD6FFEF00BC6DE4 /* NavigationBar44@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationBar44@2x.png"; sourceTree = "<group>"; };
+		84E44B6E1CD6FFEF00BC6DE4 /* NavigationBar64@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationBar64@2x.png"; sourceTree = "<group>"; };
+		84E44B6F1CD6FFEF00BC6DE4 /* NavigationBell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationBell@2x.png"; sourceTree = "<group>"; };
+		84E44B701CD6FFEF00BC6DE4 /* NavigationSquare@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationSquare@2x.png"; sourceTree = "<group>"; };
 		8B6D84F3F22F594C95B8D5EA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E30D0D3415ECE08848254D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -456,6 +476,7 @@
 		840FD4461CD5154C00C50D3E /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				84E44B661CD6FFCA00BC6DE4 /* NavBar */,
 				84E44B441CD6789300BC6DE4 /* map */,
 				840FD4101CD4FEE700C50D3E /* Assets.xcassets */,
 			);
@@ -498,6 +519,23 @@
 				84E44B491CD678EF00BC6DE4 /* search@2x.png */,
 			);
 			path = map;
+			sourceTree = "<group>";
+		};
+		84E44B661CD6FFCA00BC6DE4 /* NavBar */ = {
+			isa = PBXGroup;
+			children = (
+				84E44B671CD6FFEF00BC6DE4 /* NavBarAlpha.png */,
+				84E44B681CD6FFEF00BC6DE4 /* NavBarIcon@2x.png */,
+				84E44B691CD6FFEF00BC6DE4 /* NavBarWhite44@2x.png */,
+				84E44B6A1CD6FFEF00BC6DE4 /* NavBarWhite64@2x.png */,
+				84E44B6B1CD6FFEF00BC6DE4 /* NavigationBack@2x.png */,
+				84E44B6C1CD6FFEF00BC6DE4 /* NavigationBackBlack@2x.png */,
+				84E44B6D1CD6FFEF00BC6DE4 /* NavigationBar44@2x.png */,
+				84E44B6E1CD6FFEF00BC6DE4 /* NavigationBar64@2x.png */,
+				84E44B6F1CD6FFEF00BC6DE4 /* NavigationBell@2x.png */,
+				84E44B701CD6FFEF00BC6DE4 /* NavigationSquare@2x.png */,
+			);
+			path = NavBar;
 			sourceTree = "<group>";
 		};
 		93D9149F3F8CF1000A108C09 /* Frameworks */ = {
@@ -616,17 +654,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E44B781CD6FFEF00BC6DE4 /* NavigationBar64@2x.png in Resources */,
+				84E44B791CD6FFEF00BC6DE4 /* NavigationBell@2x.png in Resources */,
+				84E44B761CD6FFEF00BC6DE4 /* NavigationBackBlack@2x.png in Resources */,
 				84E44B631CD6C97600BC6DE4 /* pin@2x.png in Resources */,
 				84E44B4D1CD678EF00BC6DE4 /* restaurant.png in Resources */,
+				84E44B711CD6FFEF00BC6DE4 /* NavBarAlpha.png in Resources */,
+				84E44B741CD6FFEF00BC6DE4 /* NavBarWhite64@2x.png in Resources */,
 				84E44B4E1CD678EF00BC6DE4 /* search@2x.png in Resources */,
 				84E44B5B1CD6869100BC6DE4 /* PositionCell.xib in Resources */,
 				84E44B431CD676B900BC6DE4 /* MapWidget.xib in Resources */,
+				84E44B731CD6FFEF00BC6DE4 /* NavBarWhite44@2x.png in Resources */,
+				84E44B721CD6FFEF00BC6DE4 /* NavBarIcon@2x.png in Resources */,
 				84E44B4B1CD678EF00BC6DE4 /* location_yes@2x.png in Resources */,
 				840FD4111CD4FEE700C50D3E /* Assets.xcassets in Resources */,
 				84E44B651CD6CA3100BC6DE4 /* beginnav@2x.png in Resources */,
 				84E44B411CD6623700BC6DE4 /* MapPage.xib in Resources */,
+				84E44B771CD6FFEF00BC6DE4 /* NavigationBar44@2x.png in Resources */,
 				840FD4871CD52FE600C50D3E /* Podfile in Resources */,
 				840FD4601CD51CB100C50D3E /* AdvertPage.xib in Resources */,
+				84E44B751CD6FFEF00BC6DE4 /* NavigationBack@2x.png in Resources */,
+				84E44B7A1CD6FFEF00BC6DE4 /* NavigationSquare@2x.png in Resources */,
 				84E44B4A1CD678EF00BC6DE4 /* location_no@2x.png in Resources */,
 				84E44B591CD6867A00BC6DE4 /* PositionTableWidget.xib in Resources */,
 				840FD49A1CD54F0B00C50D3E /* CameraPage.xib in Resources */,
