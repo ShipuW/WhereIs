@@ -103,7 +103,7 @@
     
     
         //_myLocation = delegate.currentLocation;
-    NSLog(@"mylocation:%f,%f",_myLocation.coordinate.latitude,_myLocation.coordinate.longitude);
+    //NSLog(@"mylocation:%f,%f",_myLocation.coordinate.latitude,_myLocation.coordinate.longitude);
     [_targetHint setX:[Caculator caculateHorizontalPositionInCamera:_targetAnnotation.coordinate withMyLocation:_myLocation inHeading:newHeading withScreenWidth:self.view.frame.size.width] - _targetHint.frame.size.width * 0.5];
 }
 
