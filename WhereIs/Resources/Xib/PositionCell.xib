@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,17 +15,31 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFE-9L-Ktz">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFE-9L-Ktz">
                         <rect key="frame" x="8" y="8" width="304" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="31" id="9Pf-KW-LRu"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dG-8L-ZIA">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dG-8L-ZIA">
                         <rect key="frame" x="8" y="40" width="304" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="31" id="Nrm-4r-aVP"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="dFE-9L-Ktz" firstAttribute="leading" secondItem="1H9-7E-v5i" secondAttribute="leadingMargin" id="D8M-Tj-cmA"/>
+                    <constraint firstItem="0dG-8L-ZIA" firstAttribute="leading" secondItem="1H9-7E-v5i" secondAttribute="leadingMargin" id="GqR-pl-j67"/>
+                    <constraint firstItem="dFE-9L-Ktz" firstAttribute="trailing" secondItem="1H9-7E-v5i" secondAttribute="trailingMargin" id="Rkc-ES-4Ze"/>
+                    <constraint firstItem="dFE-9L-Ktz" firstAttribute="top" secondItem="1H9-7E-v5i" secondAttribute="topMargin" id="jc4-YK-yIc"/>
+                    <constraint firstItem="0dG-8L-ZIA" firstAttribute="bottom" secondItem="1H9-7E-v5i" secondAttribute="bottomMargin" id="qQH-Y7-PeR"/>
+                    <constraint firstItem="0dG-8L-ZIA" firstAttribute="trailing" secondItem="1H9-7E-v5i" secondAttribute="trailingMargin" id="zTI-Gm-O0h"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="_subTitleLabel" destination="0dG-8L-ZIA" id="Hxo-dY-47a"/>

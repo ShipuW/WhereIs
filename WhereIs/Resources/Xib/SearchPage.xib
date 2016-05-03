@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10116"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchPage">
@@ -17,16 +17,28 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wMx-lS-RIm">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMx-lS-RIm">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <color key="backgroundColor" red="0.78823529411764703" green="0.78823529411764703" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="fu7-2w-rsI"/>
+                    </constraints>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5lS-80-hdy">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lS-80-hdy">
                     <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="wMx-lS-RIm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2iA-Ay-16S"/>
+                <constraint firstAttribute="trailing" secondItem="5lS-80-hdy" secondAttribute="trailing" id="3P9-Sc-mt6"/>
+                <constraint firstItem="5lS-80-hdy" firstAttribute="top" secondItem="wMx-lS-RIm" secondAttribute="bottom" id="YzK-es-ASJ"/>
+                <constraint firstItem="wMx-lS-RIm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dLW-XC-8LT"/>
+                <constraint firstAttribute="trailing" secondItem="wMx-lS-RIm" secondAttribute="trailing" id="lIJ-MQ-i8l"/>
+                <constraint firstItem="5lS-80-hdy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mXx-VB-Nwc"/>
+                <constraint firstAttribute="bottom" secondItem="5lS-80-hdy" secondAttribute="bottom" id="toC-FO-VCO"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>

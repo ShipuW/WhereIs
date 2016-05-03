@@ -38,6 +38,7 @@
 - (void)removePoiAnnotation:(MAPointAnnotation *)annotation;
 - (void)clearAllAnnotations;
 - (void)setPathRequest;
+//- (void)reSizeMap:(MAMapRect)rect;
 @end
 
 //@protocol MapWidgetDelegate <NSObject>

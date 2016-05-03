@@ -8,7 +8,9 @@
 
 #import "CustomAnnotationWidget.h"
 
-@interface CustomAnnotationWidget ()
+@interface CustomAnnotationWidget (){
+    //BOOL myInside;
+}
 
     @property (nonatomic, strong, readwrite) CalloutWidget *calloutWidget;
 
@@ -26,6 +28,9 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
+//    if (myInside){
+//        return;
+//    }
     if (self.selected == selected)
     {
         return;
@@ -69,7 +74,8 @@
     {
         inside = [self.calloutWidget pointInside:[self convertPoint:point toView:self.calloutWidget] withEvent:event];
     }
-    
+    //myInside = inside;
+    //[self setSelected:inside];
     return inside;
 }
 

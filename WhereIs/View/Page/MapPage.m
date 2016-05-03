@@ -26,6 +26,17 @@
     [super viewWillAppear:animated];
     if ([_searchKeyword isEqualToString:@""]){
     }else{
+//        MAMapPoint point;
+//        point.x = 0;
+//        point.y = 0;
+//        MAMapSize size;
+//        size.width = self.view.frame.size.width;
+//        size.height = self.view.frame.size.height * 0.5;
+//        MAMapRect rect;
+//        rect.origin = point;
+//        rect.size = size;
+//        [_mapWidget reSizeMap:rect];
+
         [self beginSearch];
     }
             

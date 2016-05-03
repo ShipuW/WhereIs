@@ -16,12 +16,21 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="27M-br-crQ">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AdvertImage" translatesAutoresizingMaskIntoConstraints="NO" id="27M-br-crQ">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="27M-br-crQ" secondAttribute="bottom" id="EPs-nd-1DL"/>
+                <constraint firstAttribute="trailing" secondItem="27M-br-crQ" secondAttribute="trailing" id="FDw-Ei-rnt"/>
+                <constraint firstItem="27M-br-crQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aeQ-hW-8zO"/>
+                <constraint firstItem="27M-br-crQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="haO-JP-e3W"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
+    <resources>
+        <image name="AdvertImage" width="320" height="480"/>
+    </resources>
 </document>

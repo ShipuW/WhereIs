@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EUl-G2-3qQ">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EUl-G2-3qQ">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
@@ -26,6 +26,12 @@
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="EUl-G2-3qQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ISB-Ta-s1A"/>
+                <constraint firstItem="EUl-G2-3qQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ymz-xE-DlD"/>
+                <constraint firstAttribute="trailing" secondItem="EUl-G2-3qQ" secondAttribute="trailing" id="Zpi-8u-cxM"/>
+                <constraint firstAttribute="bottom" secondItem="EUl-G2-3qQ" secondAttribute="bottom" id="r4f-Fr-mEX"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>

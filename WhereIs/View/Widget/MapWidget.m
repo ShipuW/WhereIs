@@ -39,6 +39,7 @@
 - (void)initMapView{
     _mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds))];
     _mapView.delegate = self;
+    _mapView.showsCompass = NO;
 //    if (_language)
         _mapView.language = _language;
 //    if (_centerCoordinate)
@@ -106,6 +107,8 @@
     [self removePoiAnnotation:[self containAnnotation:annotation in:_annotations]];
     [_annotations addObject:annotation];
     [_mapView addAnnotation:annotation];
+    [_mapView setCenterCoordinate:annotation.coordinate animated:YES];
+
 }
 - (void)removePoiAnnotation:(MAPointAnnotation *)annotation{
     [_annotations removeObject:annotation];
@@ -129,6 +132,10 @@
 //    //步行路径规划
 //    [self.naviManager calculateWalkRouteWithStartPoints:startPoints endPoints:endPoints];
 }
+
+//- (void)reSizeMap:(MAMapRect)rect{
+//    [_mapView mapRectThatFits:rect];
+//}
 
 #pragma mark - MAMapViewDelegate,AMapSearchDelegate
 
@@ -224,6 +231,8 @@ updatingLocation:(BOOL)updatingLocation
         
         // 设置中心点偏移，使得标注底部中间点成为经纬度对应点
         annotationView.centerOffset = CGPointMake(0, -18);
+        
+
         
         return annotationView;
     }
