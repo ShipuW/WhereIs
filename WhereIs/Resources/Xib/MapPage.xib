@@ -10,6 +10,7 @@
             <connections>
                 <outlet property="_locationButton" destination="AzZ-Mk-RJa" id="pa7-s6-rT7"/>
                 <outlet property="_mapView" destination="dK2-xG-NWf" id="QKt-S3-8Bs"/>
+                <outlet property="_moveView" destination="p0W-cq-IcO" id="NkW-1N-uHe"/>
                 <outlet property="_pathButton" destination="lRn-qj-Eek" id="LIw-iR-iza"/>
                 <outlet property="_positionTableView" destination="fId-BU-yne" id="ngM-wh-NpI"/>
                 <outlet property="_searchButton" destination="45U-HA-3uG" id="4Do-eE-8uf"/>
@@ -86,6 +87,13 @@
                         <constraint firstItem="lRn-qj-Eek" firstAttribute="top" secondItem="45U-HA-3uG" secondAttribute="bottom" constant="20" id="qTQ-Vw-zCQ"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p0W-cq-IcO">
+                    <rect key="frame" x="0.0" y="258" width="320" height="26"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="oza-0a-gTZ"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fId-BU-yne">
                     <rect key="frame" x="0.0" y="284" width="320" height="284"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -97,12 +105,15 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="dK2-xG-NWf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0zz-Sh-xVK"/>
+                <constraint firstAttribute="trailing" secondItem="p0W-cq-IcO" secondAttribute="trailing" id="2Mj-Qu-6eu"/>
                 <constraint firstItem="fId-BU-yne" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Bpw-bA-yG7"/>
                 <constraint firstAttribute="bottom" secondItem="fId-BU-yne" secondAttribute="bottom" id="CxP-xQ-q8z"/>
                 <constraint firstAttribute="bottom" secondItem="dK2-xG-NWf" secondAttribute="bottom" id="DOl-qs-LPv"/>
                 <constraint firstAttribute="trailing" secondItem="fId-BU-yne" secondAttribute="trailing" id="WmW-oT-mNc"/>
                 <constraint firstAttribute="trailing" secondItem="dK2-xG-NWf" secondAttribute="trailing" id="fdV-6x-hyM"/>
+                <constraint firstItem="p0W-cq-IcO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sa6-ug-e5w"/>
                 <constraint firstItem="dK2-xG-NWf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tlB-OM-ebz"/>
+                <constraint firstItem="fId-BU-yne" firstAttribute="top" secondItem="p0W-cq-IcO" secondAttribute="bottom" id="yEQ-K2-WRW"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>

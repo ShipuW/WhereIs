@@ -9,21 +9,27 @@
 #import "BaseNavPage.h"
 #import "MapWidget.h"
 #import "PositionTableWidget.h"
+#import "MoveWidget.h"
 
-@interface MapPage : BaseNavPage <PositionTableDelegate,CalloutDelegate> {
-    IBOutlet UIView         *_mapView;
+@interface MapPage : BaseNavPage <PositionTableDelegate,CalloutDelegate,MoveWidgetDelegate> {
     MapWidget               *_mapWidget;
-    
-    IBOutlet UIButton       *_searchButton;
-    IBOutlet UIButton       *_pathButton;
-    IBOutlet UIButton       *_locationButton;
+    IBOutlet UIView         *_mapView;
+
+    MoveWidget              *_moveWidget;
+    IBOutlet UIView         *_moveView;
     
     PositionTableWidget     *_positionTableWidget;
     IBOutlet UIView         *_positionTableView;
     
+    IBOutlet UIButton       *_searchButton;
+    IBOutlet UIButton       *_pathButton;
+    IBOutlet UIButton       *_locationButton;
 
 }
 
 @property (nonatomic) NSString *searchKeyword;
+
+
+
 
 @end

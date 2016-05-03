@@ -10,12 +10,19 @@
 #import "CameraPage.h"
 #import "SearchPage.h"
 
+@interface MapPage(){
+    CGFloat originMoveViewCenterY;
+    CGFloat originTableViewCenterY;
+}
+@end
+
 @implementation MapPage
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initControls];
     [self addMapView];
+    [self addMoveView];
     [self initSearch];
 
     [self initAttributes];
@@ -36,14 +43,20 @@
 //        rect.origin = point;
 //        rect.size = size;
 //        [_mapWidget reSizeMap:rect];
-
+        
         [self beginSearch];
+        
     }
             
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)showMoveWidget{
+    [_moveView setHidden:NO];
+
 }
 
 - (void)addMapView{
@@ -61,6 +74,17 @@
     
 }
 
+- (void)addMoveView{
+    _moveWidget = [[MoveWidget alloc] init];
+    _moveWidget.delegate = self;
+    
+    _moveWidget.view.frame = _moveView.bounds;//赋值要放在这句之前
+    [_moveView addSubview:_moveWidget.view];
+    [_moveView sendSubviewToBack:_moveWidget.view];
+    originMoveViewCenterY = _moveView.center.y;
+
+}
+
 - (void)addPositionTableViewWithArray:(NSArray *)array{
     [_positionTableView setHidden:NO];
     _positionTableWidget = [[PositionTableWidget alloc] init];
@@ -69,7 +93,10 @@
     _positionTableWidget.listData = array;
     _positionTableWidget.view.frame = _positionTableView.bounds;//赋值要放在这句之前
     [_positionTableView addSubview:_positionTableWidget.view];
+    originTableViewCenterY = _positionTableView.center.y;
 }
+
+
 
 
 - (void)initSearch{
@@ -89,6 +116,7 @@
 - (void)initControls{
     _searchButton.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin;
     [_positionTableView setHidden:YES];
+    [_moveView setHidden:YES];
     self.title = @"在哪";
 }
 
@@ -136,6 +164,7 @@
 }
 
 - (void)beginSearch{
+    [self showIndicator:@"搜索中" autoHide:NO afterDelay:NO];
     [_mapWidget clearAllAnnotations];
     
     if (_mapWidget.currentLocation == nil || _search == nil){
@@ -154,7 +183,7 @@
     [_search AMapPOIAroundSearch: request];
 }
 
-#pragma mark - AMapSearchDelegate,PositionTableDelegate,MapWidgetDelegate,CalloutDelegate
+#pragma mark - AMapSearchDelegate,PositionTableDelegate,MapWidgetDelegate,CalloutDelegate,MoveWidgetDelegate
 
 
 
@@ -178,6 +207,9 @@
     NSLog(@"Place: %@", result);
     
     [self addPositionTableViewWithArray:response.pois];
+    [self showMoveWidget];
+    [self hideIndicator];
+    
     
 }
 
@@ -193,6 +225,24 @@
     page.targetAnnotation = annotation;
     page.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:page animated:YES];
+}
+
+- (void)beginMove:(CGFloat)moveY{
+    if(_moveView.center.y < originMoveViewCenterY - 1){
+        [_moveWidget.arrowImage setImage:[UIImage imageNamed:@"arrow_down.png"]];
+        _moveView.center = CGPointMake(_moveView.center.x, originMoveViewCenterY);
+        
+        _positionTableView.center = CGPointMake(_positionTableView.center.x, originTableViewCenterY + 0.5 * _moveView.frame.size.height+1);
+    }else if(_moveView.center.y + 0.5 * _moveView.frame.size.height > self.view.frame.size.height + 1){
+        [_moveWidget.arrowImage setImage:[UIImage imageNamed:@"arrow_up.png"]];
+        _moveView.center = CGPointMake(_moveView.center.x, self.view.frame.size.height - 0.5 * _moveView.frame.size.height);
+        _positionTableView.center = CGPointMake(_positionTableView.center.x, self.view.frame.size.height + 0.5 * _positionTableView.frame.size.height);
+    }else{
+        
+        _positionTableView.center = CGPointMake(_positionTableView.center.x, _positionTableView.center.y + moveY);
+        _moveView.center = CGPointMake(_moveView.center.x, _moveView.center.y + moveY);
+    }
+
 }
 
 @end
