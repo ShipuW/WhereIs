@@ -16,9 +16,10 @@
 #import <MAMapKit/MAMapKit.h>
 #import <AMapSearchKit/AMapSearchKit.h>
 //#import <AMapNaviKit/AMapNaviKit.h>
+#import "UIView+Frame.h"
 
 
-
+#import "Caculator.h"
 #import "Defines.h"
 #import <CoreLocation/CoreLocation.h>
 #import <CoreMotion/CoreMotion.h>

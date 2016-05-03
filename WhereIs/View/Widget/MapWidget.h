@@ -10,6 +10,8 @@
 #import "CustomAnnotationWidget.h"
 @class MapPage;
 
+
+
 //@protocol MapWidgetDelegate;
 
 @interface MapWidget : BaseWidget<MAMapViewDelegate,UIGestureRecognizerDelegate>{
@@ -29,6 +31,7 @@
 @property (nonatomic) MAPointAnnotation         *destinationPoint;
 @property (nonatomic) MapPage                   *ownerPage;
 @property (nonatomic) UIButton                  *locationButton;
+//@property (nonatomic) MAPointAnnotation         *currentAnnotation;
 //@property(nonatomic, assign) id<MapWidgetDelegate> delegate;
 
 - (void)addPoiAnnotation:(MAPointAnnotation *)annotation;

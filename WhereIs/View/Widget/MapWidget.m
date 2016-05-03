@@ -7,6 +7,7 @@
 //
 
 #import "MapWidget.h"
+#import "AppDelegate.h"
 
 
 
@@ -168,8 +169,8 @@ updatingLocation:(BOOL)updatingLocation
     if(updatingLocation)
     {
         //取出当前位置的坐标
-        //NSLog(@"latitude : %f,longitude: %f",userLocation.coordinate.latitude,userLocation.coordinate.longitude);
         _currentLocation = [userLocation.location copy];
+        //NSLog(@"%@",_currentLocation);
     }
 }
 

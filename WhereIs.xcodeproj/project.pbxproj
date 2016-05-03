@@ -33,7 +33,6 @@
 		840FD4841CD51E0200C50D3E /* FxJsonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD47E1CD51E0200C50D3E /* FxJsonUtility.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		840FD4851CD51E0200C50D3E /* FxJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD4801CD51E0200C50D3E /* FxJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		840FD4871CD52FE600C50D3E /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 840FD4861CD52FE600C50D3E /* Podfile */; };
-		840FD4891CD53C8700C50D3E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FD4881CD53C8700C50D3E /* CoreLocation.framework */; };
 		840FD48B1CD53CE000C50D3E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FD48A1CD53CE000C50D3E /* CoreMotion.framework */; };
 		840FD48F1CD54B6A00C50D3E /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD48E1CD54B6A00C50D3E /* Global.m */; };
 		840FD4921CD54C1D00C50D3E /* GetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD4911CD54C1D00C50D3E /* GetImage.m */; };
@@ -46,6 +45,10 @@
 		84CEAF851CD79A3500175860 /* SearchPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CEAF841CD79A3500175860 /* SearchPage.xib */; };
 		84CEAF871CD79A6300175860 /* SearchTableWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CEAF861CD79A6300175860 /* SearchTableWidget.xib */; };
 		84CEAF891CD79A7C00175860 /* SearchWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CEAF881CD79A7C00175860 /* SearchWidget.xib */; };
+		84CEAF8D1CD8297D00175860 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FD4881CD53C8700C50D3E /* CoreLocation.framework */; };
+		84CEAF901CD82C8600175860 /* ViewOnCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CEAF8F1CD82C8600175860 /* ViewOnCamera.m */; };
+		84CEAF931CD834C100175860 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CEAF921CD834C100175860 /* UIView+Frame.m */; };
+		84CEAF961CD839EC00175860 /* Caculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CEAF951CD839EC00175860 /* Caculator.m */; };
 		84E44B361CD614ED00BC6DE4 /* MapPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E44B351CD614ED00BC6DE4 /* MapPage.m */; };
 		84E44B391CD6587D00BC6DE4 /* MapWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E44B381CD6587D00BC6DE4 /* MapWidget.m */; };
 		84E44B3C1CD658A200BC6DE4 /* SearchWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E44B3B1CD658A200BC6DE4 /* SearchWidget.m */; };
@@ -173,6 +176,12 @@
 		84CEAF841CD79A3500175860 /* SearchPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchPage.xib; sourceTree = "<group>"; };
 		84CEAF861CD79A6300175860 /* SearchTableWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableWidget.xib; sourceTree = "<group>"; };
 		84CEAF881CD79A7C00175860 /* SearchWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchWidget.xib; sourceTree = "<group>"; };
+		84CEAF8E1CD82C8600175860 /* ViewOnCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewOnCamera.h; sourceTree = "<group>"; };
+		84CEAF8F1CD82C8600175860 /* ViewOnCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewOnCamera.m; sourceTree = "<group>"; };
+		84CEAF911CD834C100175860 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		84CEAF921CD834C100175860 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		84CEAF941CD839EC00175860 /* Caculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Caculator.h; sourceTree = "<group>"; };
+		84CEAF951CD839EC00175860 /* Caculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Caculator.m; sourceTree = "<group>"; };
 		84E44B341CD614ED00BC6DE4 /* MapPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPage.h; sourceTree = "<group>"; };
 		84E44B351CD614ED00BC6DE4 /* MapPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPage.m; sourceTree = "<group>"; };
 		84E44B371CD6587D00BC6DE4 /* MapWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapWidget.h; sourceTree = "<group>"; };
@@ -221,8 +230,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CEAF8D1CD8297D00175860 /* CoreLocation.framework in Frameworks */,
 				840FD48B1CD53CE000C50D3E /* CoreMotion.framework in Frameworks */,
-				840FD4891CD53C8700C50D3E /* CoreLocation.framework in Frameworks */,
 				8E95EBA82687DB39F7247AD4 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,6 +390,10 @@
 				840FD46C1CD51DBB00C50D3E /* FxFileUtility.m */,
 				840FD46D1CD51DBB00C50D3E /* FxString.h */,
 				840FD46E1CD51DBB00C50D3E /* FxString.m */,
+				84CEAF911CD834C100175860 /* UIView+Frame.h */,
+				84CEAF921CD834C100175860 /* UIView+Frame.m */,
+				84CEAF941CD839EC00175860 /* Caculator.h */,
+				84CEAF951CD839EC00175860 /* Caculator.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -461,6 +474,8 @@
 				84E44B601CD6C26900BC6DE4 /* CustomAnnotationWidget.m */,
 				84CEAF811CD79A2000175860 /* SearchTableWidget.h */,
 				84CEAF821CD79A2000175860 /* SearchTableWidget.m */,
+				84CEAF8E1CD82C8600175860 /* ViewOnCamera.h */,
+				84CEAF8F1CD82C8600175860 /* ViewOnCamera.m */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -781,6 +796,7 @@
 				840FD4701CD51DBB00C50D3E /* FxActivityIndicator.m in Sources */,
 				84E44B3F1CD65DE300BC6DE4 /* WeatherWidget.m in Sources */,
 				840FD4A01CD5558100C50D3E /* CameraBackgroundWidget.m in Sources */,
+				84CEAF901CD82C8600175860 /* ViewOnCamera.m in Sources */,
 				840FD4581CD51BE400C50D3E /* BaseCell.m in Sources */,
 				84E44B571CD6853400BC6DE4 /* PositionTableWidget.m in Sources */,
 				840FD44B1CD518BD00C50D3E /* BaseInfo.m in Sources */,
@@ -790,7 +806,9 @@
 				84CEAF801CD7994E00175860 /* SearchPage.m in Sources */,
 				840FD4851CD51E0200C50D3E /* FxJsonWriter.m in Sources */,
 				840FD4821CD51E0200C50D3E /* FxJsonBase.m in Sources */,
+				84CEAF931CD834C100175860 /* UIView+Frame.m in Sources */,
 				84E44B391CD6587D00BC6DE4 /* MapWidget.m in Sources */,
+				84CEAF961CD839EC00175860 /* Caculator.m in Sources */,
 				840FD4811CD51E0200C50D3E /* FxJSON.m in Sources */,
 				840FD4521CD51BB200C50D3E /* BasePage.m in Sources */,
 				84E44B3C1CD658A200BC6DE4 /* SearchWidget.m in Sources */,

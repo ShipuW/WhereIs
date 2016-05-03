@@ -152,6 +152,7 @@
 {
     if(response.pois.count == 0)
     {
+        [self showIndicator:@"没有找到，请重新输入" autoHide:YES afterDelay:YES];
         return;
     }
     
@@ -177,6 +178,7 @@
     //NSLog(@"%@",annotation.title);
     CameraPage *page = [[CameraPage alloc] init];
     
+    page.myLocation = _mapWidget.currentLocation;
     page.targetAnnotation = annotation;
     page.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:page animated:YES];

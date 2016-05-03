@@ -15,6 +15,8 @@
 
 @implementation AppDelegate
 
+@synthesize window =_window;
+@synthesize currentLocation;
 
 + (AppDelegate *)appDeg
 {

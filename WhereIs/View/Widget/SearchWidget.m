@@ -30,7 +30,7 @@
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText;
 {
     //_keyword = searchText;
-    if ([_keyword isEqualToString: @""])    [_searchBar setShowsCancelButton:NO animated:YES];
+    if ([searchText isEqualToString: @""])    [_searchBar setShowsCancelButton:NO animated:YES];
     else    [_searchBar setShowsCancelButton:YES animated:YES];
     
 }
@@ -47,7 +47,8 @@
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *) searchBar
 {
-    [_searchBar setShowsCancelButton:NO animated:YES];
+    if([searchBar.text isEqualToString:@""])
+        [_searchBar setShowsCancelButton:NO animated:YES];
     //[self searchBar:_searchBar textDidChange:nil];
     [_searchBar resignFirstResponder];
 }

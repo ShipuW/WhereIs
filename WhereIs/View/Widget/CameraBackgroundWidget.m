@@ -7,12 +7,17 @@
 //
 
 #import "CameraBackgroundWidget.h"
+#import "AppDelegate.h"
+
 
 @implementation CameraBackgroundWidget
 
 - (void)viewDidLoad{
     [super viewDidLoad];
     [self initCamera];
+    [self initLocation];
+    [self addTargetHint];
+    [self initMapView];
 }
 
 
@@ -54,6 +59,64 @@
     [self.view.layer addSublayer:self.preview];
     [self.session startRunning];
     
+}
+
+- (void)initLocation{
+    _locationManager= [[CLLocationManager alloc]init];
+    _locationManager.delegate = self;
+    if ([CLLocationManager headingAvailable]) {
+        //设置精度
+        _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        //设置滤波器不工作
+        _locationManager.headingFilter = kCLHeadingFilterNone;
+        //开始更新方向
+        [_locationManager startUpdatingHeading];
+    }else{
+        [self showIndicator:@"罗盘不可用" autoHide:YES afterDelay:YES];
+    }
+}
+
+- (void)addTargetHint{
+    _targetHint = [[ViewOnCamera alloc]init];
+    [_targetHint setTitle:@"目标"];
+    [_targetHint setSubtitle:_targetAnnotation.title];
+    _targetHint.frame = CGRectMake(0, 0, _targetHint.frame.size.width, _targetHint.frame.size.height);
+    
+    
+    [self.view addSubview:_targetHint];
+    
+}
+
+- (void)initMapView{
+    _mapView = [[MAMapView alloc] init];
+    _mapView.delegate = self;
+    _mapView.showsUserLocation = YES;
+    
+}
+
+#pragma mark - MAMapViewDelegate, CLLocationManagerDelegate
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading
+{
+//mylocation 要变化算
+        //NSLog(@"%f",newHeading.magneticHeading);
+    
+    
+        //_myLocation = delegate.currentLocation;
+    NSLog(@"mylocation:%f,%f",_myLocation.coordinate.latitude,_myLocation.coordinate.longitude);
+    [_targetHint setX:[Caculator caculateHorizontalPositionInCamera:_targetAnnotation.coordinate withMyLocation:_myLocation inHeading:newHeading withScreenWidth:self.view.frame.size.width] - _targetHint.frame.size.width * 0.5];
+}
+
+-(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation
+updatingLocation:(BOOL)updatingLocation
+{
+    if(updatingLocation)
+    {
+        //取出当前位置的坐标
+        _myLocation = [userLocation.location copy];
+     
+        
+    }
 }
 
 @end

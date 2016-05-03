@@ -151,3 +151,7 @@ selector:_selector name:_name object:nil];
 #define kDefaultLocationZoomLevel       16.1
 #define kDefaultControlMargin           22
 #define kDefaultCalloutViewMargin       -8
+
+//计算器
+#define Rc 6378137
+#define Rj 6356725
