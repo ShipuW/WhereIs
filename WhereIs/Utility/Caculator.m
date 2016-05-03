@@ -35,11 +35,11 @@
         angle= (90.-angle)+270;
     }
     //return angle;
-    NSLog(@"摄像头朝向：%f",currentHeading.magneticHeading);
-    NSLog(@"目标方位角：%f",angle);
-    xInCamera = screenWidth * 0.5 -(screenWidth * 0.5 * tan((currentHeading.magneticHeading - angle)*M_PI/180.0) / tan(15.0*M_PI/180.0));
-    NSLog(@"目标偏移位置：%f",xInCamera);
-    if (fabs(currentHeading.magneticHeading - angle) > 90) return CGFLOAT_MAX;
+    //NSLog(@"摄像头朝向：%f",currentHeading.magneticHeading);
+    //NSLog(@"目标方位角：%f",angle);
+    xInCamera = screenWidth * 0.5 -(screenWidth * 0.5 * tan((currentHeading.magneticHeading - angle)*M_PI/180.0) / tan(WidthFieldAngle * 0.5 * M_PI / 180.0));
+    //NSLog(@"目标偏移位置：%f",xInCamera);
+    if (fabs(currentHeading.magneticHeading - angle) > 90 && 360 - fabs(currentHeading.magneticHeading - angle) > 90) return CGFLOAT_MAX;
     
     return xInCamera;
 
@@ -57,6 +57,18 @@
     double Ed = Ec * cos(latigude * M_PI / 180.0);
     return Ed;
     
+}
+
++(CGFloat)caculateVerticalPositionWithGravityX:(double)gravityX GravityY:(double)gravityY GravityZ:(double)gravityZ withScreenHeight:(double)screenHeight{
+    double yInCamera = 0.0f;
+    if (gravityZ == 0) return yInCamera;
+    double angleToback = 90 - 180 * atan(gravityY / gravityZ) / M_PI;
+    yInCamera = screenHeight * 0.5 - screenHeight * 0.5 * tan(angleToback * M_PI / 180.0) / tan(HeightFieldAngle * 0.5 * M_PI / 180.0)  ;
+    
+    //NSLog(@"angle:%f",90 - 180 * atan(gravityY/gravityZ) / M_PI);
+    //NSLog(@"偏移：%f",yInCamera);
+    if (gravityY > 0) return CGFLOAT_MAX;
+    return yInCamera;
 }
 
 @end

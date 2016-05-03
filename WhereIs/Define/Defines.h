@@ -147,11 +147,19 @@ selector:_selector name:_name object:nil];
 #define kCalloutWidth       200.0
 #define kCalloutHeight      70.0
 
-//地图信息
+// 地图信息
 #define kDefaultLocationZoomLevel       16.1
 #define kDefaultControlMargin           22
 #define kDefaultCalloutViewMargin       -8
 
-//计算器
+// 姿态信息
+#define MotionUpdateInterval 1.0/60.0
+
+// 计算器
 #define Rc 6378137
 #define Rj 6356725
+
+// 增强现实视图显示信息
+#define CacheSpace 300
+#define WidthFieldAngle 35
+#define HeightFieldAngle 50

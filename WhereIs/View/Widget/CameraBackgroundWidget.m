@@ -9,6 +9,15 @@
 #import "CameraBackgroundWidget.h"
 #import "AppDelegate.h"
 
+@interface CameraBackgroundWidget(){
+    double gravityX;
+    double gravityY;
+    double gravityZ;
+    double deviaX;
+    double deviaY;
+}
+
+@end
 
 @implementation CameraBackgroundWidget
 
@@ -16,6 +25,7 @@
     [super viewDidLoad];
     [self initCamera];
     [self initLocation];
+    [self initMotion];
     [self addTargetHint];
     [self initMapView];
 }
@@ -75,6 +85,17 @@
         [self showIndicator:@"罗盘不可用" autoHide:YES afterDelay:YES];
     }
 }
+- (void)initMotion{
+    _motionManager = [[CMMotionManager alloc] init];
+    //_motionManager.delegate = self;
+    _motionManager.deviceMotionUpdateInterval = MotionUpdateInterval;
+    if (_motionManager.accelerometerAvailable){
+        //开始更新
+        [_motionManager startDeviceMotionUpdates];
+    }else{
+        [self showIndicator:@"加速剂不可用" autoHide:YES afterDelay:YES];
+    }
+}
 
 - (void)addTargetHint{
     _targetHint = [[ViewOnCamera alloc]init];
@@ -104,7 +125,18 @@
     
         //_myLocation = delegate.currentLocation;
     //NSLog(@"mylocation:%f,%f",_myLocation.coordinate.latitude,_myLocation.coordinate.longitude);
-    [_targetHint setX:[Caculator caculateHorizontalPositionInCamera:_targetAnnotation.coordinate withMyLocation:_myLocation inHeading:newHeading withScreenWidth:self.view.frame.size.width] - _targetHint.frame.size.width * 0.5];
+    gravityX = _motionManager.deviceMotion.gravity.x;
+    gravityY = _motionManager.deviceMotion.gravity.y;
+    gravityZ = _motionManager.deviceMotion.gravity.z;
+    
+    deviaX = [Caculator caculateHorizontalPositionInCamera:_targetAnnotation.coordinate withMyLocation:_myLocation inHeading:newHeading withScreenWidth:self.view.frame.size.width] - _targetHint.frame.size.width * 0.5;
+    //NSLog(@"deviaX:%f",deviaX);
+    if(deviaX < self.view.frame.size.width + CacheSpace && deviaX > 0 - CacheSpace)
+       [_targetHint setX:deviaX];
+    
+    deviaY = [Caculator caculateVerticalPositionWithGravityX:gravityX GravityY:gravityY GravityZ:gravityZ withScreenHeight:self.view.frame.size.height] - _targetHint.frame.size.height * 0.5;
+    if(deviaY < self.view.frame.size.height + CacheSpace && deviaY > 0 - CacheSpace)
+        [_targetHint setY:deviaY];
 }
 
 -(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation
@@ -114,8 +146,6 @@ updatingLocation:(BOOL)updatingLocation
     {
         //取出当前位置的坐标
         _myLocation = [userLocation.location copy];
-     
-        
     }
 }
 

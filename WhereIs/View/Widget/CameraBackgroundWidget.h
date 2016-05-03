@@ -18,6 +18,7 @@ typedef NS_ENUM(NSInteger, DevicePositon) {
 
 @interface CameraBackgroundWidget : BaseWidget <MAMapViewDelegate,CLLocationManagerDelegate>{
     CLLocationManager *_locationManager;
+    CMMotionManager *_motionManager;
     MAMapView         *_mapView;
 }
 

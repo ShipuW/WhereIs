@@ -12,4 +12,6 @@
 
 +(CGFloat)caculateHorizontalPositionInCamera:(CLLocationCoordinate2D)targetLocation withMyLocation:(CLLocation*)myLocation inHeading:(CLHeading *)heading withScreenWidth:(double)screenWidth;
 
++(CGFloat)caculateVerticalPositionWithGravityX:(double)gravityX GravityY:(double)gravityY GravityZ:(double)gravityZ withScreenHeight:(double)screenHeight;
+
 @end
