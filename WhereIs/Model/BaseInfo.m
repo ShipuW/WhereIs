@@ -16,7 +16,7 @@
     BaseInfo *info = [[BaseInfo alloc] init];
     
     info.ID = [dict objectForKey:@"id"];
-    
+    info.name = [dict objectForKey:@"name"];
     return info;
 }
 

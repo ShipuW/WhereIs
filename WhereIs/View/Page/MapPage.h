@@ -24,6 +24,7 @@
     IBOutlet UIButton       *_searchButton;
     IBOutlet UIButton       *_pathButton;
     IBOutlet UIButton       *_locationButton;
+    IBOutlet UIButton       *_loginButton;
 
 }
 

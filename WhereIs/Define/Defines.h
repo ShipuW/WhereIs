@@ -135,6 +135,7 @@ selector:_selector name:_name object:nil];
 #define LoadingTip          @"加载中..."
 #define LoginCheckTip       @"用户名或密码不能为空"
 #define LoginTitle          @"登录"
+#define AppTitle          @"在哪"
 #define WeatherSuffix       @"市市辖区"
 
 // 自定义弹出框信息

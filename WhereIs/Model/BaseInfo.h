@@ -11,6 +11,7 @@
 @interface BaseInfo : NSObject
 
 @property(nonatomic, strong) NSString    *ID;
+@property(nonatomic, strong) NSString    *name;
 
 + (instancetype)infoFromDict:(NSDictionary *)dict;
 + (NSArray *)arrayFromDict:(NSDictionary *)dict;

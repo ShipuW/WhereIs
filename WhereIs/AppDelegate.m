@@ -41,8 +41,8 @@
     [AMapSearchServices sharedServices].apiKey = AmapKey;
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 #pragma mark - remember change
-    [self showHomePage];
-    //[AdvertPage showAdvertPage];
+    //[self showHomePage];
+    [AdvertPage showAdvertPage];
     
     return YES;
 }

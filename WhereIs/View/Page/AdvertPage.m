@@ -145,42 +145,42 @@
 
 
 #pragma mark - motion data
-
-- (void)showInfo{
-    
-    motionManager = [[CMMotionManager alloc]init];
-
-    motionManager.deviceMotionUpdateInterval = 1.0/1.0;
-    
-    [self startMotion];
-    
-    locationManager= [[CLLocationManager alloc]init];
-    locationManager.delegate = self;
-    if ([CLLocationManager headingAvailable]) {
-        //设置精度
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-        //设置滤波器不工作
-        locationManager.headingFilter = kCLHeadingFilterNone;
-        //开始更新
-        [locationManager startUpdatingHeading];
-    }
-}
-
-- (void)startMotion{
-    if(motionManager.isDeviceMotionAvailable){
-        [motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMDeviceMotion *motion, NSError *error) {
-            //Acceleration
-            NSLog(@"X:%f,Y:%f,Z:%f",motion.gravity.x,motion.gravity.y,motion.gravity.z);
-
-        }];
-    }
-}
-
--(void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading
-{
-
-
-    NSLog(@"旋转角度angle：%f",newHeading.magneticHeading);
-}
+//
+//- (void)showInfo{
+//    
+//    motionManager = [[CMMotionManager alloc]init];
+//
+//    motionManager.deviceMotionUpdateInterval = 1.0/1.0;
+//    
+//    [self startMotion];
+//    
+//    locationManager= [[CLLocationManager alloc]init];
+//    locationManager.delegate = self;
+//    if ([CLLocationManager headingAvailable]) {
+//        //设置精度
+//        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+//        //设置滤波器不工作
+//        locationManager.headingFilter = kCLHeadingFilterNone;
+//        //开始更新
+//        [locationManager startUpdatingHeading];
+//    }
+//}
+//
+//- (void)startMotion{
+//    if(motionManager.isDeviceMotionAvailable){
+//        [motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMDeviceMotion *motion, NSError *error) {
+//            //Acceleration
+//            NSLog(@"X:%f,Y:%f,Z:%f",motion.gravity.x,motion.gravity.y,motion.gravity.z);
+//
+//        }];
+//    }
+//}
+//
+//-(void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading
+//{
+//
+//
+//    NSLog(@"旋转角度angle：%f",newHeading.magneticHeading);
+//}
 
 @end

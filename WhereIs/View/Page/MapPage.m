@@ -9,6 +9,7 @@
 #import "MapPage.h"
 #import "CameraPage.h"
 #import "SearchPage.h"
+#import "MyPage.h"
 
 @interface MapPage(){
     CGFloat originMoveViewCenterY;
@@ -117,7 +118,7 @@
     _searchButton.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin;
     [_positionTableView setHidden:YES];
     [_moveView setHidden:YES];
-    self.title = @"在哪";
+    self.title = AppTitle; 
 }
 
 - (void)initAttributes{
@@ -128,7 +129,6 @@
 - (IBAction)searchAction:(id)sender{
     SearchPage *page = [[SearchPage alloc] init];
     
-    page.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:page animated:YES];
     
     [_mapWidget clearAllAnnotations];
@@ -161,6 +161,14 @@
 //    
 //    [_search AMapNavigationSearch:request];
 
+}
+
+- (IBAction)myAction:(id)sender{
+    MyPage *page = [[MyPage alloc] init];
+    
+    [self.navigationController pushViewController:page animated:YES];
+    
+    [_mapWidget clearAllAnnotations];
 }
 
 - (void)beginSearch{

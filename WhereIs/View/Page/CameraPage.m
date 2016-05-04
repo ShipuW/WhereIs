@@ -14,6 +14,8 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     [self setCameraBackground];
+    [self setTitle:AppTitle];
+    //[self setNavigationLeft:@"NavigationBack.png" sel:nil];
 //    [self addTargetHint];
 }
 

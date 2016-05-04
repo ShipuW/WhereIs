@@ -20,7 +20,7 @@
 #define BaseHost    @"http://wangshipu001.eicp.net"
 #define BasePort    @":80"
 #else
-#define BaseHost    @"http://127.0.0.1" //127.0.0.1/192.168.191.1/wangshipu001.eicp.net
+#define BaseHost    @"http://wangshipu001.eicp.net" //127.0.0.1/192.168.191.1/wangshipu001.eicp.net
 #define BasePort    @""//此处若为172或192需要加:80 wangshipu001不用.80
 #endif
 
