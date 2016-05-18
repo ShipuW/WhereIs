@@ -115,7 +115,7 @@
 {
     if ([dict isKindOfClass:[NSString class]]) {
         [_delegate opFail:(NSString *)dict];
-        [_delegate opFailEx:(NSString *)dict opinfo:_opInfo];
+        [_delegate opFailEx:(NSString *)dict opinfo:nil];
         return;
     }
     
@@ -125,7 +125,7 @@
     }
     
     [_delegate opFail:[dict objectForKey:NetMessage]];
-    [_delegate opFailEx:[dict objectForKey:NetMessage] opinfo:_opInfo];
+    [_delegate opFailEx:[dict objectForKey:NetMessage] opinfo:nil];
 }
 
 

@@ -49,6 +49,7 @@
     _operation = [[Login alloc] initWithDelegate:self opInfo:opInfo];
     
     [_operation executeOp];
+    [self showIndicator:@"登陆中" autoHide:NO afterDelay:NO];
     
 
 }
@@ -58,10 +59,18 @@
     [super opSuccess:data];
     BASE_INFO_FUN(data.name);
     BASE_INFO_FUN(data.token);
-    
+    [self hideIndicator];
     [FxAppSetting setValue:data.token forKey:@"token"];
     [self.navigationController popViewControllerAnimated:YES];
 }
+- (void)opFail:(NSString *)errorMessage{
+    [self hideIndicator];
+    [self showIndicator:@"登陆服务器不可用" autoHide:YES afterDelay:YES];
 
+}
+- (void)opFailEx:(NSString *)errorMessage opinfo:(NSDictionary *)dictInfo{
+    
+    
+}
 
 @end

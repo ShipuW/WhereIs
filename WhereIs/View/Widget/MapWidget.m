@@ -40,7 +40,19 @@
     _mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds))];
     _mapView.delegate = self;
     _mapView.showsCompass = NO;
-//    if (_language)
+#pragma mark - modify here
+    MAMapPoint myPoint;
+    myPoint.x = 0;
+    myPoint.y = 0;
+    MAMapSize mySize;
+    mySize.height = 200;
+    mySize.width = 200;
+    MAMapRect currentMapRect;
+    currentMapRect.origin = myPoint;
+    currentMapRect.size = mySize;
+    //_mapView.visibleMapRect = currentMapRect;
+    [_mapView setVisibleMapRect:currentMapRect];
+    //    if (_language)
         _mapView.language = _language;
 //    if (_centerCoordinate)
         _mapView.centerCoordinate = _centerCoordinate;

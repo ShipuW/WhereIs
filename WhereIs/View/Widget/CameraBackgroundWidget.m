@@ -74,6 +74,7 @@
 - (void)initLocation{
     _locationManager= [[CLLocationManager alloc]init];
     _locationManager.delegate = self;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
     if ([CLLocationManager headingAvailable]) {
         //设置精度
         _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
@@ -101,7 +102,7 @@
     _targetHint = [[ViewOnCamera alloc]init];
     [_targetHint setTitle:@"目标"];
     [_targetHint setSubtitle:_targetAnnotation.title];
-    _targetHint.frame = CGRectMake(0, 0, _targetHint.frame.size.width, _targetHint.frame.size.height);
+    _targetHint.frame = CGRectMake(-250, -250, _targetHint.frame.size.width, _targetHint.frame.size.height);
     
     
     [self.view addSubview:_targetHint];
@@ -119,24 +120,23 @@
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading
 {
-//mylocation 要变化算
-        //NSLog(@"%f",newHeading.magneticHeading);
-    
-    
-        //_myLocation = delegate.currentLocation;
-    //NSLog(@"mylocation:%f,%f",_myLocation.coordinate.latitude,_myLocation.coordinate.longitude);
+
     gravityX = _motionManager.deviceMotion.gravity.x;
     gravityY = _motionManager.deviceMotion.gravity.y;
     gravityZ = _motionManager.deviceMotion.gravity.z;
-    
+    //NSLog(@"%@",_myLocation);
     deviaX = [Caculator caculateHorizontalPositionInCamera:_targetAnnotation.coordinate withMyLocation:_myLocation inHeading:newHeading withScreenWidth:self.view.frame.size.width] - _targetHint.frame.size.width * 0.5;
     //NSLog(@"deviaX:%f",deviaX);
-    if(deviaX < self.view.frame.size.width + CacheSpace && deviaX > 0 - CacheSpace)
-       [_targetHint setX:deviaX];
+    if(deviaX < self.view.frame.size.width + CacheSpace && deviaX > 0 - CacheSpace){
+        NSLog(@"dX,%f",deviaX);
+        [_targetHint setX:deviaX];
+    }
     
     deviaY = [Caculator caculateVerticalPositionWithGravityX:gravityX GravityY:gravityY GravityZ:gravityZ withScreenHeight:self.view.frame.size.height] - _targetHint.frame.size.height * 0.5;
-    if(deviaY < self.view.frame.size.height + CacheSpace && deviaY > 0 - CacheSpace)
+    if(deviaY < self.view.frame.size.height + CacheSpace && deviaY > 0 - CacheSpace){
         [_targetHint setY:deviaY];
+        NSLog(@"dY,%f",deviaY);
+    }
 }
 
 -(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation
@@ -145,7 +145,9 @@ updatingLocation:(BOOL)updatingLocation
     if(updatingLocation)
     {
         //取出当前位置的坐标
+        
         _myLocation = [userLocation.location copy];
+        
     }
 }
 

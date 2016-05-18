@@ -82,10 +82,10 @@ selector:_selector name:_name object:nil];
 #define FxRequestTimeout    10
 
 // 文件缓存路径
-#define RootPath            @"/Library/.WeekNews"
+#define RootPath            @"/Library/.WhereIs"
 #define CacheImagePath      @"CacheImages"
-#define NewsIconPrex        @"NewsIcon_%@"
-#define NewsDBFile          @"News.db"
+#define NewsIconPrex        @"Icon_%@"
+#define NewsDBFile          @"mydb.db"
 
 //广告常量
 #define AdvertKey           @"AdvertKey"
