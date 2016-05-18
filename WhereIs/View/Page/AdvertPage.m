@@ -126,11 +126,28 @@
     [self getLaunchImageOp:url];//获得此url的图片
 }
 
+
 - (void)opSuccessEx:(id)data opinfo:(NSDictionary *)dictInfo
 {
     [self setLaucnImage:data];
     [self delayHideAdvert];
 }
+
+- (void)opFailEx:(NSString *)errorMessage opinfo:(NSDictionary *)dictInfo
+{
+    NSString *fileName = [FxDate stringFromDateYMD:[NSDate date]];
+    UIImage *image = nil;
+    fileName = [Global getCacheImage:fileName];
+    if ([FxFileUtility isFileExist:fileName]) {
+        image = [UIImage imageWithContentsOfFile:fileName];
+        _advertImage.image = image;
+    }else{
+        [self showIndicator:@"未找到本地缓存文件" autoHide:YES afterDelay:YES];
+    }
+    
+    [self delayHideAdvert];
+}
+
 
 - (void)setLaucnImage:(NSData *)data
 {
