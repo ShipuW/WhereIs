@@ -40,6 +40,15 @@
 		840FD4981CD54EA700C50D3E /* CameraPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD4971CD54EA700C50D3E /* CameraPage.m */; };
 		840FD49A1CD54F0B00C50D3E /* CameraPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840FD4991CD54F0B00C50D3E /* CameraPage.xib */; };
 		840FD4A01CD5558100C50D3E /* CameraBackgroundWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD49F1CD5558100C50D3E /* CameraBackgroundWidget.m */; };
+		844AECFE1CF09FD200983607 /* building@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 844AECFD1CF09FD200983607 /* building@2x.png */; };
+		844AED0B1CF0A3CC00983607 /* FxDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844AED0A1CF0A3CC00983607 /* FxDB.framework */; };
+		844AED101CF0A53300983607 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 844AED0D1CF0A53300983607 /* DBManager.m */; };
+		844AED111CF0A53300983607 /* DBManager+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 844AED0F1CF0A53300983607 /* DBManager+Private.m */; };
+		844AED131CF0A67F00983607 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 844AED121CF0A67F00983607 /* libsqlite3.tbd */; };
+		844AED161CF0AB6300983607 /* RecordInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 844AED151CF0AB6300983607 /* RecordInfo.m */; };
+		844AED191CF0AB7A00983607 /* AdvertInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 844AED181CF0AB7A00983607 /* AdvertInfo.m */; };
+		844AED1C1CF19B0E00983607 /* SearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 844AED1B1CF19B0D00983607 /* SearchCell.m */; };
+		844AED1E1CF19B3700983607 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844AED1D1CF19B3700983607 /* SearchCell.xib */; };
 		846992A01CDA244700CB8171 /* MyPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8469929F1CDA244700CB8171 /* MyPage.m */; };
 		846992A31CDA245700CB8171 /* LoginPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 846992A21CDA245700CB8171 /* LoginPage.m */; };
 		846992A51CDA247800CB8171 /* MyPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846992A41CDA247800CB8171 /* MyPage.xib */; };
@@ -188,6 +197,20 @@
 		840FD4991CD54F0B00C50D3E /* CameraPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraPage.xib; sourceTree = "<group>"; };
 		840FD49E1CD5558100C50D3E /* CameraBackgroundWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraBackgroundWidget.h; sourceTree = "<group>"; };
 		840FD49F1CD5558100C50D3E /* CameraBackgroundWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraBackgroundWidget.m; sourceTree = "<group>"; };
+		844AECFD1CF09FD200983607 /* building@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "building@2x.png"; sourceTree = "<group>"; };
+		844AED0A1CF0A3CC00983607 /* FxDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FxDB.framework; sourceTree = "<group>"; };
+		844AED0C1CF0A53300983607 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		844AED0D1CF0A53300983607 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		844AED0E1CF0A53300983607 /* DBManager+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DBManager+Private.h"; sourceTree = "<group>"; };
+		844AED0F1CF0A53300983607 /* DBManager+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DBManager+Private.m"; sourceTree = "<group>"; };
+		844AED121CF0A67F00983607 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		844AED141CF0AB6300983607 /* RecordInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordInfo.h; sourceTree = "<group>"; };
+		844AED151CF0AB6300983607 /* RecordInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordInfo.m; sourceTree = "<group>"; };
+		844AED171CF0AB7A00983607 /* AdvertInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertInfo.h; sourceTree = "<group>"; };
+		844AED181CF0AB7A00983607 /* AdvertInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertInfo.m; sourceTree = "<group>"; };
+		844AED1A1CF19B0D00983607 /* SearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCell.h; sourceTree = "<group>"; };
+		844AED1B1CF19B0D00983607 /* SearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCell.m; sourceTree = "<group>"; };
+		844AED1D1CF19B3700983607 /* SearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 		8469929E1CDA244700CB8171 /* MyPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPage.h; sourceTree = "<group>"; };
 		8469929F1CDA244700CB8171 /* MyPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPage.m; sourceTree = "<group>"; };
 		846992A11CDA245700CB8171 /* LoginPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginPage.h; sourceTree = "<group>"; };
@@ -273,8 +296,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844AED131CF0A67F00983607 /* libsqlite3.tbd in Frameworks */,
 				84CEAF8D1CD8297D00175860 /* CoreLocation.framework in Frameworks */,
 				840FD48B1CD53CE000C50D3E /* CoreMotion.framework in Frameworks */,
+				844AED0B1CF0A3CC00983607 /* FxDB.framework in Frameworks */,
 				8E95EBA82687DB39F7247AD4 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +416,10 @@
 				840FD44A1CD518BD00C50D3E /* BaseInfo.m */,
 				846992AF1CDA283300CB8171 /* UserInfo.h */,
 				846992B01CDA283300CB8171 /* UserInfo.m */,
+				844AED141CF0AB6300983607 /* RecordInfo.h */,
+				844AED151CF0AB6300983607 /* RecordInfo.m */,
+				844AED171CF0AB7A00983607 /* AdvertInfo.h */,
+				844AED181CF0AB7A00983607 /* AdvertInfo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -448,6 +477,7 @@
 		840FD43E1CD5148500C50D3E /* ThirdSDK */ = {
 			isa = PBXGroup;
 			children = (
+				844AED0A1CF0A3CC00983607 /* FxDB.framework */,
 				840FD4761CD51E0200C50D3E /* JsonFramework */,
 			);
 			path = ThirdSDK;
@@ -475,6 +505,10 @@
 		840FD4411CD514F100C50D3E /* DB */ = {
 			isa = PBXGroup;
 			children = (
+				844AED0C1CF0A53300983607 /* DBManager.h */,
+				844AED0D1CF0A53300983607 /* DBManager.m */,
+				844AED0E1CF0A53300983607 /* DBManager+Private.h */,
+				844AED0F1CF0A53300983607 /* DBManager+Private.m */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -513,6 +547,8 @@
 				84E44B381CD6587D00BC6DE4 /* MapWidget.m */,
 				84E44B3A1CD658A200BC6DE4 /* SearchWidget.h */,
 				84E44B3B1CD658A200BC6DE4 /* SearchWidget.m */,
+				84CEAF811CD79A2000175860 /* SearchTableWidget.h */,
+				84CEAF821CD79A2000175860 /* SearchTableWidget.m */,
 				84E44B3D1CD65DE300BC6DE4 /* WeatherWidget.h */,
 				84E44B3E1CD65DE300BC6DE4 /* WeatherWidget.m */,
 				84E44B4F1CD6844D00BC6DE4 /* TableWidget.h */,
@@ -523,8 +559,6 @@
 				84E44B5D1CD6BE6400BC6DE4 /* CalloutWidget.m */,
 				84E44B5F1CD6C26900BC6DE4 /* CustomAnnotationWidget.h */,
 				84E44B601CD6C26900BC6DE4 /* CustomAnnotationWidget.m */,
-				84CEAF811CD79A2000175860 /* SearchTableWidget.h */,
-				84CEAF821CD79A2000175860 /* SearchTableWidget.m */,
 				84CEAF8E1CD82C8600175860 /* ViewOnCamera.h */,
 				84CEAF8F1CD82C8600175860 /* ViewOnCamera.m */,
 				84CEAF971CD8A66600175860 /* MoveWidget.h */,
@@ -540,6 +574,8 @@
 				840FD4571CD51BE400C50D3E /* BaseCell.m */,
 				84E44B521CD6850400BC6DE4 /* PositionCell.h */,
 				84E44B531CD6850400BC6DE4 /* PositionCell.m */,
+				844AED1A1CF19B0D00983607 /* SearchCell.h */,
+				844AED1B1CF19B0D00983607 /* SearchCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -559,6 +595,7 @@
 				84CEAF9E1CD8A9DD00175860 /* MoveWidget.xib */,
 				846992A41CDA247800CB8171 /* MyPage.xib */,
 				846992A81CDA249600CB8171 /* LoginPage.xib */,
+				844AED1D1CF19B3700983607 /* SearchCell.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -616,6 +653,7 @@
 		84E44B441CD6789300BC6DE4 /* map */ = {
 			isa = PBXGroup;
 			children = (
+				844AECFD1CF09FD200983607 /* building@2x.png */,
 				846992C21CDA32C900CB8171 /* login@2x.png */,
 				84CEAF9A1CD8A84600175860 /* arrow_down@2x.png */,
 				84CEAF9B1CD8A84600175860 /* arrow_up@2x.png */,
@@ -650,6 +688,7 @@
 		93D9149F3F8CF1000A108C09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				844AED121CF0A67F00983607 /* libsqlite3.tbd */,
 				840FD48A1CD53CE000C50D3E /* CoreMotion.framework */,
 				840FD4881CD53C8700C50D3E /* CoreLocation.framework */,
 				8B6D84F3F22F594C95B8D5EA /* libPods.a */,
@@ -784,6 +823,7 @@
 				84E44B4B1CD678EF00BC6DE4 /* location_yes@2x.png in Resources */,
 				840FD4111CD4FEE700C50D3E /* Assets.xcassets in Resources */,
 				84E44B651CD6CA3100BC6DE4 /* beginnav@2x.png in Resources */,
+				844AED1E1CF19B3700983607 /* SearchCell.xib in Resources */,
 				84E44B411CD6623700BC6DE4 /* MapPage.xib in Resources */,
 				84E44B771CD6FFEF00BC6DE4 /* NavigationBar44@2x.png in Resources */,
 				846992A91CDA249600CB8171 /* LoginPage.xib in Resources */,
@@ -799,6 +839,7 @@
 				840FD4601CD51CB100C50D3E /* AdvertPage.xib in Resources */,
 				84E44B751CD6FFEF00BC6DE4 /* NavigationBack@2x.png in Resources */,
 				84E44B7A1CD6FFEF00BC6DE4 /* NavigationSquare@2x.png in Resources */,
+				844AECFE1CF09FD200983607 /* building@2x.png in Resources */,
 				84E44B4A1CD678EF00BC6DE4 /* location_no@2x.png in Resources */,
 				84E44B591CD6867A00BC6DE4 /* PositionTableWidget.xib in Resources */,
 				840FD49A1CD54F0B00C50D3E /* CameraPage.xib in Resources */,
@@ -879,6 +920,7 @@
 			files = (
 				840FD48F1CD54B6A00C50D3E /* Global.m in Sources */,
 				846992A31CDA245700CB8171 /* LoginPage.m in Sources */,
+				844AED161CF0AB6300983607 /* RecordInfo.m in Sources */,
 				840FD4711CD51DBB00C50D3E /* FxAppSetting.m in Sources */,
 				84E44B511CD6844D00BC6DE4 /* TableWidget.m in Sources */,
 				840FD4721CD51DBB00C50D3E /* FxButtonHelper.m in Sources */,
@@ -903,9 +945,13 @@
 				846992AE1CDA27F800CB8171 /* Login.m in Sources */,
 				84CEAF961CD839EC00175860 /* Caculator.m in Sources */,
 				840FD4811CD51E0200C50D3E /* FxJSON.m in Sources */,
+				844AED1C1CF19B0E00983607 /* SearchCell.m in Sources */,
+				844AED111CF0A53300983607 /* DBManager+Private.m in Sources */,
 				840FD4521CD51BB200C50D3E /* BasePage.m in Sources */,
 				84E44B3C1CD658A200BC6DE4 /* SearchWidget.m in Sources */,
 				846992B11CDA283300CB8171 /* UserInfo.m in Sources */,
+				844AED191CF0AB7A00983607 /* AdvertInfo.m in Sources */,
+				844AED101CF0A53300983607 /* DBManager.m in Sources */,
 				840FD4951CD54E8E00C50D3E /* BaseNavPage.m in Sources */,
 				840FD45E1CD51C8E00C50D3E /* AdvertPage.m in Sources */,
 				84E44B541CD6850400BC6DE4 /* PositionCell.m in Sources */,
@@ -1045,6 +1091,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchScreen;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (Z6S43MU38S)";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WhereIs/ThirdSDK",
+				);
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREFIX_HEADER = WhereIs/PrefixHeader.pch;
 				INFOPLIST_FILE = WhereIs/Info.plist;
@@ -1060,6 +1112,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchScreen;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (Z6S43MU38S)";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WhereIs/ThirdSDK",
+				);
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREFIX_HEADER = WhereIs/PrefixHeader.pch;
 				INFOPLIST_FILE = WhereIs/Info.plist;

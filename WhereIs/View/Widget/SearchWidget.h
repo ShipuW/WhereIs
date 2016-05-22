@@ -16,6 +16,7 @@
 @property(nonatomic, assign) id<SearchWidgetDelegate> delegate;
 
 
+
 @end
 
 

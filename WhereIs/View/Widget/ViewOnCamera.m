@@ -10,6 +10,7 @@
 
 @interface ViewOnCamera ()
 
+@property (nonatomic, strong) UIImageView *portraitView;
 @property (nonatomic, strong) UILabel *subtitleLabel;
 @property (nonatomic, strong) UILabel *titleLabel;
 
@@ -23,7 +24,7 @@
     if (self)
     {
         self.backgroundColor = [UIColor clearColor];
-        self.frame = CGRectMake(0, 0, kTitleWidth, kCalloutHeight);
+        self.frame = CGRectMake(0, 0, kCalloutWidth, kCalloutHeight);
         [self initSubViews];
     }
     
@@ -32,16 +33,24 @@
 
 - (void)initSubViews
 {
-
+    
+    // 添加图片
+    self.portraitView = [[UIImageView alloc] initWithFrame:CGRectMake(kPortraitMargin, kPortraitMargin, kPortraitWidth, kPortraitHeight)];
+    
+    self.portraitView.backgroundColor = [UIColor clearColor];
+    self.portraitView.image = [UIImage imageNamed:@"building.png"];
+    [self addSubview:self.portraitView];
+    
+    
     // 添加标题
-    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(kPortraitMargin, kPortraitMargin, kTitleWidth, kTitleHeight)];
+    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(kPortraitMargin * 2 + kPortraitWidth, kPortraitMargin, kTitleWidth, kTitleHeight)];
     self.titleLabel.font = [UIFont boldSystemFontOfSize:14];
     self.titleLabel.textColor = [UIColor blackColor];
     self.titleLabel.text = @"title";
     self.titleLabel.textAlignment = NSTextAlignmentLeft;
     [self addSubview:self.titleLabel];
     
-    self.subtitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(kPortraitMargin, kPortraitMargin * 2 + kTitleHeight, kTitleWidth, kTitleHeight)];
+    self.subtitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(kPortraitMargin * 2 + kPortraitWidth, kPortraitMargin * 2 + kTitleHeight, kTitleWidth, kTitleHeight)];
     self.subtitleLabel.font = [UIFont systemFontOfSize:12];
     self.subtitleLabel.textColor = [UIColor blackColor];
     self.subtitleLabel.text = @"subtitleLabel";
@@ -60,13 +69,19 @@
 
 - (void)setSubtitle:(NSString *)subtitle
 {
-    CGSize titleSize = CGSizeZero;
-    self.subtitleLabel.text = subtitle;
-    titleSize = [subtitle sizeWithAttributes:@{NSFontAttributeName : self.subtitleLabel.font}];
-    [self setWidth:titleSize.width + 2 * kPortraitMargin];
-    [self.titleLabel setWidth:titleSize.width + 2 * kPortraitMargin];
-    [self.subtitleLabel setWidth:titleSize.width + 2 * kPortraitMargin];
     
+    self.subtitleLabel.text = subtitle;
+//    CGSize titleSize = CGSizeZero;
+//    titleSize = [subtitle sizeWithAttributes:@{NSFontAttributeName : self.subtitleLabel.font}];
+//    [self setWidth:titleSize.width + 2 * kPortraitMargin];
+//    [self.titleLabel setWidth:titleSize.width + 2 * kPortraitMargin];
+//    [self.subtitleLabel setWidth:titleSize.width + 2 * kPortraitMargin];
+    
+}
+
+- (void)setImage:(UIImage *)image
+{
+    self.portraitView.image = image;
 }
 
 #pragma mark - draw rect
@@ -76,7 +91,7 @@
     
     [self drawInContext:UIGraphicsGetCurrentContext()];
     
-    self.layer.shadowColor = [[UIColor lightGrayColor] CGColor];
+    self.layer.shadowColor = [[UIColor purpleColor] CGColor];
     self.layer.shadowOpacity = 1.0;
     self.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
     

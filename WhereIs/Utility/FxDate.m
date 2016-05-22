@@ -169,4 +169,11 @@ static NSDateFormatter *s_formatterYMDHMS = nil;
     return weekDay;
 }
 
++ (NSString *)getTimeStamp:(NSDate *)date{
+    NSTimeInterval timeInterval = [date timeIntervalSince1970];
+    long long dTime = [[NSNumber numberWithDouble:timeInterval] longLongValue]; // 将double转为long long型
+    NSString *tempTime = [NSString stringWithFormat:@"%llu",dTime]; // 输出long long型
+    return tempTime;
+}
+
 @end

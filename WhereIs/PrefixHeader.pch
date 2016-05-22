@@ -27,5 +27,6 @@
 #import "URLDefine.h"
 #import "FxJsonUtility.h"
 #import "FxFileUtility.h"
-
+#import "FxAppSetting.h"
+#import "FxDate.h"
 #endif /* PrefixHeader_pch */

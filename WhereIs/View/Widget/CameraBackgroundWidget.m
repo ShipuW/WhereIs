@@ -106,6 +106,7 @@
     
     
     [self.view addSubview:_targetHint];
+    _targetHint.hidden = YES;
     
 }
 
@@ -137,6 +138,7 @@
         [_targetHint setY:deviaY];
         NSLog(@"dY,%f",deviaY);
     }
+    _targetHint.hidden = NO;
 }
 
 -(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation

@@ -14,9 +14,6 @@
 {
 }
 
-- (void)setCellData:(AMapPOI *)info
-{
-    _titleLabel.text = info.name;
-}
+
 
 @end

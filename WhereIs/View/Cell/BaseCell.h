@@ -15,7 +15,7 @@
 //@property(nonatomic, strong) BaseInfo   *cellInfo;
 
 - (void)initCell;
-- (void)setCellData:(AMapPOI *)info;
 
+- (void)setCellData:(AMapPOI *)info;
 
 @end

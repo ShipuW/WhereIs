@@ -7,6 +7,7 @@
 //
 
 #import "SearchWidget.h"
+#import "DBManager.h"
 
 @interface SearchWidget ()
 
@@ -41,6 +42,13 @@
     //[self searchBar:_searchBar textDidChange:nil];
     [_searchBar resignFirstResponder];
     _keyword = searchBar.text;
+    NSString *searchuser = [FxAppSetting getValue:@"token"];
+    if (searchuser){
+        NSString *id =  [NSString stringWithFormat:RecordIdPrex, [FxDate getTimeStamp:[NSDate date]]];
+        NSString *searchtime = [FxDate stringFromDateYMDHMS:[NSDate date]];
+        NSString *name = _keyword;
+        [DBManager saveRecords:@{@"id":id, @"name":name, @"searchtime":searchtime, @"searchuser":searchuser}];
+    }
     [self.delegate searchString:_keyword];
     
 }
@@ -52,6 +60,7 @@
     //[self searchBar:_searchBar textDidChange:nil];
     [_searchBar resignFirstResponder];
 }
+
 
 
 

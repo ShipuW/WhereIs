@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCell" id="2uK-aH-Wlc" customClass="SearchCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2uK-aH-Wlc" id="s8g-S7-g6r">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Orq-U5-erD">
+                        <rect key="frame" x="8" y="8" width="304" height="27"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Orq-U5-erD" firstAttribute="bottom" secondItem="s8g-S7-g6r" secondAttribute="bottomMargin" id="CPc-zS-FF2"/>
+                    <constraint firstItem="Orq-U5-erD" firstAttribute="trailing" secondItem="s8g-S7-g6r" secondAttribute="trailingMargin" id="Gwl-3x-xvY"/>
+                    <constraint firstItem="Orq-U5-erD" firstAttribute="top" secondItem="s8g-S7-g6r" secondAttribute="topMargin" id="K0t-M1-bcm"/>
+                    <constraint firstItem="Orq-U5-erD" firstAttribute="leading" secondItem="s8g-S7-g6r" secondAttribute="leadingMargin" id="yIb-p3-U6L"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="_titleLabel" destination="Orq-U5-erD" id="aBg-MS-FN6"/>
+            </connections>
+            <point key="canvasLocation" x="236" y="204"/>
+        </tableViewCell>
+    </objects>
+</document>

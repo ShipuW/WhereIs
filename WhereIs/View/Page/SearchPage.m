@@ -33,12 +33,26 @@
 }
 
 -(void)addSearchTable{
-
+    [_searchTableView setHidden:NO];
+    _searchTableWidget = [[SearchTableWidget alloc] init];
+    _searchTableWidget.delegate = self;
+    
+//    _searchTableWidget.listData = array;
+    _searchTableWidget.view.frame = _searchTableView.bounds;//赋值要放在这句之前
+    [_searchTableView addSubview:_searchTableWidget.view];
+//    originTableViewCenterY = _positionTableView.center.y;
 }
 
-#pragma mark - SearchWidgetDelegate
+#pragma mark - SearchWidgetDelegate,SearchTableDelegate
 
 - (void)searchString:(NSString *)keyword{
+    MapPage *mapPage = [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
+    mapPage.searchKeyword = keyword;
+    [self.navigationController popToViewController:mapPage animated:true];
+    
+}
+
+- (void)searchStringFromRecord:(NSString *)keyword{
     MapPage *mapPage = [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
     mapPage.searchKeyword = keyword;
     [self.navigationController popToViewController:mapPage animated:true];

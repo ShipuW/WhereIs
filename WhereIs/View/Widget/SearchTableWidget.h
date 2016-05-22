@@ -7,7 +7,20 @@
 //
 
 #import "TableWidget.h"
+#import "SearchCell.h"
+@protocol SearchTableDelegate;
 
 @interface SearchTableWidget : TableWidget
+
+
+@property (nonatomic) NSString                      *keyword;
+@property(nonatomic, assign) id<SearchTableDelegate> delegate;
+
+@end
+
+@protocol SearchTableDelegate <NSObject>
+
+- (void)searchStringFromRecord:(NSString *)keyword;
+
 
 @end

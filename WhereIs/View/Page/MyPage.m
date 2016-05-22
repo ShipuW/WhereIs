@@ -7,7 +7,7 @@
 //
 
 #import "MyPage.h"
-#import "FxAppSetting.h"
+
 #import "LoginPage.h"
 
 @implementation MyPage

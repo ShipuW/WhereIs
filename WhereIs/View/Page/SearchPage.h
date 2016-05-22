@@ -10,12 +10,15 @@
 #import "SearchWidget.h"
 #import "SearchTableWidget.h"
 
-@interface SearchPage : BaseNavPage<SearchWidgetDelegate>
+@interface SearchPage : BaseNavPage<SearchWidgetDelegate,SearchTableDelegate>
 {
-    IBOutlet UIView     *_searchBarView;
-    IBOutlet UIView     *_searchTableView;
     SearchWidget        *_searchWidget;
+    IBOutlet UIView     *_searchBarView;
+    
     SearchTableWidget   *_searchTableWidget;
+    IBOutlet UIView     *_searchTableView;
+
+
 }
 
 @end

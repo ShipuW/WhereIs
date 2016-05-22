@@ -12,7 +12,7 @@
 
 - (void)setCellData:(AMapPOI *)info
 {
-    [super setCellData:info];
+    _titleLabel.text = info.name;
     _subTitleLabel.text = info.address;
 }
 

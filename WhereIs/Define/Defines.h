@@ -85,7 +85,8 @@ selector:_selector name:_name object:nil];
 #define RootPath            @"/Library/.WhereIs"
 #define CacheImagePath      @"CacheImages"
 #define NewsIconPrex        @"Icon_%@"
-#define NewsDBFile          @"mydb.db"
+#define DBFile              @"mydb.db"
+#define RecordIdPrex        @"Record_%@"
 
 //广告常量
 #define AdvertKey           @"AdvertKey"

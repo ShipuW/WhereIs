@@ -42,4 +42,7 @@
 + (NSString *)getDay:(NSDate *)date;
 + (NSString *)getWeekDay:(NSDate *)date;
 
+//获取时间戳
++ (NSString *)getTimeStamp:(NSDate *)date;
+
 @end
