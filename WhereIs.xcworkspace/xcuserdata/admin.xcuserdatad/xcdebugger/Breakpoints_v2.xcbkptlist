@@ -147,54 +147,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WhereIs/Utility/Caculator.m"
-            timestampString = "485683940.118006"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "+caculateVerticalPositionWithGravityX:GravityY:GravityZ:withScreenHeight:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WhereIs/Utility/Caculator.m"
-            timestampString = "485683940.118006"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "+caculateVerticalPositionWithGravityX:GravityY:GravityZ:withScreenHeight:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WhereIs/Utility/Caculator.m"
-            timestampString = "485683940.118006"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "+caculateHorizontalPositionInCamera:withMyLocation:inHeading:withScreenWidth:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "WhereIs/Utility/UIView+Frame.m"
             timestampString = "483952647.945511"
             startingColumnNumber = "9223372036854775807"
@@ -596,11 +548,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WhereIs/View/Widget/CameraBackgroundWidget.m"
-            timestampString = "485681612.818058"
+            timestampString = "485689620.37649"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "-addCompassImage"
             landmarkType = "5">
          </BreakpointContent>
@@ -612,11 +564,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WhereIs/View/Widget/CameraBackgroundWidget.m"
-            timestampString = "485681612.818058"
+            timestampString = "485689620.37649"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "-addCompassImage"
             landmarkType = "5">
          </BreakpointContent>
@@ -634,6 +586,22 @@
             startingLineNumber = "79"
             endingLineNumber = "79"
             landmarkName = "+fetchRecords:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhereIs/Utility/Caculator.m"
+            timestampString = "485699890.978878"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "+caculatePositionInCamera:withMyLocation:inHeading:withMotion:withScreenWidth:withScreenHeight:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

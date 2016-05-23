@@ -10,11 +10,8 @@
 #import "AppDelegate.h"
 
 @interface CameraBackgroundWidget(){
-    double gravityX;
-    double gravityY;
-    double gravityZ;
-    double deviaX;
-    double deviaY;
+
+
 }
 
 @end
@@ -134,27 +131,44 @@
 -(void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading
 {
 
-    gravityX = _motionManager.deviceMotion.gravity.x;
-    gravityY = _motionManager.deviceMotion.gravity.y;
-    gravityZ = _motionManager.deviceMotion.gravity.z;
     
 //    CGFloat heading = 1.0f * M_PI * newHeading.magneticHeading / 180.0f;
 //    _compassImage.transform = CGAffineTransformMakeRotation(heading);
     _compassImage.transform = CGAffineTransformMakeRotation(-[Caculator caculateHintHeading:_targetAnnotation.coordinate withMyLocation:_myLocation inHeading:newHeading]);//弧度制
     //_compassImage.transform=CGAffineTransformMakeRotation(newHeading.magneticHeading);
     //NSLog(@"%@",_myLocation);
-    deviaX = [Caculator caculateHorizontalPositionInCamera:_targetAnnotation.coordinate withMyLocation:_myLocation inHeading:newHeading withScreenWidth:self.view.frame.size.width] - _targetHint.frame.size.width * 0.5;
-    //NSLog(@"deviaX:%f",deviaX);
-    if(deviaX < self.view.frame.size.width + CacheSpace && deviaX > 0 - CacheSpace){
-        NSLog(@"dX,%f",deviaX);
-        [_targetHint setX:deviaX];
+//    CGFloat deviaX = [Caculator caculateHorizontalPositionInCamera:_targetAnnotation.coordinate withMyLocation:_myLocation inHeading:newHeading withMotion:_motionManager withScreenWidth:self.view.frame.size.width withScreenHeight:self.view.frame.size.height];
+//    //NSLog(@"deviaX:%f",deviaX);
+//    CGFloat deviaY = [Caculator caculateVerticalPositionWithGravity:_motionManager withScreenHeight:self.view.frame.size.height];
+//    
+//    CGFloat modifiX = [Caculator modifyX:deviaX withY:deviaY inMotion:_motionManager];
+//    
+//    CGFloat modifiY = [Caculator modifyY:deviaY withX:deviaX inMotion:_motionManager];
+//    
+//    if(modifiX < self.view.frame.size.width + CacheSpace && modifiX > 0 - CacheSpace){
+////        NSLog(@"dX,%f",deviaX);
+////        [_targetHint setX:modifiX];
+//        _targetHint.center = CGPointMake(modifiX, _targetHint.center.y);
+//    }
+//    if(modifiY < self.view.frame.size.height + CacheSpace && modifiY > 0 - CacheSpace){
+////        [_targetHint setY:modifiY];
+////        NSLog(@"dY,%f",deviaY);
+//        _targetHint.center = CGPointMake(_targetHint.center.x,modifiY);
+//    }
+    
+    CGPoint point = [Caculator caculatePositionInCamera:_targetAnnotation.coordinate withMyLocation:_myLocation inHeading:newHeading withMotion:_motionManager withScreenWidth:self.view.frame.size.width withScreenHeight:self.view.frame.size.height];
+    
+    if(point.x < self.view.frame.size.width + CacheSpace && point.x > 0 - CacheSpace && point.y < self.view.frame.size.height + CacheSpace && point.y > 0 - CacheSpace){
+        _targetHint.center = point;
+    }
+    CGFloat tintAngle;
+    if (_motionManager.deviceMotion.gravity.y < 0){
+        tintAngle = atan(_motionManager.deviceMotion.gravity.x/_motionManager.deviceMotion.gravity.y);
+    }else{
+        tintAngle = atan(_motionManager.deviceMotion.gravity.x/_motionManager.deviceMotion.gravity.y)+M_PI;
     }
     
-    deviaY = [Caculator caculateVerticalPositionWithGravityX:gravityX GravityY:gravityY GravityZ:gravityZ withScreenHeight:self.view.frame.size.height] - _targetHint.frame.size.height * 0.5;
-    if(deviaY < self.view.frame.size.height + CacheSpace && deviaY > 0 - CacheSpace){
-        [_targetHint setY:deviaY];
-        NSLog(@"dY,%f",deviaY);
-    }
+    _targetHint.transform = CGAffineTransformMakeRotation(tintAngle);
     _targetHint.hidden = NO;
 }
 
