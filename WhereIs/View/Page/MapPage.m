@@ -11,6 +11,7 @@
 #import "SearchPage.h"
 #import "MyPage.h"
 
+
 @interface MapPage(){
     CGFloat originMoveViewCenterY;
     CGFloat originTableViewCenterY;
@@ -189,6 +190,14 @@
     
     //发起周边搜索
     [_search AMapPOIAroundSearch: request];
+    
+//    AMapPlaceSearchRequest *request = [[AMapPlaceSearchRequest alloc] init];
+//    request.searchType = AMapSearchType_PlaceAround;
+//    request.location = [AMapGeoPoint locationWithLatitude:_currentLocation.coordinate.latitude longitude:_currentLocation.coordinate.longitude];
+//    
+//    request.keywords = @"餐饮";
+//    
+//    [_search AMapPlaceSearch:request];
 }
 
 #pragma mark - AMapSearchDelegate,PositionTableDelegate,MapWidgetDelegate,CalloutDelegate,MoveWidgetDelegate

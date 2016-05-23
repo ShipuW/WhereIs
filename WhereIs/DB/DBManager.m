@@ -76,9 +76,15 @@
 //        dict = [FxJsonUtility jsonValueFromString:[dict objectForKey:@"json"]];
         
         NSMutableArray *recordArray = [NSMutableArray array];
-        for (NSDictionary *record in contents) {
-            [recordArray addObject:record];
+        for (int i = 0; i < MaxHistoryRows; i++) {
+            [recordArray addObject:[contents objectAtIndex:contents.count - i - 1]];
+            if (contents.count - i - 1 == 0) {
+                break;
+            }
         }
+//        for (NSDictionary *record in contents) {
+//            [recordArray addObject:record];
+//        }
         return [RecordInfo arrayFromArray:recordArray];
     }
     

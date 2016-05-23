@@ -135,11 +135,12 @@
 
 - (void)opFailEx:(NSString *)errorMessage opinfo:(NSDictionary *)dictInfo
 {
-    NSString *fileName = [FxDate stringFromDateYMD:[NSDate date]];
+    NSString *fileName = [FxDate stringFromDateYMD:[NSDate date]];//以时间为名字保存图片
+    NSString *filePath = [Global getCacheImage:fileName];
+
     UIImage *image = nil;
-    fileName = [Global getCacheImage:fileName];
-    if ([FxFileUtility isFileExist:fileName]) {
-        image = [UIImage imageWithContentsOfFile:fileName];
+    if ([FxFileUtility isFileExist:filePath]) {
+        image = [UIImage imageWithContentsOfFile:filePath];
         _advertImage.image = image;
     }else{
         [self showIndicator:@"未找到本地缓存文件" autoHide:YES afterDelay:YES];

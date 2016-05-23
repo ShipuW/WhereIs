@@ -31,6 +31,7 @@ typedef NS_ENUM(NSInteger, DevicePositon) {
 @property (nonatomic) ViewOnCamera  *targetHint;
 @property (nonatomic) MAPointAnnotation      *targetAnnotation;
 @property (nonatomic) CLLocation* myLocation;
+@property (nonatomic) UIImageView* compassImage;
 //-(instancetype)initWithFrame:(CGRect)frame positionDevice:(DevicePositon)position blur:(UIBlurEffectStyle)blur;
 //-(instancetype)initWithFrame:(CGRect)frame positionDevice:(DevicePositon)position;
 //-(void)removeBlurEffect;

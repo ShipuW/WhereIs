@@ -16,18 +16,36 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Orq-U5-erD">
-                        <rect key="frame" x="8" y="8" width="304" height="27"/>
+                        <rect key="frame" x="43" y="8" width="269" height="27"/>
                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="history.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Py-Q7-84d">
+                        <rect key="frame" x="8" y="8" width="27" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="27" id="5Bb-we-tdh"/>
+                            <constraint firstAttribute="height" constant="27" id="7O7-Yk-dGJ"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Orq-U5-erD" firstAttribute="bottom" secondItem="s8g-S7-g6r" secondAttribute="bottomMargin" id="CPc-zS-FF2"/>
+                    <constraint firstItem="Orq-U5-erD" firstAttribute="leading" secondItem="6Py-Q7-84d" secondAttribute="trailing" constant="8" id="Gjp-VE-8Vg"/>
                     <constraint firstItem="Orq-U5-erD" firstAttribute="trailing" secondItem="s8g-S7-g6r" secondAttribute="trailingMargin" id="Gwl-3x-xvY"/>
+                    <constraint firstItem="Orq-U5-erD" firstAttribute="leading" secondItem="6Py-Q7-84d" secondAttribute="trailing" id="HIf-6i-zls"/>
                     <constraint firstItem="Orq-U5-erD" firstAttribute="top" secondItem="s8g-S7-g6r" secondAttribute="topMargin" id="K0t-M1-bcm"/>
+                    <constraint firstItem="6Py-Q7-84d" firstAttribute="bottom" secondItem="s8g-S7-g6r" secondAttribute="bottomMargin" id="WG8-xS-isP"/>
+                    <constraint firstItem="6Py-Q7-84d" firstAttribute="leading" secondItem="s8g-S7-g6r" secondAttribute="leadingMargin" id="j3Y-Lh-VlM"/>
+                    <constraint firstItem="6Py-Q7-84d" firstAttribute="top" secondItem="s8g-S7-g6r" secondAttribute="topMargin" id="xVm-0c-mTJ"/>
                     <constraint firstItem="Orq-U5-erD" firstAttribute="leading" secondItem="s8g-S7-g6r" secondAttribute="leadingMargin" id="yIb-p3-U6L"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="HIf-6i-zls"/>
+                        <exclude reference="yIb-p3-U6L"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="_titleLabel" destination="Orq-U5-erD" id="aBg-MS-FN6"/>
@@ -35,4 +53,7 @@
             <point key="canvasLocation" x="236" y="204"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="history.png" width="24" height="24"/>
+    </resources>
 </document>

@@ -165,3 +165,6 @@ selector:_selector name:_name object:nil];
 #define CacheSpace 300
 #define WidthFieldAngle 35
 #define HeightFieldAngle 50
+
+// 历史记录信息
+#define MaxHistoryRows 10

@@ -64,6 +64,8 @@
 		846992BF1CDA2C4D00CB8171 /* login_username_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 846992B81CDA2C4D00CB8171 /* login_username_icon@2x.png */; };
 		846992C11CDA2E9300CB8171 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 846992C01CDA2E9300CB8171 /* Icon-60@2x.png */; };
 		846992C31CDA32C900CB8171 /* login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 846992C21CDA32C900CB8171 /* login@2x.png */; };
+		84C7F3351CF29C5C008B18ED /* history@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C7F3341CF29C5C008B18ED /* history@2x.png */; };
+		84C7F3371CF2EC46008B18ED /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C7F3361CF2EC46008B18ED /* arrow@2x.png */; };
 		84CEAF801CD7994E00175860 /* SearchPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CEAF7F1CD7994E00175860 /* SearchPage.m */; };
 		84CEAF831CD79A2000175860 /* SearchTableWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CEAF821CD79A2000175860 /* SearchTableWidget.m */; };
 		84CEAF851CD79A3500175860 /* SearchPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CEAF841CD79A3500175860 /* SearchPage.xib */; };
@@ -230,6 +232,8 @@
 		846992B81CDA2C4D00CB8171 /* login_username_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_username_icon@2x.png"; sourceTree = "<group>"; };
 		846992C01CDA2E9300CB8171 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		846992C21CDA32C900CB8171 /* login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login@2x.png"; sourceTree = "<group>"; };
+		84C7F3341CF29C5C008B18ED /* history@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "history@2x.png"; sourceTree = "<group>"; };
+		84C7F3361CF2EC46008B18ED /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
 		84CEAF7E1CD7994E00175860 /* SearchPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchPage.h; sourceTree = "<group>"; };
 		84CEAF7F1CD7994E00175860 /* SearchPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchPage.m; sourceTree = "<group>"; };
 		84CEAF811CD79A2000175860 /* SearchTableWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableWidget.h; sourceTree = "<group>"; };
@@ -655,6 +659,8 @@
 			children = (
 				844AECFD1CF09FD200983607 /* building@2x.png */,
 				846992C21CDA32C900CB8171 /* login@2x.png */,
+				84C7F3341CF29C5C008B18ED /* history@2x.png */,
+				84C7F3361CF2EC46008B18ED /* arrow@2x.png */,
 				84CEAF9A1CD8A84600175860 /* arrow_down@2x.png */,
 				84CEAF9B1CD8A84600175860 /* arrow_up@2x.png */,
 				84E44B641CD6CA3100BC6DE4 /* beginnav@2x.png */,
@@ -808,6 +814,7 @@
 				84CEAF871CD79A6300175860 /* SearchTableWidget.xib in Resources */,
 				84E44B761CD6FFEF00BC6DE4 /* NavigationBackBlack@2x.png in Resources */,
 				84E44B631CD6C97600BC6DE4 /* pin@2x.png in Resources */,
+				84C7F3351CF29C5C008B18ED /* history@2x.png in Resources */,
 				84E44B4D1CD678EF00BC6DE4 /* restaurant.png in Resources */,
 				84E44B711CD6FFEF00BC6DE4 /* NavBarAlpha.png in Resources */,
 				846992BB1CDA2C4D00CB8171 /* home_page_line_vertical@2x.png in Resources */,
@@ -831,6 +838,7 @@
 				846992BE1CDA2C4D00CB8171 /* login_password_icon@2x.png in Resources */,
 				846992BA1CDA2C4D00CB8171 /* account_snslogin_icon_3@2x.png in Resources */,
 				84CEAF9C1CD8A84600175860 /* arrow_down@2x.png in Resources */,
+				84C7F3371CF2EC46008B18ED /* arrow@2x.png in Resources */,
 				846992BD1CDA2C4D00CB8171 /* login_forgot_button@2x.png in Resources */,
 				846992C11CDA2E9300CB8171 /* Icon-60@2x.png in Resources */,
 				84CEAF891CD79A7C00175860 /* SearchWidget.xib in Resources */,

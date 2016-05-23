@@ -27,6 +27,7 @@
     [self initLocation];
     [self initMotion];
     [self addTargetHint];
+    [self addCompassImage];
     [self initMapView];
 }
 
@@ -110,6 +111,17 @@
     
 }
 
+- (void)addCompassImage{
+
+    _compassImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"arrow.png"]];
+
+    _compassImage.frame = CGRectMake(self.view.center.x - 25, self.view.frame.size.height - 160, 50, 50);
+
+    [self.view addSubview:_compassImage];
+
+//    _compassImage.hidden = NO;
+}
+
 - (void)initMapView{
     _mapView = [[MAMapView alloc] init];
     _mapView.delegate = self;
@@ -125,6 +137,11 @@
     gravityX = _motionManager.deviceMotion.gravity.x;
     gravityY = _motionManager.deviceMotion.gravity.y;
     gravityZ = _motionManager.deviceMotion.gravity.z;
+    
+//    CGFloat heading = 1.0f * M_PI * newHeading.magneticHeading / 180.0f;
+//    _compassImage.transform = CGAffineTransformMakeRotation(heading);
+    _compassImage.transform = CGAffineTransformMakeRotation(-[Caculator caculateHintHeading:_targetAnnotation.coordinate withMyLocation:_myLocation inHeading:newHeading]);//弧度制
+    //_compassImage.transform=CGAffineTransformMakeRotation(newHeading.magneticHeading);
     //NSLog(@"%@",_myLocation);
     deviaX = [Caculator caculateHorizontalPositionInCamera:_targetAnnotation.coordinate withMyLocation:_myLocation inHeading:newHeading withScreenWidth:self.view.frame.size.width] - _targetHint.frame.size.width * 0.5;
     //NSLog(@"deviaX:%f",deviaX);

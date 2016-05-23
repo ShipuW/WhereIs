@@ -10,14 +10,15 @@
 
 @implementation Caculator
 
-+(CGFloat)caculateHorizontalPositionInCamera:(CLLocationCoordinate2D)targetLocation withMyLocation:(CLLocation*)myLocation inHeading:(CLHeading *)heading withScreenWidth:(double)screenWidth{
++(CGFloat)caculateHintHeading:(CLLocationCoordinate2D)targetLocation withMyLocation:(CLLocation*)myLocation inHeading:(CLHeading *)heading{
+
+    
     double targetLatitude = targetLocation.latitude;
     double targetLongitude = targetLocation.longitude;
     double myLatitude = myLocation.coordinate.latitude;
     double myLongitude = myLocation.coordinate.longitude;
-    CLHeading *currentHeading = heading;
+    CGFloat curHeading = 1.0f * M_PI * heading.magneticHeading / 180.0f;
     
-    double xInCamera = 0.0f;
     
     
     double dx = (targetLongitude - myLongitude) * [self getEdWithLo:myLongitude andLa:myLatitude];
@@ -34,16 +35,26 @@
     }else if(dLo<0&&dLa>=0){
         angle= (90.-angle)+270;
     }
+    
+    return curHeading - angle*M_PI/180.0;
+    
+}
+
++(CGFloat)caculateHorizontalPositionInCamera:(CLLocationCoordinate2D)targetLocation withMyLocation:(CLLocation*)myLocation inHeading:(CLHeading *)heading withScreenWidth:(double)screenWidth{
+    double xInCamera = 0.0f;
+    float angle = [self caculateHintHeading:targetLocation withMyLocation:myLocation inHeading:heading];
     //return angle;
     //NSLog(@"摄像头朝向：%f",currentHeading.magneticHeading);
     //NSLog(@"目标方位角：%f",angle);
-    xInCamera = screenWidth * 0.5 -(screenWidth * 0.5 * tan((currentHeading.magneticHeading - angle)*M_PI/180.0) / tan(WidthFieldAngle * 0.5 * M_PI / 180.0));
+    xInCamera = screenWidth * 0.5 -(screenWidth * 0.5 * tan(angle) / tan(WidthFieldAngle * 0.5 * M_PI / 180.0));
     //NSLog(@"目标偏移位置：%f",xInCamera);
-    if (fabs(currentHeading.magneticHeading - angle) > 90 && 360 - fabs(currentHeading.magneticHeading - angle) > 90) return CGFLOAT_MAX;
+    if (fabs(angle) > 0.5*M_PI && 2*M_PI - fabs(angle) > 0.5*M_PI) return CGFLOAT_MAX;
     
     return xInCamera;
 
 }
+
+
 
 + (double)getEcWithLo:(double)longitude andLa:(double)latigude{
 //    double loSec = (longitude - (int)longitude - (int)((longitude - (int)longitude)*60)/60.0)*3600;
