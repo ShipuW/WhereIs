@@ -26,6 +26,7 @@
     [self addMapView];
     [self addMoveView];
     [self initSearch];
+    
 
     [self initAttributes];
 }
@@ -173,32 +174,61 @@
 }
 
 - (void)beginSearch{
-    [self showIndicator:@"搜索中" autoHide:NO afterDelay:NO];
-    [_mapWidget clearAllAnnotations];
+    if([self isConnectionAvailable ]){
+        [self showIndicator:@"搜索中" autoHide:NO afterDelay:NO];
+        [_mapWidget clearAllAnnotations];
+        
+        if (_mapWidget.currentLocation == nil || _search == nil){
+            NSLog(@"search failed");
+            return;
+        }
+        
+        AMapPOIAroundSearchRequest *request = [[AMapPOIAroundSearchRequest alloc] init];
+        request.location = [AMapGeoPoint locationWithLatitude:_mapWidget.currentLocation.coordinate.latitude longitude:_mapWidget.currentLocation.coordinate.longitude];
+        request.keywords = _searchKeyword;
+        request.types = @"餐饮服务|生活服务";
+        request.sortrule = 0;
+        request.requireExtension = YES;
+        
+        //发起周边搜索
+        [_search AMapPOIAroundSearch: request];
+        
+    //    AMapPlaceSearchRequest *request = [[AMapPlaceSearchRequest alloc] init];
+    //    request.searchType = AMapSearchType_PlaceAround;
+    //    request.location = [AMapGeoPoint locationWithLatitude:_currentLocation.coordinate.latitude longitude:_currentLocation.coordinate.longitude];
+    //    
+    //    request.keywords = @"餐饮";
+    //    
+    //    [_search AMapPlaceSearch:request];
+    }else{
+        [self showIndicator:NetworkLost autoHide:YES afterDelay:YES];
+    }
+}
+
+
+
+-(BOOL) isConnectionAvailable{
     
-    if (_mapWidget.currentLocation == nil || _search == nil){
-        NSLog(@"search failed");
-        return;
+    BOOL isExistenceNetwork = YES;
+    Reachability *reach = [Reachability reachabilityWithHostName:@"www.apple.com"];
+    switch ([reach currentReachabilityStatus]) {
+        case NotReachable:
+            isExistenceNetwork = NO;
+            //NSLog(@"notReachable");
+            break;
+        case ReachableViaWiFi:
+            isExistenceNetwork = YES;
+            //NSLog(@"WIFI");
+            break;
+        case ReachableViaWWAN:
+            isExistenceNetwork = YES;
+            //NSLog(@"3G");
+            break;
     }
     
-    AMapPOIAroundSearchRequest *request = [[AMapPOIAroundSearchRequest alloc] init];
-    request.location = [AMapGeoPoint locationWithLatitude:_mapWidget.currentLocation.coordinate.latitude longitude:_mapWidget.currentLocation.coordinate.longitude];
-    request.keywords = _searchKeyword;
-    request.types = @"餐饮服务|生活服务";
-    request.sortrule = 0;
-    request.requireExtension = YES;
-    
-    //发起周边搜索
-    [_search AMapPOIAroundSearch: request];
-    
-//    AMapPlaceSearchRequest *request = [[AMapPlaceSearchRequest alloc] init];
-//    request.searchType = AMapSearchType_PlaceAround;
-//    request.location = [AMapGeoPoint locationWithLatitude:_currentLocation.coordinate.latitude longitude:_currentLocation.coordinate.longitude];
-//    
-//    request.keywords = @"餐饮";
-//    
-//    [_search AMapPlaceSearch:request];
+    return isExistenceNetwork;
 }
+
 
 #pragma mark - AMapSearchDelegate,PositionTableDelegate,MapWidgetDelegate,CalloutDelegate,MoveWidgetDelegate
 

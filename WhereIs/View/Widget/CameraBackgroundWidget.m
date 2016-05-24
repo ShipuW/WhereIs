@@ -112,7 +112,7 @@
 
     _compassImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"arrow.png"]];
 
-    _compassImage.frame = CGRectMake(self.view.center.x - 25, self.view.frame.size.height - 160, 50, 50);
+    _compassImage.frame = CGRectMake(self.view.center.x - 25, self.view.frame.size.height - 80, 50, 50);
 
     [self.view addSubview:_compassImage];
 

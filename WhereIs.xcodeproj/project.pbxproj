@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8403EB0F1CF4340F00CAF837 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8403EB0E1CF4340F00CAF837 /* SystemConfiguration.framework */; };
 		840FD4061CD4FEE700C50D3E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD4051CD4FEE700C50D3E /* main.m */; };
 		840FD4091CD4FEE700C50D3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD4081CD4FEE700C50D3E /* AppDelegate.m */; };
 		840FD4111CD4FEE700C50D3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840FD4101CD4FEE700C50D3E /* Assets.xcassets */; };
@@ -131,6 +132,7 @@
 
 /* Begin PBXFileReference section */
 		39DAF4C7688AB6EF1BA3D1C2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8403EB0E1CF4340F00CAF837 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		840FD4011CD4FEE700C50D3E /* WhereIs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereIs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		840FD4051CD4FEE700C50D3E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		840FD4071CD4FEE700C50D3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8403EB0F1CF4340F00CAF837 /* SystemConfiguration.framework in Frameworks */,
 				844AED131CF0A67F00983607 /* libsqlite3.tbd in Frameworks */,
 				84CEAF8D1CD8297D00175860 /* CoreLocation.framework in Frameworks */,
 				840FD48B1CD53CE000C50D3E /* CoreMotion.framework in Frameworks */,
@@ -694,6 +697,7 @@
 		93D9149F3F8CF1000A108C09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8403EB0E1CF4340F00CAF837 /* SystemConfiguration.framework */,
 				844AED121CF0A67F00983607 /* libsqlite3.tbd */,
 				840FD48A1CD53CE000C50D3E /* CoreMotion.framework */,
 				840FD4881CD53C8700C50D3E /* CoreLocation.framework */,

@@ -196,11 +196,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WhereIs/View/Page/MapPage.m"
-            timestampString = "485681091.921314"
+            timestampString = "485769527.211318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "259"
-            endingLineNumber = "259"
+            startingLineNumber = "289"
+            endingLineNumber = "289"
             landmarkName = "-beginMove:"
             landmarkType = "5">
          </BreakpointContent>
@@ -596,7 +596,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WhereIs/Utility/Caculator.m"
-            timestampString = "485699890.978878"
+            timestampString = "485765579.670488"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "+caculatePositionInCamera:withMyLocation:inHeading:withMotion:withScreenWidth:withScreenHeight:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhereIs/Utility/Caculator.m"
+            timestampString = "485765709.382096"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "76"

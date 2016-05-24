@@ -73,6 +73,9 @@
     
     if (fabs(angle) > 0.5*M_PI && 2*M_PI - fabs(angle) > 0.5*M_PI && gravityY < 0) xInCamera = CGFLOAT_MAX;
     
+    xInCamera = ceil(xInCamera);//防抖
+    yInCamera = ceil(yInCamera);
+    
     return CGPointMake(xInCamera, yInCamera);
 
 

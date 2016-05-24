@@ -81,6 +81,8 @@ selector:_selector name:_name object:nil];
 #define HTTPPOST            @"POST"
 #define FxRequestTimeout    10
 
+#define NetworkLost         @"网络不可用"
+
 // 文件缓存路径
 #define RootPath            @"/Library/.WhereIs"
 #define CacheImagePath      @"CacheImages"

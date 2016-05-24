@@ -13,10 +13,34 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    
+    self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
     [self setCameraBackground];
-    [self setTitle:AppTitle];
+
+    
+    
     //[self setNavigationLeft:@"NavigationBack.png" sel:nil];
 //    [self addTargetHint];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [[UIApplication sharedApplication] setStatusBarHidden:TRUE];
+//    [self.navigationController.view sendSubviewToBack:self.navigationController.navigationBar];
+    [self.navigationController setNavigationBarHidden:YES animated:UIStatusBarAnimationFade];
+    [self.navigationController setToolbarHidden:YES animated:UIStatusBarAnimationFade];
+    
+}
+
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+//    [self.navigationController.view bringSubviewToFront:self.navigationController.navigationBar];
+    [self.navigationController setNavigationBarHidden:NO animated:UIStatusBarAnimationFade];
+    [self.navigationController setToolbarHidden:NO animated:UIStatusBarAnimationFade];
+    [super viewDidDisappear:animated];
+
+
 }
 
 - (void)setCameraBackground{
@@ -27,6 +51,7 @@
     _cameraWidget.view.frame = _cameraView.bounds;
     [_cameraView addSubview:_cameraWidget.view];
     [_cameraView sendSubviewToBack:_cameraWidget.view];
+    
     
 }
 
