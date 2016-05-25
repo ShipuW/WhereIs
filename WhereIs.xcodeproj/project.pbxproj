@@ -33,7 +33,6 @@
 		840FD4831CD51E0200C50D3E /* FxJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD47C1CD51E0200C50D3E /* FxJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		840FD4841CD51E0200C50D3E /* FxJsonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD47E1CD51E0200C50D3E /* FxJsonUtility.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		840FD4851CD51E0200C50D3E /* FxJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD4801CD51E0200C50D3E /* FxJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		840FD4871CD52FE600C50D3E /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 840FD4861CD52FE600C50D3E /* Podfile */; };
 		840FD48B1CD53CE000C50D3E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FD48A1CD53CE000C50D3E /* CoreMotion.framework */; };
 		840FD48F1CD54B6A00C50D3E /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD48E1CD54B6A00C50D3E /* Global.m */; };
 		840FD4921CD54C1D00C50D3E /* GetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD4911CD54C1D00C50D3E /* GetImage.m */; };
@@ -65,6 +64,19 @@
 		846992BF1CDA2C4D00CB8171 /* login_username_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 846992B81CDA2C4D00CB8171 /* login_username_icon@2x.png */; };
 		846992C11CDA2E9300CB8171 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 846992C01CDA2E9300CB8171 /* Icon-60@2x.png */; };
 		846992C31CDA32C900CB8171 /* login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 846992C21CDA32C900CB8171 /* login@2x.png */; };
+		8479DD1E1CF5455C009E46A6 /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8479DD1C1CF5455C009E46A6 /* AMapSearchKit.framework */; };
+		8479DD1F1CF5455C009E46A6 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8479DD1D1CF5455C009E46A6 /* MAMapKit.framework */; };
+		8479DD211CF545E0009E46A6 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8479DD201CF545E0009E46A6 /* libc++.tbd */; };
+		8479DD231CF545E8009E46A6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8479DD221CF545E8009E46A6 /* libz.tbd */; };
+		8479DD251CF545F2009E46A6 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8479DD241CF545F2009E46A6 /* libstdc++.6.0.9.tbd */; };
+		8479DD271CF545FA009E46A6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8479DD261CF545FA009E46A6 /* AudioToolbox.framework */; };
+		8479DD291CF54601009E46A6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8479DD281CF54601009E46A6 /* AVFoundation.framework */; };
+		8479DD2B1CF54609009E46A6 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8479DD2A1CF54609009E46A6 /* AddressBook.framework */; };
+		8479DD2D1CF54615009E46A6 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8479DD2C1CF54615009E46A6 /* CoreTelephony.framework */; };
+		8479DD2F1CF5461C009E46A6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8479DD2E1CF5461C009E46A6 /* Security.framework */; };
+		8479DD311CF5462E009E46A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8479DD301CF5462E009E46A6 /* UIKit.framework */; };
+		8479DD331CF54634009E46A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8479DD321CF54634009E46A6 /* Foundation.framework */; };
+		8479DD361CF5478C009E46A6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8479DD351CF5478C009E46A6 /* Reachability.m */; };
 		84C7F3351CF29C5C008B18ED /* history@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C7F3341CF29C5C008B18ED /* history@2x.png */; };
 		84C7F3371CF2EC46008B18ED /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C7F3361CF2EC46008B18ED /* arrow@2x.png */; };
 		84CEAF801CD7994E00175860 /* SearchPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CEAF7F1CD7994E00175860 /* SearchPage.m */; };
@@ -110,7 +122,6 @@
 		84E44B781CD6FFEF00BC6DE4 /* NavigationBar64@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E44B6E1CD6FFEF00BC6DE4 /* NavigationBar64@2x.png */; };
 		84E44B791CD6FFEF00BC6DE4 /* NavigationBell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E44B6F1CD6FFEF00BC6DE4 /* NavigationBell@2x.png */; };
 		84E44B7A1CD6FFEF00BC6DE4 /* NavigationSquare@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E44B701CD6FFEF00BC6DE4 /* NavigationSquare@2x.png */; };
-		8E95EBA82687DB39F7247AD4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6D84F3F22F594C95B8D5EA /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,7 +142,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		39DAF4C7688AB6EF1BA3D1C2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8403EB0E1CF4340F00CAF837 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		840FD4011CD4FEE700C50D3E /* WhereIs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereIs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		840FD4051CD4FEE700C50D3E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -186,7 +196,6 @@
 		840FD47E1CD51E0200C50D3E /* FxJsonUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FxJsonUtility.m; sourceTree = "<group>"; };
 		840FD47F1CD51E0200C50D3E /* FxJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FxJsonWriter.h; sourceTree = "<group>"; };
 		840FD4801CD51E0200C50D3E /* FxJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FxJsonWriter.m; sourceTree = "<group>"; };
-		840FD4861CD52FE600C50D3E /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		840FD4881CD53C8700C50D3E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		840FD48A1CD53CE000C50D3E /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		840FD48C1CD549FC00C50D3E /* URLDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLDefine.h; sourceTree = "<group>"; };
@@ -234,6 +243,20 @@
 		846992B81CDA2C4D00CB8171 /* login_username_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_username_icon@2x.png"; sourceTree = "<group>"; };
 		846992C01CDA2E9300CB8171 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		846992C21CDA32C900CB8171 /* login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login@2x.png"; sourceTree = "<group>"; };
+		8479DD1C1CF5455C009E46A6 /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapSearchKit.framework; sourceTree = "<group>"; };
+		8479DD1D1CF5455C009E46A6 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
+		8479DD201CF545E0009E46A6 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		8479DD221CF545E8009E46A6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		8479DD241CF545F2009E46A6 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		8479DD261CF545FA009E46A6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8479DD281CF54601009E46A6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8479DD2A1CF54609009E46A6 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		8479DD2C1CF54615009E46A6 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		8479DD2E1CF5461C009E46A6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8479DD301CF5462E009E46A6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8479DD321CF54634009E46A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8479DD341CF5478C009E46A6 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		8479DD351CF5478C009E46A6 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		84C7F3341CF29C5C008B18ED /* history@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "history@2x.png"; sourceTree = "<group>"; };
 		84C7F3361CF2EC46008B18ED /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
 		84CEAF7E1CD7994E00175860 /* SearchPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchPage.h; sourceTree = "<group>"; };
@@ -293,8 +316,6 @@
 		84E44B6E1CD6FFEF00BC6DE4 /* NavigationBar64@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationBar64@2x.png"; sourceTree = "<group>"; };
 		84E44B6F1CD6FFEF00BC6DE4 /* NavigationBell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationBell@2x.png"; sourceTree = "<group>"; };
 		84E44B701CD6FFEF00BC6DE4 /* NavigationSquare@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationSquare@2x.png"; sourceTree = "<group>"; };
-		8B6D84F3F22F594C95B8D5EA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D8E30D0D3415ECE08848254D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,12 +323,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8479DD331CF54634009E46A6 /* Foundation.framework in Frameworks */,
+				8479DD311CF5462E009E46A6 /* UIKit.framework in Frameworks */,
 				8403EB0F1CF4340F00CAF837 /* SystemConfiguration.framework in Frameworks */,
+				8479DD2F1CF5461C009E46A6 /* Security.framework in Frameworks */,
+				8479DD2D1CF54615009E46A6 /* CoreTelephony.framework in Frameworks */,
+				8479DD2B1CF54609009E46A6 /* AddressBook.framework in Frameworks */,
+				8479DD291CF54601009E46A6 /* AVFoundation.framework in Frameworks */,
+				8479DD271CF545FA009E46A6 /* AudioToolbox.framework in Frameworks */,
+				8479DD251CF545F2009E46A6 /* libstdc++.6.0.9.tbd in Frameworks */,
+				8479DD231CF545E8009E46A6 /* libz.tbd in Frameworks */,
+				8479DD211CF545E0009E46A6 /* libc++.tbd in Frameworks */,
 				844AED131CF0A67F00983607 /* libsqlite3.tbd in Frameworks */,
+				8479DD1F1CF5455C009E46A6 /* MAMapKit.framework in Frameworks */,
+				8479DD1E1CF5455C009E46A6 /* AMapSearchKit.framework in Frameworks */,
 				84CEAF8D1CD8297D00175860 /* CoreLocation.framework in Frameworks */,
 				840FD48B1CD53CE000C50D3E /* CoreMotion.framework in Frameworks */,
 				844AED0B1CF0A3CC00983607 /* FxDB.framework in Frameworks */,
-				8E95EBA82687DB39F7247AD4 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,15 +360,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5F972BACC534E0DFAE5B6C49 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				39DAF4C7688AB6EF1BA3D1C2 /* Pods.debug.xcconfig */,
-				D8E30D0D3415ECE08848254D /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		840FD3F81CD4FEE700C50D3E = {
 			isa = PBXGroup;
 			children = (
@@ -344,7 +367,6 @@
 				840FD41D1CD4FEE700C50D3E /* WhereIsTests */,
 				840FD4281CD4FEE700C50D3E /* WhereIsUITests */,
 				840FD4021CD4FEE700C50D3E /* Products */,
-				5F972BACC534E0DFAE5B6C49 /* Pods */,
 				93D9149F3F8CF1000A108C09 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -381,7 +403,6 @@
 		840FD4041CD4FEE700C50D3E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				840FD4861CD52FE600C50D3E /* Podfile */,
 				840FD4151CD4FEE700C50D3E /* Info.plist */,
 				840FD4051CD4FEE700C50D3E /* main.m */,
 				840FD4481CD5162000C50D3E /* PrefixHeader.pch */,
@@ -459,6 +480,8 @@
 		840FD43D1CD5147600C50D3E /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				8479DD341CF5478C009E46A6 /* Reachability.h */,
+				8479DD351CF5478C009E46A6 /* Reachability.m */,
 				840FD4611CD51DBB00C50D3E /* FxActivity.h */,
 				840FD4621CD51DBB00C50D3E /* FxActivity.m */,
 				840FD4631CD51DBB00C50D3E /* FxActivityIndicator.h */,
@@ -484,6 +507,8 @@
 		840FD43E1CD5148500C50D3E /* ThirdSDK */ = {
 			isa = PBXGroup;
 			children = (
+				8479DD1C1CF5455C009E46A6 /* AMapSearchKit.framework */,
+				8479DD1D1CF5455C009E46A6 /* MAMapKit.framework */,
 				844AED0A1CF0A3CC00983607 /* FxDB.framework */,
 				840FD4761CD51E0200C50D3E /* JsonFramework */,
 			);
@@ -697,11 +722,20 @@
 		93D9149F3F8CF1000A108C09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8479DD321CF54634009E46A6 /* Foundation.framework */,
+				8479DD301CF5462E009E46A6 /* UIKit.framework */,
+				8479DD2E1CF5461C009E46A6 /* Security.framework */,
+				8479DD2C1CF54615009E46A6 /* CoreTelephony.framework */,
+				8479DD2A1CF54609009E46A6 /* AddressBook.framework */,
+				8479DD281CF54601009E46A6 /* AVFoundation.framework */,
+				8479DD261CF545FA009E46A6 /* AudioToolbox.framework */,
+				8479DD241CF545F2009E46A6 /* libstdc++.6.0.9.tbd */,
+				8479DD221CF545E8009E46A6 /* libz.tbd */,
+				8479DD201CF545E0009E46A6 /* libc++.tbd */,
 				8403EB0E1CF4340F00CAF837 /* SystemConfiguration.framework */,
 				844AED121CF0A67F00983607 /* libsqlite3.tbd */,
 				840FD48A1CD53CE000C50D3E /* CoreMotion.framework */,
 				840FD4881CD53C8700C50D3E /* CoreLocation.framework */,
-				8B6D84F3F22F594C95B8D5EA /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -713,12 +747,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 840FD42E1CD4FEE700C50D3E /* Build configuration list for PBXNativeTarget "WhereIs" */;
 			buildPhases = (
-				01EFF64AB73986E20795DA53 /* Check Pods Manifest.lock */,
 				840FD3FD1CD4FEE700C50D3E /* Sources */,
 				840FD3FE1CD4FEE700C50D3E /* Frameworks */,
 				840FD3FF1CD4FEE700C50D3E /* Resources */,
-				EB7199F3B58DAC9DCE5AF2D2 /* Embed Pods Frameworks */,
-				C39B135454514C1DD7386860 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -838,7 +869,6 @@
 				84E44B411CD6623700BC6DE4 /* MapPage.xib in Resources */,
 				84E44B771CD6FFEF00BC6DE4 /* NavigationBar44@2x.png in Resources */,
 				846992A91CDA249600CB8171 /* LoginPage.xib in Resources */,
-				840FD4871CD52FE600C50D3E /* Podfile in Resources */,
 				846992BE1CDA2C4D00CB8171 /* login_password_icon@2x.png in Resources */,
 				846992BA1CDA2C4D00CB8171 /* account_snslogin_icon_3@2x.png in Resources */,
 				84CEAF9C1CD8A84600175860 /* arrow_down@2x.png in Resources */,
@@ -877,54 +907,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		01EFF64AB73986E20795DA53 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		C39B135454514C1DD7386860 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EB7199F3B58DAC9DCE5AF2D2 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		840FD3FD1CD4FEE700C50D3E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -946,6 +928,7 @@
 				84CEAF991CD8A66600175860 /* MoveWidget.m in Sources */,
 				840FD44B1CD518BD00C50D3E /* BaseInfo.m in Sources */,
 				840FD4731CD51DBB00C50D3E /* FxDate.m in Sources */,
+				8479DD361CF5478C009E46A6 /* Reachability.m in Sources */,
 				840FD44F1CD51B9900C50D3E /* BaseController.m in Sources */,
 				840FD45B1CD51C1200C50D3E /* BaseOperation.m in Sources */,
 				846992A01CDA244700CB8171 /* MyPage.m in Sources */,
@@ -1099,7 +1082,6 @@
 		};
 		840FD42F1CD4FEE700C50D3E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39DAF4C7688AB6EF1BA3D1C2 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchScreen;
@@ -1113,6 +1095,7 @@
 				GCC_PREFIX_HEADER = WhereIs/PrefixHeader.pch;
 				INFOPLIST_FILE = WhereIs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.waspmaster.WhereIs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1120,7 +1103,6 @@
 		};
 		840FD4301CD4FEE700C50D3E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8E30D0D3415ECE08848254D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchScreen;
@@ -1134,6 +1116,7 @@
 				GCC_PREFIX_HEADER = WhereIs/PrefixHeader.pch;
 				INFOPLIST_FILE = WhereIs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.waspmaster.WhereIs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
