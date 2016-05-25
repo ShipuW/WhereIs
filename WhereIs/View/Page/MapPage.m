@@ -15,7 +15,12 @@
 @interface MapPage(){
     CGFloat originMoveViewCenterY;
     CGFloat originTableViewCenterY;
+    CGPoint curMoveCenter;
+    CGPoint curPositionTableView;
+    UIView *codeTableView;
+    UIView *codeMoveView;
 }
+
 @end
 
 @implementation MapPage
@@ -24,7 +29,7 @@
     [super viewDidLoad];
     [self initControls];
     [self addMapView];
-    [self addMoveView];
+
     [self initSearch];
     
 
@@ -32,7 +37,8 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-
+    curMoveCenter = codeMoveView.center;
+    curPositionTableView = codeTableView.center;
     [super viewWillAppear:animated];
     if ([_searchKeyword isEqualToString:@""]){
     }else{
@@ -53,14 +59,19 @@
             
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+
+    [super viewWillDisappear:animated];
+    [codeTableView removeFromSuperview];
+    [codeMoveView removeFromSuperview];
+    _searchKeyword = @"";
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
-- (void)showMoveWidget{
-    [_moveView setHidden:NO];
 
-}
 
 - (void)addMapView{
     
@@ -69,7 +80,7 @@
     _mapWidget.zoomLevel = kDefaultLocationZoomLevel;
     _mapWidget.ownerPage = self;
     _mapWidget.locationButton = _locationButton;
-
+    
     
     _mapWidget.view.frame = _mapView.bounds;//赋值要放在这句之前
     [_mapView addSubview:_mapWidget.view];
@@ -78,25 +89,34 @@
 }
 
 - (void)addMoveView{
+    codeMoveView = [[UIView alloc]initWithFrame:CGRectMake(0, self.view.height - self.view.width - MoveWidgetHeight, self.view.width, MoveWidgetHeight)];
+    originMoveViewCenterY = codeMoveView.centerY;
+    codeMoveView.backgroundColor = [UIColor whiteColor];
+    codeMoveView.alpha = 0.5;
     _moveWidget = [[MoveWidget alloc] init];
     _moveWidget.delegate = self;
-    
-    _moveWidget.view.frame = _moveView.bounds;//赋值要放在这句之前
-    [_moveView addSubview:_moveWidget.view];
-    [_moveView sendSubviewToBack:_moveWidget.view];
-    originMoveViewCenterY = _moveView.center.y;
+
+    _moveWidget.view.frame = codeMoveView.bounds;//赋值要放在这句之前
+    [codeMoveView addSubview:_moveWidget.view];
+    [codeMoveView sendSubviewToBack:_moveWidget.view];
+    originMoveViewCenterY = codeMoveView.center.y;
+    [self.view addSubview:codeMoveView];
 
 }
 
 - (void)addPositionTableViewWithArray:(NSArray *)array{
-    [_positionTableView setHidden:NO];
+
+    codeTableView = [[UIView alloc]initWithFrame:CGRectMake(0, self.view.height - self.view.width , self.view.width, self.view.width)];
+    originTableViewCenterY = codeTableView.centerY;
     _positionTableWidget = [[PositionTableWidget alloc] init];
     _positionTableWidget.delegate = self;
     
     _positionTableWidget.listData = array;
-    _positionTableWidget.view.frame = _positionTableView.bounds;//赋值要放在这句之前
-    [_positionTableView addSubview:_positionTableWidget.view];
-    originTableViewCenterY = _positionTableView.center.y;
+    _positionTableWidget.view.frame = codeTableView.bounds;//赋值要放在这句之前
+    [codeTableView addSubview:_positionTableWidget.view];
+    curPositionTableView.y = codeTableView.center.y;
+    [self.view addSubview:codeTableView];
+    
 }
 
 
@@ -118,8 +138,8 @@
 
 - (void)initControls{
     _searchButton.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin;
-    [_positionTableView setHidden:YES];
-    [_moveView setHidden:YES];
+    [codeTableView setHidden:YES];
+    [codeMoveView setHidden:YES];
     self.title = AppTitle; 
 }
 
@@ -138,13 +158,17 @@
 }
 
 - (IBAction)locateAction:(id)sender{
+//    float tempy = _moveView.y;
     if (_mapWidget.mapView.userTrackingMode != MAUserTrackingModeFollow)
     {
         _mapWidget.mapView.userTrackingMode = MAUserTrackingModeFollow;
         [_mapWidget.mapView setZoomLevel:kDefaultLocationZoomLevel animated:YES];
     }
-
+//    [_moveView setY:tempy];
+    codeMoveView.center = curMoveCenter;
+    codeTableView.center = curPositionTableView;
 }
+
 
 - (IBAction)pathAction:(id)sender{
     if (_mapWidget.destinationPoint == nil || _mapWidget.currentLocation == nil || _search == nil)
@@ -254,7 +278,7 @@
     NSLog(@"Place: %@", result);
     
     [self addPositionTableViewWithArray:response.pois];
-    [self showMoveWidget];
+    [self addMoveView];
     [self hideIndicator];
     
     
@@ -275,21 +299,23 @@
 }
 
 - (void)beginMove:(CGFloat)moveY{
-    if(_moveView.center.y < originMoveViewCenterY - 1){
+    if(codeMoveView.center.y < originMoveViewCenterY - 1){
         [_moveWidget.arrowImage setImage:[UIImage imageNamed:@"arrow_down.png"]];
-        _moveView.center = CGPointMake(_moveView.center.x, originMoveViewCenterY);
-        
-        _positionTableView.center = CGPointMake(_positionTableView.center.x, originTableViewCenterY + 0.5 * _moveView.frame.size.height+1);
-    }else if(_moveView.center.y + 0.5 * _moveView.frame.size.height > self.view.frame.size.height + 1){
+        [codeMoveView setCenterY:originMoveViewCenterY];
+        [codeTableView setCenterY:originTableViewCenterY];
+
+    }else if(codeMoveView.center.y + 0.5 * codeMoveView.frame.size.height > self.view.frame.size.height + 1){
         [_moveWidget.arrowImage setImage:[UIImage imageNamed:@"arrow_up.png"]];
-        _moveView.center = CGPointMake(_moveView.center.x, self.view.frame.size.height - 0.5 * _moveView.frame.size.height);
-        _positionTableView.center = CGPointMake(_positionTableView.center.x, self.view.frame.size.height + 0.5 * _positionTableView.frame.size.height);
+        [codeMoveView setCenterY:self.view.height - 0.5 * MoveWidgetHeight];
+        [codeTableView setCenterY:self.view.height + 0.5 * self.view.width];
+        
     }else{
         
-        _positionTableView.center = CGPointMake(_positionTableView.center.x, _positionTableView.center.y + moveY);
-        _moveView.center = CGPointMake(_moveView.center.x, _moveView.center.y + moveY);
+        codeTableView.center = CGPointMake(codeTableView.center.x, codeTableView.center.y + moveY);
+        codeMoveView.center = CGPointMake(codeMoveView.center.x, codeMoveView.center.y + moveY);
     }
-
+    curPositionTableView = codeTableView.center;
+    curMoveCenter = codeMoveView.center;
 }
 
 @end

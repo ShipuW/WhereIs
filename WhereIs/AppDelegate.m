@@ -40,7 +40,7 @@
     [MAMapServices sharedServices].apiKey = AmapKey;
     [AMapSearchServices sharedServices].apiKey = AmapKey;
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-#pragma mark - remember change
+
     //[self showHomePage];
     [AdvertPage showAdvertPage];
     

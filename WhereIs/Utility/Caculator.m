@@ -71,7 +71,9 @@
         xInCamera = screenWidth * 0.5 + cos(atan(gravityX/gravityY)) * (screenWidth * 0.5 * tan(angle) / tan(WidthFieldAngle * 0.5 * M_PI / 180.0)) - sin(atan(gravityX/gravityY)) * screenHeight * 0.5 * tan(angleToback * M_PI / 180.0) / tan(HeightFieldAngle * 0.5 * M_PI / 180.0);;
     }
     
-    if (fabs(angle) > 0.5*M_PI && 2*M_PI - fabs(angle) > 0.5*M_PI && gravityY < 0) xInCamera = CGFLOAT_MAX;
+//    if (fabs(angle) > 0.5*M_PI && 2*M_PI - fabs(angle) > 0.5*M_PI) xInCamera = CGFLOAT_MAX;
+
+    if (angle < 0.5*M_PI && gravityY > 0) xInCamera = CGFLOAT_MAX;
     
     xInCamera = ceil(xInCamera);//防抖
     yInCamera = ceil(yInCamera);

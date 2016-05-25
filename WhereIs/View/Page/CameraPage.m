@@ -16,7 +16,7 @@
     
     self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
     [self setCameraBackground];
-
+    
     
     
     //[self setNavigationLeft:@"NavigationBack.png" sel:nil];
@@ -51,7 +51,14 @@
     _cameraWidget.view.frame = _cameraView.bounds;
     [_cameraView addSubview:_cameraWidget.view];
     [_cameraView sendSubviewToBack:_cameraWidget.view];
-    
+//    UIView *view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 80, 80)];
+//    view.backgroundColor = [UIColor whiteColor];
+//
+//    [view addSubview: [_cameraWidget.view copy]];
+//
+//    view.transform = CGAffineTransformMakeRotation(M_PI);
+//    [_cameraView addSubview:view];
+//    [_cameraView bringSubviewToFront:view];
     
 }
 

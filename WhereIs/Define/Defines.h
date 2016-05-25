@@ -138,7 +138,7 @@ selector:_selector name:_name object:nil];
 #define LoadingTip          @"加载中..."
 #define LoginCheckTip       @"用户名或密码不能为空"
 #define LoginTitle          @"登录"
-#define AppTitle          @"在哪"
+#define AppTitle            @"在哪"
 #define WeatherSuffix       @"市市辖区"
 
 // 自定义弹出框信息
@@ -155,6 +155,7 @@ selector:_selector name:_name object:nil];
 #define kDefaultLocationZoomLevel       16.1
 #define kDefaultControlMargin           22
 #define kDefaultCalloutViewMargin       -8
+#define MoveWidgetHeight                26
 
 // 姿态信息
 #define MotionUpdateInterval 1.0/60.0

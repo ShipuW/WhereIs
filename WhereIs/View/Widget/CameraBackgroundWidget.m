@@ -160,6 +160,9 @@
     
     if(point.x < self.view.frame.size.width + CacheSpace && point.x > 0 - CacheSpace && point.y < self.view.frame.size.height + CacheSpace && point.y > 0 - CacheSpace){
         _targetHint.center = point;
+        _targetHint.hidden = NO;
+    }else{
+        _targetHint.hidden = YES;
     }
     CGFloat tintAngle;
     if (_motionManager.deviceMotion.gravity.y < 0){
@@ -169,7 +172,7 @@
     }
     
     _targetHint.transform = CGAffineTransformMakeRotation(tintAngle);
-    _targetHint.hidden = NO;
+
 }
 
 -(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation

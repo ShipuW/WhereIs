@@ -40,6 +40,30 @@
     self.frame = frame;
 }
 
+- (CGFloat)centerX
+{
+    return self.center.x;
+}
+
+- (void)setCenterX:(CGFloat)x
+{
+    CGPoint c = self.center;
+    c.x = x;
+    self.center = c;
+}
+
+- (CGFloat)centerY
+{
+    return self.center.y;
+}
+
+- (void)setCenterY:(CGFloat)y
+{
+    CGPoint c = self.center;
+    c.y = y;
+    self.center = c;
+}
+
 - (CGPoint)origin
 {
     return self.frame.origin;
