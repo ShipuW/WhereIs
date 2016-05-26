@@ -38,6 +38,8 @@
 - (void)removePoiAnnotation:(MAPointAnnotation *)annotation;
 - (void)clearAllAnnotations;
 - (void)setPathRequest;
+- (void)updateBaseLocation:(CGPoint)point;
+
 //- (void)reSizeMap:(MAMapRect)rect;
 @end
 

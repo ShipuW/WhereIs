@@ -116,7 +116,7 @@
     [codeTableView addSubview:_positionTableWidget.view];
     curPositionTableView.y = codeTableView.center.y;
     [self.view addSubview:codeTableView];
-    
+
 }
 
 

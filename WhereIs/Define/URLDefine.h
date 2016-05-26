@@ -34,5 +34,6 @@
 #define ColumnURL   BaseURL "column.json"
 #define CategoryURL BaseURL "category.json"
 #define NewsURLFmt  BaseURL "news_%@.json"
+#define IconURLFmt  BaseURL "icons.json"
 #define CategoryURLFmt  BaseURL "category_%@.json"
 #define DetailURLFmt BaseServer2 "%@/full.html"

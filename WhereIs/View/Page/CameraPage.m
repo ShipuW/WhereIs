@@ -62,6 +62,7 @@
     
 }
 
+
 //- (void)addTargetHint{
 //    _targetHint = [[ViewOnCamera alloc]init];
 //    [_targetHint setTitle:@"目标"];

@@ -149,6 +149,8 @@
 //    [_mapView mapRectThatFits:rect];
 //}
 
+
+
 #pragma mark - MAMapViewDelegate,AMapSearchDelegate
 
 - (void)AMapSearchRequest:(id)request didFailWithError:(NSError *)error{

@@ -86,7 +86,7 @@ selector:_selector name:_name object:nil];
 // 文件缓存路径
 #define RootPath            @"/Library/.WhereIs"
 #define CacheImagePath      @"CacheImages"
-#define NewsIconPrex        @"Icon_%@"
+#define IconPrex            @"Icon_%@"
 #define DBFile              @"mydb.db"
 #define RecordIdPrex        @"Record_%@"
 
@@ -107,7 +107,7 @@ selector:_selector name:_name object:nil];
 #define LocationDistance    100
 
 // 消息通知Key
-#define NofifyNewsIcon      @"NewsIcon"
+#define NofifyIcon      @"Icon"
 
 // 高德地图
 #define AmapKey             @"b239d3ba7c47329f0c7ec9d07ef08c85"

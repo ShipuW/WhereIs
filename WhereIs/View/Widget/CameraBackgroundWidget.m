@@ -100,6 +100,7 @@
     _targetHint = [[ViewOnCamera alloc]init];
     [_targetHint setTitle:@"目标"];
     [_targetHint setSubtitle:_targetAnnotation.title];
+   
     _targetHint.frame = CGRectMake(-250, -250, _targetHint.frame.size.width, _targetHint.frame.size.height);
     
     

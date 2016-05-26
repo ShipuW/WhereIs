@@ -30,4 +30,5 @@
 #import "FxFileUtility.h"
 #import "FxAppSetting.h"
 #import "FxDate.h"
+//#import "Download.h"
 #endif /* PrefixHeader_pch */

@@ -21,4 +21,6 @@
 @property(nonatomic) MAPointAnnotation      *targetAnnotation;
 @property(nonatomic) CLLocation             *myLocation;
 
+
+
 @end
