@@ -8,6 +8,9 @@
 
 #import "CameraPage.h"
 
+
+
+
 @implementation CameraPage
 
 
@@ -18,7 +21,7 @@
     [self setCameraBackground];
     
     
-    
+
     //[self setNavigationLeft:@"NavigationBack.png" sel:nil];
 //    [self addTargetHint];
 }
@@ -50,15 +53,42 @@
     _cameraWidget.targetAnnotation = _targetAnnotation;
     //_cameraWidget.myLocation = [_myLocation copy];
     _cameraWidget.view.frame = _cameraView.bounds;
+    
+//    _arWidget = [[ARCameraWidget alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+//    _arWidget.enableCardboardButton = YES;
+//    _arWidget.enableFullscreenButton = YES;
+//    [_arWidget loadFromUrl:[NSURL URLWithString:@"http://wangshipu001.eicp.net/1.mp4"]];
+//    _arWidget.position = AVCaptureDevicePositionBack;//前置或者后置摄像头
+//    _arWidget.targetAnnotation = _targetAnnotation;
+//    [_arWidget setDelegate:self];
+
+    
+    
+//    _arWidget.frame = _cameraView.bounds;
+//    _arWidget.enableCardboardButton = YES;
+
+    
+    
+//    self.videoView = [[GCSVideoView alloc]initWithFrame:CGRectMake(0, 0,self.view.width, self.view.height)];
+//    self.videoView.enableCardboardButton = YES;
+//    
+//    [self.videoView loadFromUrl:[NSURL URLWithString:@"http://wangshipu001.eicp.net/1.mp4"]];
+//    [self.videoView setDelegate:self];
+//    self.videoView = _cameraWidget.view;
+//    [self.view addSubview:self.videoView];
+    
+    
     [_cameraView addSubview:_cameraWidget.view];
     [_cameraView bringSubviewToFront:_cameraWidget.view];
 
+    
+    
 //    [_cameraWidget.view setTransform: CGAffineTransformScale(_cameraWidget.view.transform, 0.5, 0.5)];
 
-    
-    
-    
-    
+
+    //Configure viewlet r = new RectangleF(new PointF(0.0f, 0.0f), new SizeF(UIScreen.MainScreen.Bounds.Size))let s = new SCNView(r)configView s scene |> ignorethis.View <- s
+
+    //Configure viewslet outer = new UIView(UIScreen.MainScreen.Bounds)let ss =	[		new RectangleF(new PointF(0.0f, 0.0f), new SizeF(float32 UIScreen.MainScreen.Bounds.Width / 2.0f - 1.0f, UIScreen.MainScreen.Bounds.Height));		new RectangleF(new PointF(float32 UIScreen.MainScreen.Bounds.Width / 2.0f + 1.0f, 0.0f), new SizeF(UIScreen.MainScreen.Bounds.Width / 2.0f -1.0f, UIScreen.MainScreen.Bounds.Height));	]	|> List.map (fun r -> new SCNView(r))	|> List.map (fun s -> outer.AddSubview(configView s scene); s)this.View <- outer
 //    _copyCameraWidget = [[CameraBackgroundWidget alloc] init];
 //    _copyCameraWidget.position = AVCaptureDevicePositionBack;//前置或者后置摄像头
 //    _copyCameraWidget.targetAnnotation = _targetAnnotation;

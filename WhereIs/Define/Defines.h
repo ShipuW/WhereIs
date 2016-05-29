@@ -43,6 +43,8 @@
 #define IsiPhone6   (IsiPhone && ScreenMaxLength == 667.0)
 #define IsiPhone6P  (IsiPhone && ScreenMaxLength == 736.0)
 
+#define SCREEN_WIDTH         ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT        ([[UIScreen mainScreen] bounds].size.height)
 
 // 消息通知
 #define RegisterNotify(_name, _selector)                    \

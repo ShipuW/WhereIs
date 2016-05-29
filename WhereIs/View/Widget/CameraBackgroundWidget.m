@@ -230,7 +230,7 @@
     
     _targetHint.transform = CGAffineTransformMakeRotation(tintAngle);
     
-    NSLog(@"%f,%f",compassAngle,tintAngle);
+//    NSLog(@"%f,%f",compassAngle,tintAngle);
     if(fabs(compassAngle - tintAngle)<1.2*M_PI && fabs(compassAngle - tintAngle)>0.2*M_PI){
         _targetHint.hidden = YES;
     }else{
