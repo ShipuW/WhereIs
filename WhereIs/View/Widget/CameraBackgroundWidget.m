@@ -63,11 +63,66 @@
     [self.session addOutput:self.imageOutput];
     self.preview = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
     [self.preview setVideoGravity:AVLayerVideoGravityResizeAspectFill];
-    [self.preview setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    [self.preview setFrame:CGRectMake(0, 0, self.view.frame.size.width,  self.view.frame.size.height)];
     [self.view.layer addSublayer:self.preview];
+
+//    [self.session addOutput:self.imageOutput];
+//    self.previewCopy = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
+//    [self.previewCopy setVideoGravity:AVLayerVideoGravityResizeAspectFill];
+//    [self.previewCopy setFrame:CGRectMake(0, 0.5 * self.view.frame.size.height, self.view.frame.size.width, 0.5 * self.view.frame.size.height)];
+//    [self.view.layer addSublayer:self.previewCopy];
+//    
+//    
+//    
+//    self.sessionCopy = [AVCaptureSession new];
+//    [self.sessionCopy setSessionPreset:AVCaptureSessionPresetHigh];
+//    
+//    NSArray *devicesCopy = [NSArray new];
+//    devicesCopy = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+//    for (AVCaptureDevice *device in devicesCopy) {
+//        if (_position == DevicePositonBack) {
+//            if ([device position] == AVCaptureDevicePositionBack) {
+//                _deviceCopy = device;
+//                break;
+//            }
+//        }else {
+//            if ([device position] == AVCaptureDevicePositionFront) {
+//                _deviceCopy = device;
+//                break;
+//            }
+//        }
+//    }
+//    
+//
+//    
+//    self.inputCopy = [[AVCaptureDeviceInput alloc] initWithDevice:self.deviceCopy error:&error];
+//    if ([self.sessionCopy canAddInput:self.inputCopy]) {
+//        [self.sessionCopy addInput:self.inputCopy];
+//    }
+//    
+//    self.imageOutputCopy = [AVCaptureStillImageOutput new];
+//    NSDictionary *outputSettingsCopy = @{AVVideoCodecKey:AVVideoCodecJPEG};
+//    [self.imageOutputCopy setOutputSettings:outputSettingsCopy];
+//    [self.sessionCopy addOutput:self.imageOutputCopy];
+//    self.previewCopy = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.sessionCopy];
+//    [self.previewCopy setVideoGravity:AVLayerVideoGravityResizeAspectFill];
+//    [self.previewCopy setFrame:CGRectMake(0, 0.5 * self.view.frame.size.height, self.view.frame.size.width, 0.5 * self.view.frame.size.height)];
+//    [self.view.layer addSublayer:self.previewCopy];
+//    
+//    
+//    
+//    UIView *test = [[UIView alloc]initWithFrame:CGRectMake(0, 0.5 * self.view.frame.size.height, self.view.frame.size.width, 0.5 * self.view.frame.size.height)];
+//
+//    [test.layer addSublayer:self.previewCopy];
+//    [self.view addSubview:test];
+//    [self.view bringSubviewToFront:test];
+//    
     [self.session startRunning];
+//    [self.sessionCopy startRunning];
     
 }
+
+
 
 - (void)initLocation{
     _locationManager= [[CLLocationManager alloc]init];
@@ -135,7 +190,8 @@
     
 //    CGFloat heading = 1.0f * M_PI * newHeading.magneticHeading / 180.0f;
 //    _compassImage.transform = CGAffineTransformMakeRotation(heading);
-    _compassImage.transform = CGAffineTransformMakeRotation(-[Caculator caculateHintHeading:_targetAnnotation.coordinate withMyLocation:_myLocation inHeading:newHeading]);//弧度制
+    CGFloat compassAngle=-[Caculator caculateHintHeading:_targetAnnotation.coordinate withMyLocation:_myLocation inHeading:newHeading];
+    _compassImage.transform = CGAffineTransformMakeRotation(compassAngle);//弧度制
     //_compassImage.transform=CGAffineTransformMakeRotation(newHeading.magneticHeading);
     //NSLog(@"%@",_myLocation);
 //    CGFloat deviaX = [Caculator caculateHorizontalPositionInCamera:_targetAnnotation.coordinate withMyLocation:_myLocation inHeading:newHeading withMotion:_motionManager withScreenWidth:self.view.frame.size.width withScreenHeight:self.view.frame.size.height];
@@ -173,7 +229,13 @@
     }
     
     _targetHint.transform = CGAffineTransformMakeRotation(tintAngle);
-
+    
+    NSLog(@"%f,%f",compassAngle,tintAngle);
+    if(fabs(compassAngle - tintAngle)<1.2*M_PI && fabs(compassAngle - tintAngle)>0.2*M_PI){
+        _targetHint.hidden = YES;
+    }else{
+        _targetHint.hidden = NO;
+    }
 }
 
 -(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation

@@ -23,10 +23,15 @@ typedef NS_ENUM(NSInteger, DevicePositon) {
 }
 
 @property (nonatomic, retain) AVCaptureSession *session;
+@property (nonatomic, retain) AVCaptureSession *sessionCopy;
 @property (nonatomic, retain) AVCaptureDeviceInput *input;
+@property (nonatomic, retain) AVCaptureDeviceInput *inputCopy;
 @property (nonatomic, retain) AVCaptureDevice *device;
+@property (nonatomic, retain) AVCaptureDevice *deviceCopy;
 @property (nonatomic, retain) AVCaptureStillImageOutput *imageOutput;
-@property (nonatomic, retain) AVCaptureVideoPreviewLayer *preview;
+@property (nonatomic, retain) AVCaptureStillImageOutput *imageOutputCopy;
+@property (nonatomic) AVCaptureVideoPreviewLayer *preview;
+@property (nonatomic) AVCaptureVideoPreviewLayer *previewCopy;
 @property (nonatomic) DevicePositon position;
 @property (nonatomic) ViewOnCamera  *targetHint;
 @property (nonatomic) MAPointAnnotation      *targetAnnotation;

@@ -3,11 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10117"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraPage">
             <connections>
                 <outlet property="_cameraView" destination="pWH-yS-Ye5" id="OGq-gL-J8o"/>
+                <outlet property="_downCameraView" destination="5Cb-hN-kCF" id="jaH-jn-JFh"/>
+                <outlet property="_upCameraView" destination="zA9-zK-Ddx" id="TXG-ob-pm8"/>
                 <outlet property="view" destination="iN0-l3-epB" id="aCa-jj-Qte"/>
             </connections>
         </placeholder>
@@ -18,10 +21,34 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pWH-yS-Ye5">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zA9-zK-Ddx">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="284"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="zA9-zK-Ddx" secondAttribute="height" multiplier="80:71" id="44F-FU-mSP"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Cb-hN-kCF">
+                            <rect key="frame" x="0.0" y="284" width="320" height="284"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="5Cb-hN-kCF" secondAttribute="height" multiplier="80:71" id="3bd-6p-LnU"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="5Cb-hN-kCF" secondAttribute="trailing" id="AvC-I5-IDz"/>
+                        <constraint firstItem="5Cb-hN-kCF" firstAttribute="leading" secondItem="pWH-yS-Ye5" secondAttribute="leading" id="GQe-BP-rnb"/>
+                        <constraint firstItem="zA9-zK-Ddx" firstAttribute="leading" secondItem="pWH-yS-Ye5" secondAttribute="leading" id="NaW-Ik-oQy"/>
+                        <constraint firstItem="zA9-zK-Ddx" firstAttribute="top" secondItem="pWH-yS-Ye5" secondAttribute="top" id="Nc1-3b-fiG"/>
+                        <constraint firstAttribute="trailing" secondItem="zA9-zK-Ddx" secondAttribute="trailing" id="sjj-3b-iiG"/>
+                        <constraint firstAttribute="bottom" secondItem="5Cb-hN-kCF" secondAttribute="bottom" id="uEb-jb-DPS"/>
+                    </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="pWH-yS-Ye5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2oc-iH-qXk"/>
                 <constraint firstAttribute="trailing" secondItem="pWH-yS-Ye5" secondAttribute="trailing" id="AkT-mr-nIN"/>

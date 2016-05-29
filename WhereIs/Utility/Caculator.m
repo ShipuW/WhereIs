@@ -50,7 +50,7 @@
     float angle = [self caculateHintHeading:targetLocation withMyLocation:myLocation inHeading:heading];
     float angleToback = 0.0f;
 //    NSLog(@"%f",angle - M_PI*(int)(angle/M_PI));
-    float recordAngle = angle - M_PI*(int)(angle/M_PI);
+    float recordAngle = angle ;
     angle += atan(gravityX/gravityY);
     
     
@@ -78,8 +78,23 @@
 
     
 //    if (fabs(angle) > 0.5*M_PI && 2*M_PI - fabs(angle) > 0.5*M_PI) xInCamera = CGFLOAT_MAX;
-//    NSLog(@"%f",recordAngle);
-    if ((fabs(recordAngle) < 0.2 * M_PI && gravityY > 0)||(fabs(recordAngle) > 0.8 * M_PI && gravityY < 0)) xInCamera = CGFLOAT_MAX;
+
+    
+//    CGFloat tintAngle;
+//    if (gravityY < 0){
+//        tintAngle = atan(gravityX/gravityY);
+//    }else{
+//        tintAngle = atan(gravityX/gravityY)+M_PI;
+//    }
+//    
+//    
+//    NSLog(@"%f,%f,%f",tintAngle,recordAngle,gravityY);
+//    if ( tintAngle != - recordAngle)
+//            xInCamera = CGFLOAT_MAX;
+//        if ((fabs(recordAngle) < 0.2 * M_PI && gravityY > 0)||(fabs(recordAngle) > 0.8 * M_PI && fabs(recordAngle) < 1.2 * M_PI && gravityY < 0))
+//            xInCamera = CGFLOAT_MAX;
+    
+    
 //    NSLog(@"%f,%f,%f",xInCamera,yInCamera,cos(atan(gravityX/gravityY)) * (screenWidth * 0.5 * tan(angle) / tan(WidthFieldAngle * 0.5 * M_PI / 180.0)) +sin(atan(gravityX/gravityY)) * screenHeight * 0.5 * tan(angleToback * M_PI / 180.0) / tan(HeightFieldAngle * 0.5 * M_PI / 180.0));
 //    xInCamera = ceil(xInCamera);//防抖
 //    yInCamera = ceil(yInCamera);

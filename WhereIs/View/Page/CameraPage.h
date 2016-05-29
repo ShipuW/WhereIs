@@ -15,6 +15,9 @@
 
     IBOutlet UIView         *_cameraView;
     CameraBackgroundWidget  *_cameraWidget;
+    CameraBackgroundWidget  *_copyCameraWidget;
+    IBOutlet UIView         *_upCameraView;
+    IBOutlet UIView         *_downCameraView;
 //    ViewOnCamera            *_targetHint;
 }
 
