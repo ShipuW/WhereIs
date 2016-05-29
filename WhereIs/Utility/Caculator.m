@@ -41,9 +41,9 @@
 }
 
 +(CGPoint)caculatePositionInCamera:(CLLocationCoordinate2D)targetLocation withMyLocation:(CLLocation*)myLocation inHeading:(CLHeading *)heading withMotion:(CMMotionManager *)motion withScreenWidth:(double)screenWidth withScreenHeight:(double)screenHeight{
-    CGFloat gravityX = motion.deviceMotion.gravity.x;
-    CGFloat gravityY = motion.deviceMotion.gravity.y;
-    CGFloat gravityZ = motion.deviceMotion.gravity.z;
+    double gravityX = motion.deviceMotion.gravity.x;
+    double gravityY = motion.deviceMotion.gravity.y;
+    double gravityZ = motion.deviceMotion.gravity.z;
     
     float xInCamera = 0.0f;
     float yInCamera = 0.0f;
@@ -63,20 +63,24 @@
     }else{
         yInCamera = screenHeight * 0.5;
     }
+    
+    
 
+    
     if (gravityY <= 0){
         xInCamera = screenWidth * 0.5 - cos(atan(gravityX/gravityY)) * (screenWidth * 0.5 * tan(angle) / tan(WidthFieldAngle * 0.5 * M_PI / 180.0)) + sin(atan(gravityX/gravityY)) * screenHeight * 0.5 * tan(angleToback * M_PI / 180.0) / tan(HeightFieldAngle * 0.5 * M_PI / 180.0);
     }else
     {
         xInCamera = screenWidth * 0.5 + cos(atan(gravityX/gravityY)) * (screenWidth * 0.5 * tan(angle) / tan(WidthFieldAngle * 0.5 * M_PI / 180.0)) - sin(atan(gravityX/gravityY)) * screenHeight * 0.5 * tan(angleToback * M_PI / 180.0) / tan(HeightFieldAngle * 0.5 * M_PI / 180.0);;
     }
+
     
 //    if (fabs(angle) > 0.5*M_PI && 2*M_PI - fabs(angle) > 0.5*M_PI) xInCamera = CGFLOAT_MAX;
-
-    if (angle < 0.5*M_PI && gravityY > 0) xInCamera = CGFLOAT_MAX;
-    
-    xInCamera = ceil(xInCamera);//防抖
-    yInCamera = ceil(yInCamera);
+//    NSLog(@"%f",angle);
+    if ((fabs(angle) < 0.2 * M_PI && gravityY > 0)||(fabs(angle) > 0.8 * M_PI && gravityY < 0)) xInCamera = CGFLOAT_MAX;
+//    NSLog(@"%f,%f,%f",xInCamera,yInCamera,cos(atan(gravityX/gravityY)) * (screenWidth * 0.5 * tan(angle) / tan(WidthFieldAngle * 0.5 * M_PI / 180.0)) +sin(atan(gravityX/gravityY)) * screenHeight * 0.5 * tan(angleToback * M_PI / 180.0) / tan(HeightFieldAngle * 0.5 * M_PI / 180.0));
+//    xInCamera = ceil(xInCamera);//防抖
+//    yInCamera = ceil(yInCamera);
     
     return CGPointMake(xInCamera, yInCamera);
 
