@@ -39,34 +39,30 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
+    
     self.tabBarController.tabBar.hidden = YES;
-
+    
     curMoveCenter = codeMoveView.center;
     curPositionTableView = codeTableView.center;
-    [codeTableView setHidden:YES];
-    [codeMoveView setHidden:YES];
+//    [codeTableView setHidden:YES];
+//    [codeMoveView setHidden:YES];
     [super viewWillAppear:animated];
     if ([_searchKeyword isEqualToString:@""]){
-        [codeTableView setHidden:YES];
-        [codeMoveView setHidden:YES];
+//        _positionTableWidget.view.hidden = YES;
+//        [codeTableView setHidden:YES];
+//        [codeMoveView setHidden:YES];
         
     }else{
-//        MAMapPoint point;
-//        point.x = 0;
-//        point.y = 0;
-//        MAMapSize size;
-//        size.width = self.view.frame.size.width;
-//        size.height = self.view.frame.size.height * 0.5;
-//        MAMapRect rect;
-//        rect.origin = point;
-//        rect.size = size;
-//        [_mapWidget reSizeMap:rect];
         
         [self beginSearch];
         
     }
             
 }
+
+
+
+
 
 - (void)viewWillDisappear:(BOOL)animated{
 
@@ -136,14 +132,6 @@
     _search.delegate = self;
 }
 
-//- (void)initNaviManager
-//{
-//    if (_naviManager == nil)
-//    {
-//        _naviManager = [[AMapNaviManager alloc] init];
-//        [_naviManager setDelegate:self];
-//    }
-//}
 
 - (void)initControls{
     _searchButton.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin;
@@ -167,7 +155,7 @@
 }
 
 - (IBAction)locateAction:(id)sender{
-//    float tempy = _moveView.y;
+
     if (_mapWidget.mapView.userTrackingMode != MAUserTrackingModeFollow)
     {
         _mapWidget.mapView.userTrackingMode = MAUserTrackingModeFollow;
@@ -295,9 +283,9 @@
     //NSLog(@"%@",annotation.title);
     CameraPage *page = [[CameraPage alloc] init];
     
-    page.myLocation = _mapWidget.currentLocation;
+    page.myLocation = _mapWidget.mapView.userLocation.location;
     page.targetAnnotation = annotation;
-    page.hidesBottomBarWhenPushed = YES;
+
     [self.navigationController pushViewController:page animated:YES];
 }
 

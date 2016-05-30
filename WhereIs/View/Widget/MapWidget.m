@@ -41,7 +41,6 @@
     _mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds))];
     _mapView.delegate = self;
     _mapView.showsCompass = NO;
-#pragma mark - modify here
     MAMapPoint myPoint;
     myPoint.x = 0;
     myPoint.y = 0;
@@ -304,11 +303,6 @@ updatingLocation:(BOOL)updatingLocation
     return nil;
 }
 
-#pragma mark - CalloutDelegate
 
-//- (void)beginNavigation:(MAPointAnnotation *)annotation{
-//    NSLog(@"%@",annotation.title);
-//    //[self.delegate beginNavigation2MapPage:annotation];
-//}
 
 @end

@@ -40,7 +40,7 @@
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
 //    [self.navigationController.view bringSubviewToFront:self.navigationController.navigationBar];
     [self.navigationController setNavigationBarHidden:NO animated:UIStatusBarAnimationFade];
-    [self.navigationController setToolbarHidden:NO animated:UIStatusBarAnimationFade];
+//    [self.navigationController setToolbarHidden:NO animated:UIStatusBarAnimationFade];
     [super viewDidDisappear:animated];
 
 

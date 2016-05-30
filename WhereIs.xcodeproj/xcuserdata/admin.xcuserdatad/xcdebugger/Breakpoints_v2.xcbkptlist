@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WhereIs/View/Widget/MapWidget.m"
-            timestampString = "486285860.289316"
+            timestampString = "486288524.125447"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
             landmarkName = "-setPathRequest"
             landmarkType = "5">
          </BreakpointContent>
@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WhereIs/View/Page/MapPage.m"
-            timestampString = "486285965.129287"
+            timestampString = "486289510.434199"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "-pathAction:"
             landmarkType = "5">
          </BreakpointContent>
@@ -52,11 +52,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WhereIs/View/Page/MapPage.m"
-            timestampString = "486286230.851457"
+            timestampString = "486289510.434199"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "291"
-            endingLineNumber = "291"
+            startingLineNumber = "279"
+            endingLineNumber = "279"
             landmarkName = "-didSelect:"
             landmarkType = "5">
          </BreakpointContent>
@@ -68,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WhereIs/View/Widget/MapWidget.m"
-            timestampString = "486286608.223522"
+            timestampString = "486288524.125447"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "-showRouteWithNaviRoute:"
             landmarkType = "5">
          </BreakpointContent>
@@ -84,11 +84,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WhereIs/View/Widget/MapWidget.m"
-            timestampString = "486287194.346429"
+            timestampString = "486288524.125447"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
             landmarkName = "-showRouteWithNaviRoute:"
             landmarkType = "5">
          </BreakpointContent>
