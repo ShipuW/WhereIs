@@ -8,7 +8,7 @@
 
 #import "MapWidget.h"
 #import "AppDelegate.h"
-
+#import <AMapSearchKit/AMapSearchAPI.h>
 
 
 @implementation MapWidget
@@ -27,6 +27,7 @@
     [super viewDidLoad];
     [self initMapView];
     [self initSearch];
+    [self initNaviManager];
     [self initAttributes];
 
 }
@@ -53,7 +54,7 @@
     //_mapView.visibleMapRect = currentMapRect;
     [_mapView setVisibleMapRect:currentMapRect];
     //    if (_language)
-        _mapView.language = _language;
+//        _mapView.language = _language;
 //    if (_centerCoordinate)
         _mapView.centerCoordinate = _centerCoordinate;
 //    if (_zoomLevel)
@@ -64,7 +65,14 @@
     
 }
 
-
+- (void)initNaviManager
+{
+    if (_naviManager == nil)
+    {
+        _naviManager = [[AMapNaviManager alloc] init];
+        [_naviManager setDelegate:self];
+    }
+}
 - (void)initSearch{
     _search = [[AMapSearchAPI alloc] init];
     _search.delegate = self;
@@ -73,7 +81,7 @@
 - (void)initAttributes{
     _annotations = [NSMutableArray array];
     self.listData = nil;
-    
+    _destinationPoint = [[MAPointAnnotation alloc]init];
     _longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
     _longPressGesture.delegate = self;
     _longPressGesture.minimumPressDuration = 0.4;
@@ -89,7 +97,7 @@
             _destinationPoint = nil;
         }
         
-        _destinationPoint = [[MAPointAnnotation alloc]init];
+        
         _destinationPoint.coordinate = coordinate;
         _destinationPoint.title = @"地图选点";
         
@@ -131,27 +139,44 @@
     [_annotations removeAllObjects];
 }
 
+
+
 - (void)setPathRequest{
-//    AMapNaviPoint *startPoint = [AMapNaviPoint locationWithLatitude:39.989614 longitude:116.481763];
-//    AMapNaviPoint *endPoints = [AMapNaviPoint locationWithLatitude:39.983456 longitude:116.315495];
-//    
-//    NSArray *startPoints = @[_startPoint];
-//    NSArray *endPoints   = @[_endPoint];
-//    
-//    //驾车路径规划（未设置途经点、导航策略为速度优先）
-//    [_naviManager calculateDriveRouteWithStartPoints:startPoints endPoints:endPoints wayPoints:nil drivingStrategy:0];
-//    
-//    //步行路径规划
-//    [self.naviManager calculateWalkRouteWithStartPoints:startPoints endPoints:endPoints];
+    
+    _startPoint = [AMapNaviPoint locationWithLatitude:_mapView.userLocation.coordinate.latitude longitude:_mapView.userLocation.coordinate.longitude];
+    _endPoint = [AMapNaviPoint locationWithLatitude:_destinationPoint.coordinate.latitude longitude:_destinationPoint.coordinate.longitude];
+    
+    NSArray *startPoints = @[_startPoint];
+    NSArray *endPoints   = @[_endPoint];
+    [self.naviManager calculateWalkRouteWithStartPoints:startPoints endPoints:endPoints];
 }
 
-//- (void)reSizeMap:(MAMapRect)rect{
-//    [_mapView mapRectThatFits:rect];
-//}
 
 
+- (void)showRouteWithNaviRoute:(AMapNaviRoute *)naviRoute
+{
+    if (naviRoute == nil)
+    {
+        return;
+    }
+    
+    // 清除旧的overlays
+    [self.mapView removeOverlays:self.mapView.overlays];
+    
+    NSUInteger coordianteCount = [naviRoute.routeCoordinates count];
+    CLLocationCoordinate2D coordinates[coordianteCount];
+    for (int i = 0; i < coordianteCount; i++)
+    {
+        AMapNaviPoint *aCoordinate = [naviRoute.routeCoordinates objectAtIndex:i];
+        coordinates[i] = CLLocationCoordinate2DMake(aCoordinate.latitude, aCoordinate.longitude);
+    }
+    
+    MAPolyline *polyline = [MAPolyline polylineWithCoordinates:coordinates count:coordianteCount];
+    [self.mapView addOverlay:polyline];
+    [_mapView showAnnotations:@[_mapView.userLocation,_destinationPoint] animated:YES];
+}
 
-#pragma mark - MAMapViewDelegate,AMapSearchDelegate
+#pragma mark - MAMapViewDelegate,AMapSearchDelegate,AMapNaviManagerDelegate
 
 - (void)AMapSearchRequest:(id)request didFailWithError:(NSError *)error{
     NSLog(@"request:%@,error:%@",request,error);
@@ -254,6 +279,30 @@ updatingLocation:(BOOL)updatingLocation
     return nil;
 }
 
+
+- (void)naviManagerOnCalculateRouteSuccess:(AMapNaviManager *)naviManager
+{
+
+    NSLog(@"OnCalculateRouteSuccess");
+    
+    [self showRouteWithNaviRoute:[[naviManager naviRoute] copy]];
+    
+    _calRouteSuccess = YES;
+}
+
+- (MAOverlayView *)mapView:(MAMapView *)mapView viewForOverlay:(id<MAOverlay>)overlay
+{
+    if ([overlay isKindOfClass:[MAPolyline class]])
+    {
+        MAPolylineView *polylineView = [[MAPolylineView alloc] initWithPolyline:overlay];
+        
+        polylineView.lineWidth   = 5.0f;
+        polylineView.strokeColor = [UIColor redColor];
+        
+        return polylineView;
+    }
+    return nil;
+}
 
 #pragma mark - CalloutDelegate
 

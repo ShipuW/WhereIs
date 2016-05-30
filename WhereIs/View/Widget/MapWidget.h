@@ -8,13 +8,14 @@
 
 #import "BaseWidget.h"
 #import "CustomAnnotationWidget.h"
+#import <AMapSearchKit/AMapSearchAPI.h>
 @class MapPage;
 
 
 
 //@protocol MapWidgetDelegate;
 
-@interface MapWidget : BaseWidget<MAMapViewDelegate,UIGestureRecognizerDelegate>{
+@interface MapWidget : BaseWidget<MAMapViewDelegate,AMapNaviManagerDelegate,UIGestureRecognizerDelegate>{
 //    MAMapView                       *_mapView;
     NSMutableArray                  *_annotations;
     UILongPressGestureRecognizer    *_longPressGesture;
@@ -22,6 +23,10 @@
     
 }
 
+@property (nonatomic, strong) AMapNaviPoint* startPoint;
+@property (nonatomic, strong) AMapNaviPoint* endPoint;
+
+@property (nonatomic) BOOL calRouteSuccess; // 指示是否算路成功
 
 @property (nonatomic) MAMapView                 *mapView;
 @property (nonatomic) MAMapLanguage             language;
@@ -31,6 +36,7 @@
 @property (nonatomic) MAPointAnnotation         *destinationPoint;
 @property (nonatomic) MapPage                   *ownerPage;
 @property (nonatomic) UIButton                  *locationButton;
+@property (nonatomic, strong) AMapNaviManager   *naviManager;
 //@property (nonatomic) MAPointAnnotation         *currentAnnotation;
 //@property(nonatomic, assign) id<MapWidgetDelegate> delegate;
 
@@ -38,7 +44,7 @@
 - (void)removePoiAnnotation:(MAPointAnnotation *)annotation;
 - (void)clearAllAnnotations;
 - (void)setPathRequest;
-- (void)updateBaseLocation:(CGPoint)point;
+//- (void)updateBaseLocation:(CGPoint)point;
 
 //- (void)reSizeMap:(MAMapRect)rect;
 @end

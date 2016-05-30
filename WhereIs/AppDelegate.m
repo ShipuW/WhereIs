@@ -39,6 +39,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [MAMapServices sharedServices].apiKey = AmapKey;
     [AMapSearchServices sharedServices].apiKey = AmapKey;
+    [AMapNaviServices sharedServices].apiKey = AmapKey;
+
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 
     //[self showHomePage];

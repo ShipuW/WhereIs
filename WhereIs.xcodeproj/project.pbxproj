@@ -40,6 +40,9 @@
 		840FD4981CD54EA700C50D3E /* CameraPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD4971CD54EA700C50D3E /* CameraPage.m */; };
 		840FD49A1CD54F0B00C50D3E /* CameraPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840FD4991CD54F0B00C50D3E /* CameraPage.xib */; };
 		840FD4A01CD5558100C50D3E /* CameraBackgroundWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FD49F1CD5558100C50D3E /* CameraBackgroundWidget.m */; };
+		8426CB661CFC075D004770AE /* AMapNaviKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8426CB651CFC075D004770AE /* AMapNaviKit.framework */; };
+		8426CB681CFC0857004770AE /* AMapNavi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8426CB671CFC0857004770AE /* AMapNavi.bundle */; };
+		8426CB6A1CFC0891004770AE /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8426CB691CFC0891004770AE /* AMap.bundle */; };
 		842AB6291CFB209A009EBFD8 /* ARCameraWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 842AB6281CFB209A009EBFD8 /* ARCameraWidget.m */; };
 		844AECFE1CF09FD200983607 /* building@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 844AECFD1CF09FD200983607 /* building@2x.png */; };
 		844AED0B1CF0A3CC00983607 /* FxDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844AED0A1CF0A3CC00983607 /* FxDB.framework */; };
@@ -66,7 +69,6 @@
 		846992C11CDA2E9300CB8171 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 846992C01CDA2E9300CB8171 /* Icon-60@2x.png */; };
 		846992C31CDA32C900CB8171 /* login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 846992C21CDA32C900CB8171 /* login@2x.png */; };
 		8479DD1E1CF5455C009E46A6 /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8479DD1C1CF5455C009E46A6 /* AMapSearchKit.framework */; };
-		8479DD1F1CF5455C009E46A6 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8479DD1D1CF5455C009E46A6 /* MAMapKit.framework */; };
 		8479DD211CF545E0009E46A6 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8479DD201CF545E0009E46A6 /* libc++.tbd */; };
 		8479DD231CF545E8009E46A6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8479DD221CF545E8009E46A6 /* libz.tbd */; };
 		8479DD251CF545F2009E46A6 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8479DD241CF545F2009E46A6 /* libstdc++.6.0.9.tbd */; };
@@ -78,7 +80,6 @@
 		8479DD311CF5462E009E46A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8479DD301CF5462E009E46A6 /* UIKit.framework */; };
 		8479DD331CF54634009E46A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8479DD321CF54634009E46A6 /* Foundation.framework */; };
 		8479DD361CF5478C009E46A6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8479DD351CF5478C009E46A6 /* Reachability.m */; };
-		8479DD3C1CF55DEE009E46A6 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8479DD3B1CF55DEE009E46A6 /* AMap.bundle */; };
 		8479DD411CF6A9B1009E46A6 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 8479DD401CF6A9B1009E46A6 /* README */; };
 		84C7F3351CF29C5C008B18ED /* history@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C7F3341CF29C5C008B18ED /* history@2x.png */; };
 		84C7F3371CF2EC46008B18ED /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C7F3361CF2EC46008B18ED /* arrow@2x.png */; };
@@ -224,6 +225,9 @@
 		840FD4991CD54F0B00C50D3E /* CameraPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraPage.xib; sourceTree = "<group>"; };
 		840FD49E1CD5558100C50D3E /* CameraBackgroundWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraBackgroundWidget.h; sourceTree = "<group>"; };
 		840FD49F1CD5558100C50D3E /* CameraBackgroundWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraBackgroundWidget.m; sourceTree = "<group>"; };
+		8426CB651CFC075D004770AE /* AMapNaviKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapNaviKit.framework; sourceTree = "<group>"; };
+		8426CB671CFC0857004770AE /* AMapNavi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMapNavi.bundle; path = WhereIs/ThirdSDK/AMapNaviKit.framework/Versions/1.5.0.3533b29/Resources/AMapNavi.bundle; sourceTree = "<group>"; };
+		8426CB691CFC0891004770AE /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = WhereIs/ThirdSDK/AMapNaviKit.framework/Versions/1.5.0.3533b29/Resources/AMap.bundle; sourceTree = "<group>"; };
 		842AB6271CFB209A009EBFD8 /* ARCameraWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCameraWidget.h; sourceTree = "<group>"; };
 		842AB6281CFB209A009EBFD8 /* ARCameraWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCameraWidget.m; sourceTree = "<group>"; };
 		844AECFD1CF09FD200983607 /* building@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "building@2x.png"; sourceTree = "<group>"; };
@@ -273,7 +277,6 @@
 		8479DD321CF54634009E46A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8479DD341CF5478C009E46A6 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		8479DD351CF5478C009E46A6 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		8479DD3B1CF55DEE009E46A6 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = WhereIs/ThirdSDK/MAMapKit.framework/AMap.bundle; sourceTree = "<group>"; };
 		8479DD401CF6A9B1009E46A6 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		84C7F3341CF29C5C008B18ED /* history@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "history@2x.png"; sourceTree = "<group>"; };
 		84C7F3361CF2EC46008B18ED /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
@@ -360,11 +363,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8479DD251CF545F2009E46A6 /* libstdc++.6.0.9.tbd in Frameworks */,
+				8479DD271CF545FA009E46A6 /* AudioToolbox.framework in Frameworks */,
+				8479DD2B1CF54609009E46A6 /* AddressBook.framework in Frameworks */,
+				8479DD231CF545E8009E46A6 /* libz.tbd in Frameworks */,
+				8426CB661CFC075D004770AE /* AMapNaviKit.framework in Frameworks */,
 				84D78FD31CFB18F8006C2E85 /* libCardboardSDK.a in Frameworks */,
 				8479DD331CF54634009E46A6 /* Foundation.framework in Frameworks */,
 				8403EB0F1CF4340F00CAF837 /* SystemConfiguration.framework in Frameworks */,
 				8479DD211CF545E0009E46A6 /* libc++.tbd in Frameworks */,
-				8479DD231CF545E8009E46A6 /* libz.tbd in Frameworks */,
 				8479DD2F1CF5461C009E46A6 /* Security.framework in Frameworks */,
 				8479DD291CF54601009E46A6 /* AVFoundation.framework in Frameworks */,
 				840FD48B1CD53CE000C50D3E /* CoreMotion.framework in Frameworks */,
@@ -372,14 +379,10 @@
 				84D78FDB1CFB1B21006C2E85 /* QuartzCore.framework in Frameworks */,
 				84D78FDA1CFB1B17006C2E85 /* OpenGLES.framework in Frameworks */,
 				84D78FD91CFB1B0F006C2E85 /* CoreGraphics.framework in Frameworks */,
-				8479DD271CF545FA009E46A6 /* AudioToolbox.framework in Frameworks */,
 				84D78EF41CFAFAE4006C2E85 /* GLKit.framework in Frameworks */,
 				8479DD311CF5462E009E46A6 /* UIKit.framework in Frameworks */,
 				8479DD2D1CF54615009E46A6 /* CoreTelephony.framework in Frameworks */,
-				8479DD2B1CF54609009E46A6 /* AddressBook.framework in Frameworks */,
-				8479DD251CF545F2009E46A6 /* libstdc++.6.0.9.tbd in Frameworks */,
 				844AED131CF0A67F00983607 /* libsqlite3.tbd in Frameworks */,
-				8479DD1F1CF5455C009E46A6 /* MAMapKit.framework in Frameworks */,
 				8479DD1E1CF5455C009E46A6 /* AMapSearchKit.framework in Frameworks */,
 				84CEAF8D1CD8297D00175860 /* CoreLocation.framework in Frameworks */,
 				844AED0B1CF0A3CC00983607 /* FxDB.framework in Frameworks */,
@@ -553,6 +556,7 @@
 			children = (
 				84D78FC21CFB18F8006C2E85 /* CardboardSDK */,
 				8479DD1C1CF5455C009E46A6 /* AMapSearchKit.framework */,
+				8426CB651CFC075D004770AE /* AMapNaviKit.framework */,
 				8479DD1D1CF5455C009E46A6 /* MAMapKit.framework */,
 				844AED0A1CF0A3CC00983607 /* FxDB.framework */,
 				840FD4761CD51E0200C50D3E /* JsonFramework */,
@@ -820,6 +824,8 @@
 		93D9149F3F8CF1000A108C09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8426CB691CFC0891004770AE /* AMap.bundle */,
+				8426CB671CFC0857004770AE /* AMapNavi.bundle */,
 				84D78FDC1CFB1B31006C2E85 /* MediaPlayer.framework */,
 				84D78F571CFB1383006C2E85 /* CoreMedia.framework */,
 				84D78F551CFB137A006C2E85 /* CFNetwork.framework */,
@@ -827,7 +833,6 @@
 				84D78F511CFB1361006C2E85 /* OpenGLES.framework */,
 				84D78F4F1CFB1359006C2E85 /* CoreGraphics.framework */,
 				84D78EF31CFAFAE4006C2E85 /* GLKit.framework */,
-				8479DD3B1CF55DEE009E46A6 /* AMap.bundle */,
 				8479DD321CF54634009E46A6 /* Foundation.framework */,
 				8479DD301CF5462E009E46A6 /* UIKit.framework */,
 				8479DD2E1CF5461C009E46A6 /* Security.framework */,
@@ -949,7 +954,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8479DD3C1CF55DEE009E46A6 /* AMap.bundle in Resources */,
+				8426CB6A1CFC0891004770AE /* AMap.bundle in Resources */,
+				8426CB681CFC0857004770AE /* AMapNavi.bundle in Resources */,
 				846992B91CDA2C4D00CB8171 /* account_snslogin_icon_1@2x.png in Resources */,
 				84E44B781CD6FFEF00BC6DE4 /* NavigationBar64@2x.png in Resources */,
 				84E44B791CD6FFEF00BC6DE4 /* NavigationBell@2x.png in Resources */,

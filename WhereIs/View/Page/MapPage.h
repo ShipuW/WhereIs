@@ -11,6 +11,7 @@
 #import "PositionTableWidget.h"
 #import "MoveWidget.h"
 
+
 @interface MapPage : BaseNavPage <PositionTableDelegate,CalloutDelegate,MoveWidgetDelegate> {
     MapWidget               *_mapWidget;
     IBOutlet UIView         *_mapView;

@@ -10,6 +10,8 @@
 #import "CameraPage.h"
 #import "SearchPage.h"
 #import "MyPage.h"
+#import <AMapSearchKit/AMapSearchAPI.h>
+
 
 
 @interface MapPage(){
@@ -37,10 +39,17 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
+    self.tabBarController.tabBar.hidden = YES;
+
     curMoveCenter = codeMoveView.center;
     curPositionTableView = codeTableView.center;
+    [codeTableView setHidden:YES];
+    [codeMoveView setHidden:YES];
     [super viewWillAppear:animated];
     if ([_searchKeyword isEqualToString:@""]){
+        [codeTableView setHidden:YES];
+        [codeMoveView setHidden:YES];
+        
     }else{
 //        MAMapPoint point;
 //        point.x = 0;
@@ -140,7 +149,7 @@
     _searchButton.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin;
     [codeTableView setHidden:YES];
     [codeMoveView setHidden:YES];
-    self.title = AppTitle; 
+    self.title = AppTitle;
 }
 
 - (void)initAttributes{
@@ -171,21 +180,14 @@
 
 
 - (IBAction)pathAction:(id)sender{
-    if (_mapWidget.destinationPoint == nil || _mapWidget.currentLocation == nil || _search == nil)
+    if (_mapWidget.destinationPoint == nil || _mapWidget.currentLocation == nil )
     {
         NSLog(@"path search failed");
         return;
     }
+
     [_mapWidget setPathRequest];
-//    AMapNavigationSearchRequest *request = [[AMapNavigationSearchRequest alloc] init];
-//    
-//    // 设置为步行路径规划
-//    request.searchType = AMapSearchType_NaviWalking;
-//    
-//    request.origin = [AMapGeoPoint locationWithLatitude:_currentLocation.coordinate.latitude longitude:_currentLocation.coordinate.longitude];
-//    request.destination = [AMapGeoPoint locationWithLatitude:_destinationPoint.coordinate.latitude longitude:_destinationPoint.coordinate.longitude];
-//    
-//    [_search AMapNavigationSearch:request];
+
 
 }
 
@@ -210,7 +212,7 @@
         AMapPOIAroundSearchRequest *request = [[AMapPOIAroundSearchRequest alloc] init];
         request.location = [AMapGeoPoint locationWithLatitude:_mapWidget.currentLocation.coordinate.latitude longitude:_mapWidget.currentLocation.coordinate.longitude];
         request.keywords = _searchKeyword;
-        request.types = @"餐饮服务|生活服务";
+        request.types = @"";
         request.sortrule = 0;
         request.requireExtension = YES;
         
@@ -285,6 +287,7 @@
 }
 
 - (void)didSelect:(MAPointAnnotation *)annotation{
+    _mapWidget.destinationPoint.coordinate = annotation.coordinate;
     [_mapWidget addPoiAnnotation:annotation];
 }
 
