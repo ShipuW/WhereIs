@@ -13,7 +13,9 @@
 - (void)initCell
 {
 }
+- (void)setCellData:(AMapPOI *)info{
 
+}
 
 
 @end

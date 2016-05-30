@@ -33,7 +33,7 @@ static NSDateFormatter *s_formatterYMDHMS = nil;
         fitHour %= 24;
     }
  
-    NSInteger unitFlags = NSHourCalendarUnit;  
+    NSInteger unitFlags = NSCalendarUnitHour;
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *componets = [calendar components:unitFlags fromDate:srcDate];  
     NSInteger hour = [componets hour];
@@ -128,7 +128,7 @@ static NSDateFormatter *s_formatterYMDHMS = nil;
      NSDayCalendarUnit
      fromDate:date];
      */
-    comps = [calendar components:NSYearCalendarUnit fromDate:date];
+    comps = [calendar components:NSCalendarUnitYear fromDate:date];
     NSString *year = [NSString stringWithFormat:@"%@", @([comps year])];
     
     return year;
@@ -139,7 +139,7 @@ static NSDateFormatter *s_formatterYMDHMS = nil;
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *comps = nil;
     
-    comps = [calendar components:NSMonthCalendarUnit fromDate:date];
+    comps = [calendar components:NSCalendarUnitMonth fromDate:date];
     NSString *month = [NSString stringWithFormat:@"%@", @([comps month])];
     
     return month;
@@ -151,7 +151,7 @@ static NSDateFormatter *s_formatterYMDHMS = nil;
     NSDateComponents *comps = nil;
     
     comps = [calendar components:
-             NSDayCalendarUnit fromDate:date];
+             NSCalendarUnitDay fromDate:date];
     NSString *day = [NSString stringWithFormat:@"%@", @([comps day])];
     
     return day;
@@ -163,7 +163,7 @@ static NSDateFormatter *s_formatterYMDHMS = nil;
     NSDateComponents *comps = nil;
     
     comps = [calendar components:
-             NSWeekdayCalendarUnit fromDate:date];
+             NSCalendarUnitWeekday fromDate:date];
     NSString *weekDay = [NSString stringWithFormat:@"%@", @([comps weekday])];
     
     return weekDay;

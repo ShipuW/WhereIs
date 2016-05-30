@@ -50,7 +50,6 @@
     float angle = [self caculateHintHeading:targetLocation withMyLocation:myLocation inHeading:heading];
     float angleToback = 0.0f;
 //    NSLog(@"%f",angle - M_PI*(int)(angle/M_PI));
-    float recordAngle = angle ;
     angle += atan(gravityX/gravityY);
     
     
