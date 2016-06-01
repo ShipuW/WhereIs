@@ -283,7 +283,7 @@
     //NSLog(@"%@",annotation.title);
     CameraPage *page = [[CameraPage alloc] init];
     
-    page.myLocation = _mapWidget.mapView.userLocation.location;
+    page.myLocation = _mapWidget.currentLocation;//mapView.userLocation.location;
     page.targetAnnotation = annotation;
 
     [self.navigationController pushViewController:page animated:YES];
