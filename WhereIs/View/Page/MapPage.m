@@ -46,6 +46,7 @@
     curPositionTableView = codeTableView.center;
 //    [codeTableView setHidden:YES];
 //    [codeMoveView setHidden:YES];
+    [_mapWidget.mapView removeOverlays:_mapWidget.mapView.overlays];
     [super viewWillAppear:animated];
     if ([_searchKeyword isEqualToString:@""]){
 //        _positionTableWidget.view.hidden = YES;
